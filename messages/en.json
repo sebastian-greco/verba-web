@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "features": "Features",
+    "privacy": "Privacy",
+    "pricing": "Pricing",
+    "download": "Download Free"
+  },
+  "hero": {
+    "headline": "Your voice, typed instantly. Privately.",
+    "subheadline": "Local speech-to-text for Mac. No cloud. No subscription. No account.",
+    "cta_primary": "Download Free Trial",
+    "cta_secondary": "Buy License",
+    "badge_local": "100% Local",
+    "badge_offline": "Works Offline",
+    "badge_no_account": "No Account Required",
+    "badge_silicon": "Apple Silicon",
+    "note": "macOS 15+ · Apple Silicon · 50 free transcriptions included"
+  },
+  "demo": {
+    "headline": "Press a key. Speak. Done.",
+    "step_hold": "Hold Fn",
+    "step_speak": "Speak naturally",
+    "step_done": "Text appears instantly"
+  },
+  "privacy_section": {
+    "headline": "Private by Design.",
+    "subheadline": "Your audio stays on your Mac. Always.",
+    "local_storage_title": "Local Storage Only",
+    "local_storage_desc": "All recordings stored in ~/Library/Application Support/Verba/ — on your Mac.",
+    "no_account_title": "No Account Required",
+    "no_account_desc": "Download, launch, speak. Zero signup, zero login, zero tracking.",
+    "offline_title": "Works Offline",
+    "offline_desc": "No internet needed. Everything runs on your Apple Silicon hardware.",
+    "quote": "Your voice is yours. We never hear it."
+  },
+  "features": {
+    "headline": "Everything you need. Nothing you don't.",
+    "transcription_title": "Instant Transcription",
+    "transcription_desc": "Press Fn, speak, text appears in any app.",
+    "languages_title": "99 Languages",
+    "languages_desc": "Auto-detects your language via Whisper Large v3 Turbo.",
+    "push_to_talk_title": "Push-to-Talk",
+    "push_to_talk_desc": "Hold Fn for quick takes. Lock mode for hands-free recording.",
+    "history_title": "Recording History",
+    "history_desc": "Every transcription saved locally with timing and duration.",
+    "metal_title": "Metal Accelerated",
+    "metal_desc": "Apple Silicon GPU. ~2–3s for 10s of audio.",
+    "translation_title": "Translation Mode",
+    "translation_desc": "Speak in any language, get English output instantly.",
+    "cleanup_title": "Smart Cleanup",
+    "cleanup_desc": "On-device AI removes filler words and fixes grammar.",
+    "telemetry_title": "Zero Telemetry",
+    "telemetry_desc": "No analytics, no crash reports, nothing leaves your Mac."
+  },
+  "pricing": {
+    "headline": "Pay once. Own it forever.",
+    "subheadline": "No subscriptions. No recurring fees. No surprises.",
+    "trial_label": "Free Trial",
+    "trial_desc": "50 transcriptions included — no credit card, no time limit, no signup",
+    "trial_cta": "Download Free",
+    "paid_label": "Full License",
+    "paid_price": "$22",
+    "paid_period": "one-time",
+    "paid_desc": "Unlimited transcriptions, 3 devices, all future updates",
+    "paid_cta": "Buy License",
+    "guarantee": "30-day money-back guarantee",
+    "comparison_title": "Why Verba?",
+    "comparison_others_label": "Other apps",
+    "comparison_others_price": "$8–15/month",
+    "comparison_others_cloud": "Audio sent to servers",
+    "comparison_others_account": "Account required",
+    "comparison_verba_price": "$22 once",
+    "comparison_verba_cloud": "100% local — no servers",
+    "comparison_verba_account": "No account needed"
+  },
+  "cleanup": {
+    "headline": "AI Text Cleanup",
+    "badge": "Experimental",
+    "subheadline": "Powered by a local language model. No cloud, no API keys.",
+    "before_label": "You said",
+    "after_label": "Verba wrote",
+    "before_text": "um so basically I wanted to uh talk about the the project status and like we need to uh finish the API by next week",
+    "after_text": "I wanted to talk about the project status. We need to finish the API by next week.",
+    "features_title": "What it does",
+    "feature_fillers": "Removes filler words (um, uh, like, basically)",
+    "feature_grammar": "Fixes grammar and punctuation",
+    "feature_lists": "Formats spoken lists into actual bullet points",
+    "feature_styles": "Style modes: Standard, Formal, Casual, Excited",
+    "note": "Requires downloading a 985MB model. Runs entirely on your Mac. Never online."
+  },
+  "cta_block": {
+    "headline": "Start speaking. Stop typing.",
+    "button": "Download Free — 50 Transcriptions Included",
+    "note": "macOS 15+ · Apple Silicon required · No account needed"
+  },
+  "footer": {
+    "tagline": "A private speech-to-text app for Mac. Your voice never leaves your device.",
+    "product": "Product",
+    "legal": "Legal",
+    "contact_label": "Contact",
+    "features_link": "Features",
+    "privacy_link": "Privacy",
+    "pricing_link": "Pricing",
+    "privacy_policy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact_email": "hello@verbaspeech.app",
+    "copyright": "© 2026 Verba"
+  },
+  "legal": {
+    "privacy_title": "Privacy Policy",
+    "terms_title": "Terms of Service",
+    "last_updated": "Last updated: February 2026"
+  }
+}

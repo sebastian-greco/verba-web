@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "features": "Fonctionnalités",
+    "privacy": "Confidentialité",
+    "pricing": "Tarifs",
+    "download": "Télécharger gratuitement"
+  },
+  "hero": {
+    "headline": "Votre voix, saisie instantanément. En toute confidentialité.",
+    "subheadline": "Dictée locale pour Mac. Sans cloud. Sans abonnement. Sans compte.",
+    "cta_primary": "Télécharger la version d'essai",
+    "cta_secondary": "Acheter la licence",
+    "badge_local": "100% Local",
+    "badge_offline": "Fonctionne hors ligne",
+    "badge_no_account": "Aucun compte requis",
+    "badge_silicon": "Apple Silicon",
+    "note": "macOS 15+ · Apple Silicon · 50 transcriptions gratuites incluses"
+  },
+  "demo": {
+    "headline": "Appuyez sur une touche. Parlez. C'est fait.",
+    "step_hold": "Maintenez Fn",
+    "step_speak": "Parlez naturellement",
+    "step_done": "Le texte apparaît instantanément"
+  },
+  "privacy_section": {
+    "headline": "Confidentialité dès la conception.",
+    "subheadline": "Votre audio reste sur votre Mac. Toujours.",
+    "local_storage_title": "Stockage local uniquement",
+    "local_storage_desc": "Tous les enregistrements sont stockés dans ~/Library/Application Support/Verba/ — sur votre Mac.",
+    "no_account_title": "Aucun compte requis",
+    "no_account_desc": "Téléchargez, lancez, parlez. Zéro inscription, zéro connexion, zéro traçage.",
+    "offline_title": "Fonctionne hors ligne",
+    "offline_desc": "Pas d'internet nécessaire. Tout s'exécute sur votre matériel Apple Silicon.",
+    "quote": "Votre voix vous appartient. Nous ne l'entendons jamais."
+  },
+  "features": {
+    "headline": "Tout ce dont vous avez besoin. Rien de plus.",
+    "transcription_title": "Transcription instantanée",
+    "transcription_desc": "Appuyez sur Fn, parlez, le texte apparaît dans n'importe quelle application.",
+    "languages_title": "99 langues",
+    "languages_desc": "Détecte automatiquement votre langue via Whisper Large v3 Turbo.",
+    "push_to_talk_title": "Push-to-Talk",
+    "push_to_talk_desc": "Maintenez Fn pour les prises rapides. Mode verrouillé pour l'enregistrement mains libres.",
+    "history_title": "Historique des enregistrements",
+    "history_desc": "Chaque transcription sauvegardée localement avec horodatage et durée.",
+    "metal_title": "Accélération Metal",
+    "metal_desc": "GPU Apple Silicon. ~2–3 s pour 10 s d'audio.",
+    "translation_title": "Mode traduction",
+    "translation_desc": "Parlez dans n'importe quelle langue, obtenez instantanément le résultat en anglais.",
+    "cleanup_title": "Nettoyage intelligent",
+    "cleanup_desc": "L'IA embarquée supprime les mots de remplissage et corrige la grammaire.",
+    "telemetry_title": "Zéro télémétrie",
+    "telemetry_desc": "Pas d'analytique, pas de rapports d'erreurs. Rien ne quitte votre Mac."
+  },
+  "pricing": {
+    "headline": "Payez une fois. Utilisez à vie.",
+    "subheadline": "Pas d'abonnement. Pas de frais récurrents. Pas de surprises.",
+    "trial_label": "Essai gratuit",
+    "trial_desc": "50 transcriptions incluses — sans carte bancaire, sans limite de temps, sans inscription",
+    "trial_cta": "Télécharger gratuitement",
+    "paid_label": "Licence complète",
+    "paid_price": "$22",
+    "paid_period": "paiement unique",
+    "paid_desc": "Transcriptions illimitées, 3 appareils, toutes les mises à jour futures",
+    "paid_cta": "Acheter la licence",
+    "guarantee": "Garantie satisfait ou remboursé 30 jours",
+    "comparison_title": "Pourquoi Verba ?",
+    "comparison_others_label": "Autres apps",
+    "comparison_others_price": "$8–15/month",
+    "comparison_others_cloud": "Audio envoyé sur des serveurs",
+    "comparison_others_account": "Compte obligatoire",
+    "comparison_verba_price": "$22 une fois",
+    "comparison_verba_cloud": "100% local — aucun serveur",
+    "comparison_verba_account": "Aucun compte nécessaire"
+  },
+  "cleanup": {
+    "headline": "Nettoyage de texte par IA",
+    "badge": "Expérimental",
+    "subheadline": "Propulsé par un modèle de langage local. Sans cloud, sans clé API.",
+    "before_label": "Vous avez dit",
+    "after_label": "Verba a écrit",
+    "before_text": "euh donc en gros je voulais euh parler du statut du projet et genre on doit euh finir l'API pour la semaine prochaine",
+    "after_text": "Je voulais parler du statut du projet. Nous devons terminer l'API pour la semaine prochaine.",
+    "features_title": "Ce que ça fait",
+    "feature_fillers": "Supprime les mots de remplissage (um, euh, genre, en gros)",
+    "feature_grammar": "Corrige la grammaire et la ponctuation",
+    "feature_lists": "Formate les listes orales en véritables points de liste",
+    "feature_styles": "Modes de style : Standard, Formel, Décontracté, Enthousiaste",
+    "note": "Nécessite le téléchargement d'un modèle de 985 Mo. Fonctionne entièrement sur votre Mac. Jamais en ligne."
+  },
+  "cta_block": {
+    "headline": "Commencez à parler. Arrêtez de taper.",
+    "button": "Télécharger gratuitement — 50 transcriptions incluses",
+    "note": "macOS 15+ · Apple Silicon requis · Aucun compte nécessaire"
+  },
+  "footer": {
+    "tagline": "Une application de dictée privée pour Mac. Votre voix ne quitte jamais votre appareil.",
+    "product": "Produit",
+    "legal": "Mentions légales",
+    "contact_label": "Contact",
+    "features_link": "Fonctionnalités",
+    "privacy_link": "Confidentialité",
+    "pricing_link": "Tarifs",
+    "privacy_policy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "contact_email": "hello@verbaspeech.app",
+    "copyright": "© 2026 Verba"
+  },
+  "legal": {
+    "privacy_title": "Politique de confidentialité",
+    "terms_title": "Conditions d'utilisation",
+    "last_updated": "Dernière mise à jour : février 2026"
+  }
+}

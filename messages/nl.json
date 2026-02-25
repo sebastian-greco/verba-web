@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "features": "Functies",
+    "privacy": "Privacy",
+    "pricing": "Prijzen",
+    "download": "Gratis downloaden"
+  },
+  "hero": {
+    "headline": "Jouw stem, direct getypt. Privé.",
+    "subheadline": "Lokale spraakherkenning voor Mac. Geen cloud. Geen abonnement. Geen account.",
+    "cta_primary": "Gratis proefversie downloaden",
+    "cta_secondary": "Licentie kopen",
+    "badge_local": "100% Lokaal",
+    "badge_offline": "Werkt offline",
+    "badge_no_account": "Geen account vereist",
+    "badge_silicon": "Apple Silicon",
+    "note": "macOS 15+ · Apple Silicon · 50 gratis transcripties inbegrepen"
+  },
+  "demo": {
+    "headline": "Druk op een toets. Spreek. Klaar.",
+    "step_hold": "Houd Fn ingedrukt",
+    "step_speak": "Spreek natuurlijk",
+    "step_done": "Tekst verschijnt direct"
+  },
+  "privacy_section": {
+    "headline": "Privacy by Design.",
+    "subheadline": "Jouw audio blijft op je Mac. Altijd.",
+    "local_storage_title": "Alleen lokale opslag",
+    "local_storage_desc": "Alle opnames worden opgeslagen in ~/Library/Application Support/Verba/ — op jouw Mac.",
+    "no_account_title": "Geen account vereist",
+    "no_account_desc": "Download, open, spreek. Geen registratie, geen login, geen tracking.",
+    "offline_title": "Werkt offline",
+    "offline_desc": "Geen internet nodig. Alles draait op jouw Apple Silicon hardware.",
+    "quote": "Jouw stem is van jou. Wij horen hem nooit."
+  },
+  "features": {
+    "headline": "Alles wat je nodig hebt. Niets wat je niet nodig hebt.",
+    "transcription_title": "Directe transcriptie",
+    "transcription_desc": "Druk op Fn, spreek, tekst verschijnt in elke app.",
+    "languages_title": "99 talen",
+    "languages_desc": "Detecteert automatisch jouw taal via Whisper Large v3 Turbo.",
+    "push_to_talk_title": "Push-to-Talk",
+    "push_to_talk_desc": "Houd Fn ingedrukt voor snelle opnames. Vergrendelmodus voor handsfree opnemen.",
+    "history_title": "Opnamegeschiedenis",
+    "history_desc": "Elke transcriptie lokaal opgeslagen met tijdstip en duur.",
+    "metal_title": "Metal-versnelling",
+    "metal_desc": "Apple Silicon GPU. ~2–3 sec. voor 10 sec. audio.",
+    "translation_title": "Vertaalmodus",
+    "translation_desc": "Spreek in elke taal, ontvang direct Engelse tekst.",
+    "cleanup_title": "Slimme opschoning",
+    "cleanup_desc": "On-device AI verwijdert stopwoorden en corrigeert de grammatica.",
+    "telemetry_title": "Nul telemetrie",
+    "telemetry_desc": "Geen analyses, geen foutrapporten. Niets verlaat je Mac."
+  },
+  "pricing": {
+    "headline": "Eén keer betalen. Voor altijd van genieten.",
+    "subheadline": "Geen abonnementen. Geen terugkerende kosten. Geen verrassingen.",
+    "trial_label": "Gratis proefversie",
+    "trial_desc": "50 transcripties inbegrepen — geen creditcard, geen tijdslimiet, geen registratie",
+    "trial_cta": "Gratis downloaden",
+    "paid_label": "Volledige licentie",
+    "paid_price": "$22",
+    "paid_period": "eenmalig",
+    "paid_desc": "Onbeperkte transcripties, 3 apparaten, alle toekomstige updates",
+    "paid_cta": "Licentie kopen",
+    "guarantee": "30 dagen niet-goed-geld-terug garantie",
+    "comparison_title": "Waarom Verba?",
+    "comparison_others_label": "Andere apps",
+    "comparison_others_price": "$8–15/month",
+    "comparison_others_cloud": "Audio verzonden naar servers",
+    "comparison_others_account": "Account vereist",
+    "comparison_verba_price": "$22 eenmalig",
+    "comparison_verba_cloud": "100% lokaal — geen servers",
+    "comparison_verba_account": "Geen account nodig"
+  },
+  "cleanup": {
+    "headline": "AI-tekstopschoning",
+    "badge": "Experimenteel",
+    "subheadline": "Aangedreven door een lokaal taalmodel. Geen cloud, geen API-sleutels.",
+    "before_label": "Je zei",
+    "after_label": "Verba schreef",
+    "before_text": "eh dus eigenlijk wilde ik uh praten over de de projectstatus en zoals we moeten uh de API afmaken voor volgende week",
+    "after_text": "Ik wilde praten over de projectstatus. We moeten de API afmaken voor volgende week.",
+    "features_title": "Wat het doet",
+    "feature_fillers": "Verwijdert stopwoorden (um, uh, zoals, eigenlijk)",
+    "feature_grammar": "Corrigeert grammatica en interpunctie",
+    "feature_lists": "Zet gesproken opsommingen om in echte opsommingstekens",
+    "feature_styles": "Stijlmodi: Standaard, Formeel, Informeel, Enthousiast",
+    "note": "Vereist het downloaden van een model van 985 MB. Draait volledig op jouw Mac. Nooit online."
+  },
+  "cta_block": {
+    "headline": "Begin met spreken. Stop met typen.",
+    "button": "Gratis downloaden — 50 transcripties inbegrepen",
+    "note": "macOS 15+ · Apple Silicon vereist · Geen account nodig"
+  },
+  "footer": {
+    "tagline": "Een privé spraakherkenningsapp voor Mac. Jouw stem verlaat nooit jouw apparaat.",
+    "product": "Product",
+    "legal": "Juridisch",
+    "contact_label": "Contact",
+    "features_link": "Functies",
+    "privacy_link": "Privacy",
+    "pricing_link": "Prijzen",
+    "privacy_policy": "Privacybeleid",
+    "terms": "Servicevoorwaarden",
+    "contact_email": "hello@verbaspeech.app",
+    "copyright": "© 2026 Verba"
+  },
+  "legal": {
+    "privacy_title": "Privacybeleid",
+    "terms_title": "Servicevoorwaarden",
+    "last_updated": "Laatst bijgewerkt: februari 2026"
+  }
+}

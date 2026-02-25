@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "features": "Funktionen",
+    "privacy": "Datenschutz",
+    "pricing": "Preise",
+    "download": "Kostenlos herunterladen"
+  },
+  "hero": {
+    "headline": "Deine Stimme, sofort getippt. Privat.",
+    "subheadline": "Lokale Spracherkennung für den Mac. Kein Cloud-Dienst. Kein Abo. Kein Account.",
+    "cta_primary": "Kostenlose Testversion laden",
+    "cta_secondary": "Lizenz kaufen",
+    "badge_local": "100% Lokal",
+    "badge_offline": "Offline nutzbar",
+    "badge_no_account": "Kein Account erforderlich",
+    "badge_silicon": "Apple Silicon",
+    "note": "macOS 15+ · Apple Silicon · 50 kostenlose Transkriptionen enthalten"
+  },
+  "demo": {
+    "headline": "Taste drücken. Sprechen. Fertig.",
+    "step_hold": "Fn gedrückt halten",
+    "step_speak": "Natürlich sprechen",
+    "step_done": "Text erscheint sofort"
+  },
+  "privacy_section": {
+    "headline": "Datenschutz by Design.",
+    "subheadline": "Deine Audiodaten bleiben auf deinem Mac. Immer.",
+    "local_storage_title": "Nur lokale Speicherung",
+    "local_storage_desc": "Alle Aufnahmen werden in ~/Library/Application Support/Verba/ gespeichert — auf deinem Mac.",
+    "no_account_title": "Kein Account erforderlich",
+    "no_account_desc": "Herunterladen, starten, sprechen. Keine Registrierung, kein Login, kein Tracking.",
+    "offline_title": "Offline nutzbar",
+    "offline_desc": "Keine Internetverbindung nötig. Alles läuft auf deiner Apple Silicon Hardware.",
+    "quote": "Deine Stimme gehört dir. Wir hören sie nie."
+  },
+  "features": {
+    "headline": "Alles, was du brauchst. Nichts, was du nicht brauchst.",
+    "transcription_title": "Sofortige Transkription",
+    "transcription_desc": "Fn drücken, sprechen, Text erscheint in jeder App.",
+    "languages_title": "99 Sprachen",
+    "languages_desc": "Erkennt deine Sprache automatisch über Whisper Large v3 Turbo.",
+    "push_to_talk_title": "Push-to-Talk",
+    "push_to_talk_desc": "Fn gedrückt halten für schnelle Aufnahmen. Sperrmodus für freihändige Aufnahme.",
+    "history_title": "Aufnahmeverlauf",
+    "history_desc": "Jede Transkription wird lokal mit Zeitstempel und Dauer gespeichert.",
+    "metal_title": "Metal-Beschleunigung",
+    "metal_desc": "Apple Silicon GPU. ~2–3 Sek. für 10 Sek. Audio.",
+    "translation_title": "Übersetzungsmodus",
+    "translation_desc": "In jeder Sprache sprechen, sofort englischen Text erhalten.",
+    "cleanup_title": "Intelligente Bereinigung",
+    "cleanup_desc": "Lokale KI entfernt Füllwörter und korrigiert die Grammatik direkt auf dem Gerät.",
+    "telemetry_title": "Null Telemetrie",
+    "telemetry_desc": "Keine Analysen, keine Absturzberichte. Nichts verlässt deinen Mac."
+  },
+  "pricing": {
+    "headline": "Einmal zahlen. Für immer nutzen.",
+    "subheadline": "Keine Abos. Keine wiederkehrenden Gebühren. Keine versteckten Kosten.",
+    "trial_label": "Kostenlose Testversion",
+    "trial_desc": "50 Transkriptionen enthalten — keine Kreditkarte, kein Ablaufdatum, keine Registrierung",
+    "trial_cta": "Kostenlos herunterladen",
+    "paid_label": "Vollständige Lizenz",
+    "paid_price": "$22",
+    "paid_period": "einmalige Zahlung",
+    "paid_desc": "Unbegrenzte Transkriptionen, 3 Geräte, alle zukünftigen Updates",
+    "paid_cta": "Lizenz kaufen",
+    "guarantee": "30 Tage Geld-zurück-Garantie",
+    "comparison_title": "Warum Verba?",
+    "comparison_others_label": "Andere Apps",
+    "comparison_others_price": "$8–15/month",
+    "comparison_others_cloud": "Audio wird an Server übertragen",
+    "comparison_others_account": "Account erforderlich",
+    "comparison_verba_price": "$22 einmalig",
+    "comparison_verba_cloud": "100% lokal — keine Server",
+    "comparison_verba_account": "Kein Account nötig"
+  },
+  "cleanup": {
+    "headline": "KI-Textbereinigung",
+    "badge": "Experimentell",
+    "subheadline": "Basiert auf einem lokalen Sprachmodell. Kein Cloud-Dienst, keine API-Schlüssel.",
+    "before_label": "Du hast gesagt",
+    "after_label": "Verba hat geschrieben",
+    "before_text": "ähm also ich wollte uh über den den Projektstatus reden und irgendwie müssen wir uh die API bis nächste Woche fertig haben",
+    "after_text": "Ich wollte über den Projektstatus sprechen. Wir müssen die API bis nächste Woche fertigstellen.",
+    "features_title": "Was es macht",
+    "feature_fillers": "Entfernt Füllwörter (um, uh, irgendwie, also)",
+    "feature_grammar": "Korrigiert Grammatik und Zeichensetzung",
+    "feature_lists": "Wandelt gesprochene Aufzählungen in echte Stichpunkte um",
+    "feature_styles": "Stilmodi: Standard, Formell, Locker, Lebhaft",
+    "note": "Erfordert das Herunterladen eines 985 MB großen Modells. Läuft vollständig auf deinem Mac. Niemals online."
+  },
+  "cta_block": {
+    "headline": "Fang an zu sprechen. Hör auf zu tippen.",
+    "button": "Kostenlos herunterladen — 50 Transkriptionen enthalten",
+    "note": "macOS 15+ · Apple Silicon erforderlich · Kein Account nötig"
+  },
+  "footer": {
+    "tagline": "Eine private Spracherkennungs-App für den Mac. Deine Stimme verlässt nie dein Gerät.",
+    "product": "Produkt",
+    "legal": "Rechtliches",
+    "contact_label": "Kontakt",
+    "features_link": "Funktionen",
+    "privacy_link": "Datenschutz",
+    "pricing_link": "Preise",
+    "privacy_policy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "contact_email": "hello@verbaspeech.app",
+    "copyright": "© 2026 Verba"
+  },
+  "legal": {
+    "privacy_title": "Datenschutzerklärung",
+    "terms_title": "Nutzungsbedingungen",
+    "last_updated": "Zuletzt aktualisiert: Februar 2026"
+  }
+}
