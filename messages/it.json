@@ -71,7 +71,10 @@
     "comparison_others_account": "Account required",
     "comparison_verba_price": "$22 once",
     "comparison_verba_cloud": "100% local — no servers",
-    "comparison_verba_account": "No account needed"
+    "comparison_verba_account": "No account needed",
+    "comparison_row_price": "Prezzo",
+    "comparison_row_cloud": "Elaborazione",
+    "comparison_row_account": "Account"
   },
   "cleanup": {
     "headline": "AI Text Cleanup",

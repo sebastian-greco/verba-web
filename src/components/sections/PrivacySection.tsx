@@ -45,13 +45,16 @@ export default function PrivacySection() {
 
           <div className="relative">
             <div className="absolute inset-0 rounded-2xl bg-primary/5 blur-3xl" />
-            <Image
-              src="/images/privacy-visual.jpg"
-              alt="Privacy architecture"
-              width={560}
-              height={420}
-              className="relative rounded-2xl border border-border/50 object-cover w-full"
-            />
+            <div className="relative rounded-2xl border border-border/50 overflow-hidden bg-card aspect-[4/3] min-h-[280px]">
+              <Image
+                src="/images/privacy-visual.jpg"
+                alt="Privacy architecture diagram"
+                fill
+                sizes="(max-width: 1024px) 100vw, 560px"
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
+            </div>
           </div>
         </div>
       </div>

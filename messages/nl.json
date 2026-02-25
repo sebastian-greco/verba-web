@@ -71,7 +71,10 @@
     "comparison_others_account": "Account vereist",
     "comparison_verba_price": "$22 eenmalig",
     "comparison_verba_cloud": "100% lokaal — geen servers",
-    "comparison_verba_account": "Geen account nodig"
+    "comparison_verba_account": "Geen account nodig",
+    "comparison_row_price": "Prijs",
+    "comparison_row_cloud": "Verwerking",
+    "comparison_row_account": "Account"
   },
   "cleanup": {
     "headline": "AI-tekstopschoning",

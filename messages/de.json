@@ -71,7 +71,10 @@
     "comparison_others_account": "Account erforderlich",
     "comparison_verba_price": "$22 einmalig",
     "comparison_verba_cloud": "100% lokal — keine Server",
-    "comparison_verba_account": "Kein Account nötig"
+    "comparison_verba_account": "Kein Account nötig",
+    "comparison_row_price": "Preis",
+    "comparison_row_cloud": "Verarbeitung",
+    "comparison_row_account": "Account"
   },
   "cleanup": {
     "headline": "KI-Textbereinigung",

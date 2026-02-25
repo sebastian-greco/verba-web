@@ -18,7 +18,7 @@ export default function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="py-24">
+    <section id="pricing" className="pt-16 pb-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t('headline')}</h2>
@@ -77,19 +77,19 @@ export default function PricingSection() {
               <span className="text-center text-primary">Verba</span>
             </div>
             {[
-              [t('comparison_others_price'), t('comparison_verba_price')],
-              [t('comparison_others_cloud'), t('comparison_verba_cloud')],
-              [t('comparison_others_account'), t('comparison_verba_account')],
-            ].map(([other, verba], i) => (
+              [t('comparison_row_price'), t('comparison_others_price'), t('comparison_verba_price')],
+              [t('comparison_row_cloud'), t('comparison_others_cloud'), t('comparison_verba_cloud')],
+              [t('comparison_row_account'), t('comparison_others_account'), t('comparison_verba_account')],
+            ].map(([label, other, verba], i) => (
               <div key={i} className="grid grid-cols-3 px-4 py-3 border-b last:border-0 border-border/30 text-sm">
-                <span></span>
-                <div className="flex items-center justify-center gap-1.5 text-muted-foreground">
-                  <X className="w-3.5 h-3.5 text-destructive shrink-0" />
-                  <span className="text-center text-xs">{other}</span>
+                <span className="text-xs font-medium text-muted-foreground/70 flex items-center">{label}</span>
+                <div className="flex items-center justify-center gap-1 text-muted-foreground">
+                  <X className="w-3 h-3 text-destructive shrink-0" />
+                  <span className="text-center text-xs leading-tight">{other}</span>
                 </div>
-                <div className="flex items-center justify-center gap-1.5 text-foreground">
-                  <Check className="w-3.5 h-3.5 text-primary shrink-0" />
-                  <span className="text-center text-xs">{verba}</span>
+                <div className="flex items-center justify-center gap-1 text-foreground">
+                  <Check className="w-3 h-3 text-primary shrink-0" />
+                  <span className="text-center text-xs leading-tight">{verba}</span>
                 </div>
               </div>
             ))}

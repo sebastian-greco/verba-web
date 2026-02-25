@@ -71,7 +71,10 @@
     "comparison_others_account": "Compte obligatoire",
     "comparison_verba_price": "$22 une fois",
     "comparison_verba_cloud": "100% local — aucun serveur",
-    "comparison_verba_account": "Aucun compte nécessaire"
+    "comparison_verba_account": "Aucun compte nécessaire",
+    "comparison_row_price": "Prix",
+    "comparison_row_cloud": "Traitement",
+    "comparison_row_account": "Compte"
   },
   "cleanup": {
     "headline": "Nettoyage de texte par IA",

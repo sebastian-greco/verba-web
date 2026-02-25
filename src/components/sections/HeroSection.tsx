@@ -14,16 +14,16 @@ export default function HeroSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="flex flex-col gap-6">
           <div className="flex flex-wrap gap-2">
-            <Badge variant="outline" className="text-primary border-primary/40 bg-primary/10 text-xs">
+            <Badge variant="outline" className="text-primary border-primary/40 bg-primary/10 text-xs whitespace-nowrap">
               {t('badge_local')}
             </Badge>
-            <Badge variant="outline" className="text-primary border-primary/40 bg-primary/10 text-xs">
+            <Badge variant="outline" className="text-primary border-primary/40 bg-primary/10 text-xs whitespace-nowrap">
               {t('badge_offline')}
             </Badge>
-            <Badge variant="outline" className="text-primary border-primary/40 bg-primary/10 text-xs">
+            <Badge variant="outline" className="text-primary border-primary/40 bg-primary/10 text-xs whitespace-nowrap">
               {t('badge_no_account')}
             </Badge>
-            <Badge variant="outline" className="text-primary border-primary/40 bg-primary/10 text-xs">
+            <Badge variant="outline" className="text-primary border-primary/40 bg-primary/10 text-xs whitespace-nowrap">
               {t('badge_silicon')}
             </Badge>
           </div>
