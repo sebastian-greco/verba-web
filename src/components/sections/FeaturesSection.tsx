@@ -1,51 +1,56 @@
 import { useTranslations } from 'next-intl';
-import { Badge } from '@/components/ui/badge';
-import { Mic, Globe, Keyboard, History, Zap, Languages, Sparkles, ShieldOff } from 'lucide-react';
 
 export default function FeaturesSection() {
   const t = useTranslations('features');
-
+  const tCleanup = useTranslations('cleanup');
+  
   const features = [
-    { icon: Mic, titleKey: 'transcription_title', descKey: 'transcription_desc', experimental: false },
-    { icon: Globe, titleKey: 'languages_title', descKey: 'languages_desc', experimental: false },
-    { icon: Keyboard, titleKey: 'push_to_talk_title', descKey: 'push_to_talk_desc', experimental: false },
-    { icon: History, titleKey: 'history_title', descKey: 'history_desc', experimental: false },
-    { icon: Zap, titleKey: 'metal_title', descKey: 'metal_desc', experimental: false },
-    { icon: Languages, titleKey: 'translation_title', descKey: 'translation_desc', experimental: false },
-    { icon: Sparkles, titleKey: 'cleanup_title', descKey: 'cleanup_desc', experimental: true },
-    { icon: ShieldOff, titleKey: 'telemetry_title', descKey: 'telemetry_desc', experimental: false },
+    { titleKey: 'transcription_title', descKey: 'transcription_desc', experimental: false },
+    { titleKey: 'languages_title', descKey: 'languages_desc', experimental: false },
+    { titleKey: 'push_to_talk_title', descKey: 'push_to_talk_desc', experimental: false },
+    { titleKey: 'history_title', descKey: 'history_desc', experimental: false },
+    { titleKey: 'metal_title', descKey: 'metal_desc', experimental: false },
+    { titleKey: 'translation_title', descKey: 'translation_desc', experimental: false },
+    { titleKey: 'cleanup_title', descKey: 'cleanup_desc', experimental: true },
+    { titleKey: 'telemetry_title', descKey: 'telemetry_desc', experimental: false },
   ] as const;
 
-  const tCleanup = useTranslations('cleanup');
-
   return (
-    <section id="features" className="py-16 bg-card/30">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">{t('headline')}</h2>
+    <section id="features" className="py-24 sm:py-32 border-b border-border bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        <h2 className="text-4xl sm:text-6xl lg:text-7xl font-serif leading-none tracking-tighter mb-16 sm:mb-24">
+          {t('headline')}
+        </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {features.map((feature) => {
-            const Icon = feature.icon;
-            return (
-              <div
-                key={feature.titleKey}
-                className="flex flex-col gap-3 p-5 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-colors"
-              >
-                <div className="flex items-start justify-between">
-                  <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center">
-                    <Icon className="w-5 h-5 text-primary" />
-                  </div>
-                  {feature.experimental && (
-                    <Badge className="text-xs bg-amber-500/15 text-amber-400 border-amber-500/30 hover:bg-amber-500/15">
-                      {tCleanup('badge')}
-                    </Badge>
-                  )}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-border">
+          {features.map((feature, i) => (
+            <div 
+              key={feature.titleKey} 
+              className={`p-6 sm:p-8 flex flex-col justify-between aspect-square relative border-b border-border ${
+                i % 4 !== 3 ? 'lg:border-r' : ''
+              } ${i % 2 === 0 ? 'sm:border-r' : ''}`}
+            >
+              {feature.experimental && (
+                <div className="absolute top-6 right-6 px-2 py-1 bg-primary text-black font-mono text-[10px] uppercase tracking-widest">
+                  {tCleanup('badge')}
                 </div>
-                <p className="font-semibold text-sm">{t(feature.titleKey)}</p>
-                <p className="text-xs text-muted-foreground leading-relaxed">{t(feature.descKey)}</p>
+              )}
+              
+              <div className="font-mono text-2xl text-muted-foreground/30">
+                / 0{i + 1}
               </div>
-            );
-          })}
+
+              <div>
+                <h3 className="font-mono text-lg uppercase tracking-widest mb-4 mt-8">
+                  {t(feature.titleKey as any)}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {t(feature.descKey as any)}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

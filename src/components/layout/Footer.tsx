@@ -1,49 +1,51 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import Image from 'next/image';
 
 export default function Footer() {
   const t = useTranslations('footer');
 
   return (
-    <footer className="border-t border-border/50 bg-card/50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-2">
-              <Image src="/logo.svg" alt="Verba" width={24} height={24} />
-              <span className="font-semibold">Verba</span>
-            </div>
-            <p className="text-sm text-muted-foreground max-w-xs">{t('tagline')}</p>
+    <footer className="bg-black text-white pt-24 sm:pt-48 pb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-16 mb-24">
+          <div className="flex flex-col max-w-sm">
+            <div className="w-12 h-12 bg-primary mb-8" />
+            <h3 className="font-serif text-3xl mb-4 text-foreground">Verba</h3>
+            <p className="font-mono text-sm tracking-widest uppercase text-muted-foreground leading-relaxed">
+              {t('tagline')}
+            </p>
           </div>
 
-          <div className="flex flex-col gap-3">
-            <p className="text-sm font-medium text-foreground">{t('product')}</p>
-            <div className="flex flex-col gap-2">
-              <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <div className="grid grid-cols-2 gap-16 sm:gap-32">
+            <div className="flex flex-col gap-6">
+              <p className="font-mono text-xs tracking-widest uppercase text-primary mb-2">
+                {t('product')}
+              </p>
+              <a href="#features" className="font-mono text-sm tracking-widest uppercase text-muted-foreground hover:text-white transition-none">
                 {t('features_link')}
               </a>
-              <a href="#privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#privacy" className="font-mono text-sm tracking-widest uppercase text-muted-foreground hover:text-white transition-none">
                 {t('privacy_link')}
               </a>
-              <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#pricing" className="font-mono text-sm tracking-widest uppercase text-muted-foreground hover:text-white transition-none">
                 {t('pricing_link')}
               </a>
             </div>
-          </div>
 
-          <div className="flex flex-col gap-3">
-            <p className="text-sm font-medium text-foreground">{t('legal')}</p>
-            <div className="flex flex-col gap-2">
-              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <div className="flex flex-col gap-6">
+              <p className="font-mono text-xs tracking-widest uppercase text-primary mb-2">
+                {t('legal')}
+              </p>
+              <Link href="/privacy" className="font-mono text-sm tracking-widest uppercase text-muted-foreground hover:text-white transition-none">
                 {t('privacy_policy')}
               </Link>
-              <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/terms" className="font-mono text-sm tracking-widest uppercase text-muted-foreground hover:text-white transition-none">
                 {t('terms')}
               </Link>
               <a
                 href={`mailto:${t('contact_email')}`}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="font-mono text-sm tracking-widest uppercase text-muted-foreground hover:text-white transition-none"
               >
                 {t('contact_email')}
               </a>
@@ -51,8 +53,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-border/50">
-          <p className="text-xs text-muted-foreground">{t('copyright')}</p>
+        <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="font-mono text-xs tracking-widest uppercase text-muted-foreground">
+            {t('copyright')}
+          </p>
+          <div className="font-mono text-xs tracking-widest uppercase text-muted-foreground">
+            AESTHETIC: TECHNICAL MONOLITH
+          </div>
         </div>
       </div>
     </footer>

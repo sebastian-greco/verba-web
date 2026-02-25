@@ -1,61 +1,69 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { HardDrive, UserX, WifiOff } from 'lucide-react';
 
 export default function PrivacySection() {
   const t = useTranslations('privacy_section');
 
   const cards = [
-    { icon: HardDrive, title: t('local_storage_title'), desc: t('local_storage_desc') },
-    { icon: UserX, title: t('no_account_title'), desc: t('no_account_desc') },
-    { icon: WifiOff, title: t('offline_title'), desc: t('offline_desc') },
+    { num: 'I', title: t('local_storage_title'), desc: t('local_storage_desc') },
+    { num: 'II', title: t('no_account_title'), desc: t('no_account_desc') },
+    { num: 'III', title: t('offline_title'), desc: t('offline_desc') },
   ];
 
   return (
-    <section id="privacy" className="py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="flex flex-col gap-8">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t('headline')}</h2>
-              <p className="text-lg text-muted-foreground">{t('subheadline')}</p>
-            </div>
+    <section id="privacy" className="py-24 sm:py-32 border-b border-border bg-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        <div className="mb-16 sm:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+          <h2 className="text-5xl sm:text-7xl lg:text-8xl font-serif leading-[0.9] tracking-tighter text-foreground max-w-2xl">
+            {t('headline')}
+          </h2>
+          <p className="text-xl font-mono uppercase tracking-widest text-primary max-w-sm">
+            {t('subheadline')}
+          </p>
+        </div>
 
-            <div className="flex flex-col gap-4">
-              {cards.map((card) => {
-                const Icon = card.icon;
-                return (
-                  <div key={card.title} className="flex gap-4 p-4 rounded-xl bg-card border border-border/50">
-                    <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center shrink-0">
-                      <Icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-sm mb-1">{card.title}</p>
-                      <p className="text-sm text-muted-foreground">{card.desc}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            <blockquote className="border-l-2 border-primary pl-4">
-              <p className="text-lg font-medium text-primary italic">{t('quote')}</p>
-            </blockquote>
-          </div>
-
-          <div className="relative">
-            <div className="absolute inset-0 rounded-2xl bg-primary/5 blur-3xl" />
-            <div className="relative rounded-2xl border border-border/50 overflow-hidden bg-card aspect-[4/3] min-h-[280px]">
-              <Image
-                src="/images/privacy-visual.jpg"
-                alt="Privacy architecture diagram"
-                fill
-                sizes="(max-width: 1024px) 100vw, 560px"
-                className="object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 border border-border">
+          
+          <div className="col-span-1 lg:col-span-6 border-b lg:border-b-0 lg:border-r border-border flex flex-col">
+            {cards.map((card, i) => (
+              <div 
+                key={card.title} 
+                className={`p-8 sm:p-10 flex flex-col sm:flex-row gap-6 sm:gap-12 items-start ${
+                  i !== cards.length - 1 ? 'border-b border-border' : ''
+                }`}
+              >
+                <div className="font-serif text-4xl sm:text-5xl text-muted-foreground shrink-0 w-12">
+                  {card.num}
+                </div>
+                <div>
+                  <h3 className="font-mono text-lg sm:text-xl uppercase tracking-widest mb-4">
+                    {card.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {card.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+            <div className="p-8 sm:p-10 bg-primary text-black flex-grow flex items-center">
+              <p className="text-2xl sm:text-3xl font-serif leading-none tracking-tight">
+                "{t('quote')}"
+              </p>
             </div>
           </div>
+
+          <div className="col-span-1 lg:col-span-6 relative aspect-square lg:aspect-auto bg-card">
+            <Image
+              src="/images/privacy-visual.jpg"
+              alt="Privacy architecture diagram"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center grayscale contrast-125 opacity-80 mix-blend-luminosity"
+            />
+            <div className="absolute inset-0 border border-border/20 m-4 pointer-events-none" />
+          </div>
+
         </div>
       </div>
     </section>

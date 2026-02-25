@@ -3,8 +3,6 @@
 import { useTranslations } from 'next-intl';
 import { usePathname, useRouter, Link } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
@@ -25,15 +23,13 @@ function LocaleSwitcher({ locale }: { locale: string }) {
   const pathname = usePathname();
 
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center gap-3 text-xs font-mono tracking-widest uppercase">
       {routing.locales.map((l) => (
         <button
           key={l}
           onClick={() => router.replace(pathname, { locale: l })}
-          className={`text-xs px-1.5 py-0.5 rounded font-mono transition-colors ${
-            l === locale
-              ? 'text-primary font-bold'
-              : 'text-muted-foreground hover:text-foreground'
+          className={`transition-none hover:text-primary ${
+            l === locale ? 'text-primary' : 'text-muted-foreground'
           }`}
         >
           {localeNames[l]}
@@ -54,59 +50,62 @@ export default function Nav({ locale }: { locale: string }) {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-
-        <Link href="/" className="flex items-center gap-2 shrink-0">
-          <Image src="/logo.svg" alt="Verba" width={28} height={28} />
-          <span className="font-semibold text-foreground">Verba</span>
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background">
+      <div className="mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+        
+        <Link href="/" className="flex items-center gap-3 shrink-0 group">
+          <div className="w-4 h-4 bg-foreground group-hover:bg-primary transition-none" />
+          <span className="font-mono text-sm tracking-widest uppercase font-bold text-foreground">Verba</span>
         </Link>
 
-
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8 font-mono text-xs tracking-widest uppercase">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-primary transition-none"
             >
-              {link.label}
+              [{link.label}]
             </a>
           ))}
         </nav>
 
-
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-6">
           <LocaleSwitcher locale={locale} />
-          <Button asChild size="sm">
-            <a href={DOWNLOAD_URL}>{t('download')}</a>
-          </Button>
+          <a
+            href={DOWNLOAD_URL}
+            className="text-xs font-mono uppercase tracking-widest bg-primary text-black px-4 py-2 hover:bg-white hover:text-black transition-none"
+          >
+            {t('download')}
+          </a>
         </div>
 
-
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex md:hidden items-center gap-4">
           <LocaleSwitcher locale={locale} />
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-5 w-5" />
-              </Button>
+              <button className="text-foreground hover:text-primary transition-none">
+                <Menu className="h-5 w-5" strokeWidth={1.5} />
+              </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-64">
-              <nav className="flex flex-col gap-4 mt-8">
+            <SheetContent side="right" className="w-full sm:w-80 bg-background border-l border-border rounded-none p-6">
+              <nav className="flex flex-col gap-6 mt-12 font-mono text-sm tracking-widest uppercase">
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
-                    className="text-base text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-none"
                     onClick={() => setOpen(false)}
                   >
-                    {link.label}
+                    [{link.label}]
                   </a>
                 ))}
-                <Button asChild className="mt-2">
-                  <a href={DOWNLOAD_URL}>{t('download')}</a>
-                </Button>
+                <a
+                  href={DOWNLOAD_URL}
+                  className="mt-4 text-center bg-primary text-black px-4 py-3 hover:bg-white hover:text-black transition-none"
+                >
+                  {t('download')}
+                </a>
               </nav>
             </SheetContent>
           </Sheet>
