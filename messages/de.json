@@ -7,14 +7,25 @@
   },
   "hero": {
     "headline": "Deine Stimme, sofort getippt. Privat.",
-    "subheadline": "Lokale Spracherkennung für den Mac. Kein Cloud-Dienst. Kein Abo. Kein Account.",
+    "subheadline": "Nahtlos in all deinen Mac-Apps dank KI-Auto-Bearbeitung, eigenen Vokabeln und Textbausteinen. Lokales, privates Speech-to-Text.",
     "cta_primary": "Kostenlose Testversion laden",
     "cta_secondary": "Lizenz kaufen",
     "badge_local": "100% Lokal",
     "badge_offline": "Offline nutzbar",
     "badge_no_account": "Kein Account erforderlich",
     "badge_silicon": "Apple Silicon",
-    "note": "macOS 15+ · Apple Silicon · 50 kostenlose Transkriptionen enthalten"
+    "note": "macOS 15+ · Apple Silicon · 50 kostenlose Transkriptionen enthalten",
+    "headline_part1": "Tippe 4x schneller.",
+    "headline_part2": "Mühelos.",
+    "live_transcription_title": "Live-Transkription",
+    "live_transcription_speaking": "Spricht: ",
+    "live_transcription_text": "\"Hallo Team, kurz zur Besprechung. Wir priorisieren das neue Dashboard für Q3, um das User Engagement zu steigern.\"",
+    "key_features_title": "Hauptfunktionen",
+    "feature_1": "Auto-Korrektur & Snippets",
+    "feature_2": "100% lokale & private Verarbeitung",
+    "feature_3": "Unterstützt über 100 Sprachen",
+    "cta_button": "Kostenlos Starten",
+    "demo_button": "Demo Ansehen"
   },
   "demo": {
     "headline": "Taste drücken. Sprechen. Fertig.",

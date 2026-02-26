@@ -27,14 +27,14 @@ export default function HeroSection() {
             <Mic className="w-6 h-6" strokeWidth={2} />
           </div>
           <h1 className="heading-serif text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.1] text-foreground mb-6">
-            Type 4x Faster. <br />
-            <span className="italic text-primary/80">Effortlessly.</span>
+            {t("headline_part1")} <br />
+            <span className="italic text-primary/80">
+              {t("headline_part2")}
+            </span>
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed font-light">
-            Flow seamlessly across all your Mac apps with AI auto-editing,
-            custom vocabularies, and snippet libraries. Local, private
-            speech-to-text.
+            {t("subheadline")}
           </p>
         </motion.div>
 
@@ -46,7 +46,9 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="glass-panel p-8 sm:p-10 rounded-3xl flex flex-col justify-between group"
           >
-            <h3 className="font-semibold text-lg mb-8">Live Transcription</h3>
+            <h3 className="font-semibold text-lg mb-8">
+              {t("live_transcription_title")}
+            </h3>
 
             <div className="flex items-center gap-4 mb-8">
               <button className="h-12 w-12 shrink-0 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground shadow-sm transition-all duration-300">
@@ -71,10 +73,9 @@ export default function HeroSection() {
 
             <p className="text-sm font-medium text-foreground/80 leading-relaxed bg-foreground/5 p-4 rounded-2xl border border-glass-border">
               <span className="text-muted-foreground font-semibold">
-                Speaking:{" "}
+                {t("live_transcription_speaking")}
               </span>
-              "Hey team, just summarizing the meeting. We are going to
-              prioritize the new dashboard for Q3 to boost user engagement."
+              {t("live_transcription_text")}
             </p>
           </motion.div>
 
@@ -84,32 +85,28 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             className="glass-panel p-8 sm:p-10 rounded-3xl flex flex-col"
           >
-            <h3 className="font-semibold text-lg mb-8">Key Features</h3>
+            <h3 className="font-semibold text-lg mb-8">
+              {t("key_features_title")}
+            </h3>
 
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-4">
                 <div className="p-2 rounded-full bg-blue-500/10 text-blue-500 shrink-0 shadow-sm border border-blue-500/20">
                   <Sparkles className="w-5 h-5" />
                 </div>
-                <span className="text-base font-medium">
-                  Auto-Edits & Snippets
-                </span>
+                <span className="text-base font-medium">{t("feature_1")}</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="p-2 rounded-full bg-primary/10 text-primary shrink-0 shadow-sm border border-primary/20">
                   <Shield className="w-5 h-5" />
                 </div>
-                <span className="text-base font-medium">
-                  100% Local & Private Processing
-                </span>
+                <span className="text-base font-medium">{t("feature_2")}</span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="p-2 rounded-full bg-orange-500/10 text-orange-500 shrink-0 shadow-sm border border-orange-500/20">
                   <Globe className="w-5 h-5" />
                 </div>
-                <span className="text-base font-medium">
-                  Support for 100+ Languages
-                </span>
+                <span className="text-base font-medium">{t("feature_3")}</span>
               </div>
             </div>
           </motion.div>
@@ -127,7 +124,7 @@ export default function HeroSection() {
             size="lg"
             className="rounded-full w-full sm:w-auto h-14 px-10 text-base shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all hover:-translate-y-0.5"
           >
-            <a href={DOWNLOAD_URL}>Get Started for Free</a>
+            <a href={DOWNLOAD_URL}>{t("cta_button")}</a>
           </Button>
           <Button
             asChild
@@ -135,7 +132,7 @@ export default function HeroSection() {
             size="lg"
             className="rounded-full w-full sm:w-auto h-14 px-10 text-base bg-transparent border-glass-border hover:bg-black/5 dark:hover:bg-white/5 transition-all"
           >
-            <a href="#demo">Watch Demo</a>
+            <a href="#demo">{t("demo_button")}</a>
           </Button>
         </motion.div>
       </div>

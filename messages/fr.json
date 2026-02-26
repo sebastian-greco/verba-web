@@ -7,14 +7,25 @@
   },
   "hero": {
     "headline": "Votre voix, saisie instantanément. En toute confidentialité.",
-    "subheadline": "Dictée locale pour Mac. Sans cloud. Sans abonnement. Sans compte.",
+    "subheadline": "Écrivez de manière fluide sur vos applications Mac grâce à l’IA, des vocabulaires personnalisés et des bibliothèques d'extraits. Dictée vocale locale et privée.",
     "cta_primary": "Télécharger la version d'essai",
     "cta_secondary": "Acheter la licence",
     "badge_local": "100% Local",
     "badge_offline": "Fonctionne hors ligne",
     "badge_no_account": "Aucun compte requis",
     "badge_silicon": "Apple Silicon",
-    "note": "macOS 15+ · Apple Silicon · 50 transcriptions gratuites incluses"
+    "note": "macOS 15+ · Apple Silicon · 50 transcriptions gratuites incluses",
+    "headline_part1": "Tapez 4 fois plus vite.",
+    "headline_part2": "Sans effort.",
+    "live_transcription_title": "Transcription en Direct",
+    "live_transcription_speaking": "Parle: ",
+    "live_transcription_text": "\"Salut l'équipe, pour résumer la réunion. Nous allons donner la priorité au tableau de bord pour le T3 afin de stimuler l'engagement.\"",
+    "key_features_title": "Fonctionnalités Clés",
+    "feature_1": "Modifications auto et extraits",
+    "feature_2": "Traitement 100% local et privé",
+    "feature_3": "Support de plus de 100 langues",
+    "cta_button": "Commencer Gratuitement",
+    "demo_button": "Voir la Démo"
   },
   "demo": {
     "headline": "Appuyez sur une touche. Parlez. C'est fait.",

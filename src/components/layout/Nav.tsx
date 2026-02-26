@@ -5,7 +5,13 @@ import { usePathname, useRouter, Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Menu, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -26,21 +32,35 @@ function LocaleSwitcher({ locale }: { locale: string }) {
   const pathname = usePathname();
 
   return (
-    <div className="flex items-center gap-1">
-      {routing.locales.map((l) => (
-        <button
-          key={l}
-          onClick={() => router.replace(pathname, { locale: l })}
-          className={`text-xs px-2 py-1 rounded-full font-medium transition-all duration-300 ${
-            l === locale
-              ? "bg-primary/10 text-primary"
-              : "text-muted-foreground hover:bg-black/5 hover:text-foreground dark:hover:bg-white/5"
-          }`}
+    <DropdownMenu modal={false}>
+      <DropdownMenuTrigger asChild>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="h-8 gap-1 text-xs px-2 font-medium text-muted-foreground hover:text-foreground rounded-full"
         >
-          {localeNames[l]}
-        </button>
-      ))}
-    </div>
+          {localeNames[locale]} <ChevronDown className="w-3 h-3 opacity-50" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent
+        align="end"
+        className="min-w-[80px] bg-background/90 backdrop-blur-xl border-glass-border"
+      >
+        {routing.locales.map((l) => (
+          <DropdownMenuItem
+            key={l}
+            onClick={() => router.replace(pathname, { locale: l })}
+            className={`text-xs cursor-pointer ${
+              l === locale
+                ? "bg-primary/10 text-primary font-semibold"
+                : "text-muted-foreground"
+            }`}
+          >
+            {localeNames[l]}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
 
@@ -59,9 +79,9 @@ export default function Nav({ locale }: { locale: string }) {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-4 left-0 right-0 z-50 flex justify-center w-full px-4 md:px-6 pointer-events-none"
+      className="fixed top-6 left-0 right-0 z-50 flex justify-center w-full px-4 md:px-6 pointer-events-none"
     >
-      <div className="flex items-center w-full max-w-5xl justify-between h-14 px-6 bg-white/40 dark:bg-black/40 backdrop-blur-xl border border-glass-border shadow-sm shadow-black/5 rounded-full pointer-events-auto transition-all">
+      <div className="flex items-center w-full max-w-4xl justify-between h-14 px-6 md:px-8 bg-white/60 dark:bg-black/40 backdrop-blur-2xl border border-white/40 shadow-lg shadow-black/5 rounded-full pointer-events-auto transition-all">
         <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
           <Image
             src="/logo.svg"
@@ -70,7 +90,7 @@ export default function Nav({ locale }: { locale: string }) {
             height={24}
             className="group-hover:opacity-80 transition-opacity"
           />
-          <span className="font-medium text-foreground tracking-tight text-lg">
+          <span className="font-semibold text-foreground tracking-tight text-lg">
             Verba
           </span>
         </Link>

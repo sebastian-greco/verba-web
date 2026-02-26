@@ -5,35 +5,60 @@ import { motion, useScroll, useTransform } from "framer-motion";
 export default function BackgroundBlobs() {
   const { scrollY } = useScroll();
 
-  // Parallax effects
-  const y1 = useTransform(scrollY, [0, 2000], [0, 400]);
-  const y2 = useTransform(scrollY, [0, 2000], [0, -300]);
-  const y3 = useTransform(scrollY, [0, 2000], [0, 250]);
+  // Gentle, slower parallax to prevent clunky jumps during scroll.
+  // Using very small movement ranges for fluid effect.
+  const y1 = useTransform(scrollY, [0, 2000], [0, 100]);
+  const y2 = useTransform(scrollY, [0, 2000], [0, -120]);
+  const y3 = useTransform(scrollY, [0, 2000], [0, 80]);
 
   return (
-    <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-[#F7F9FC]">
-      {/* Top Right Cyan Shape */}
+    <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-[#F8FAFC]">
+      {/* Top Right Cyan Blob */}
       <motion.div
         style={{ y: y1 }}
-        className="absolute top-[-20%] right-[-5%] w-[100vw] h-[100vw] max-w-[1200px] max-h-[1200px] rounded-[48%_52%_41%_59%/46%_43%_57%_54%] bg-gradient-to-tr from-[#E3F2FD] to-[#cbf0ff] opacity-100 mix-blend-multiply"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 150, repeat: Infinity, ease: "linear" }}
+        animate={{
+          rotate: [0, 8, -8, 0],
+          borderRadius: [
+            "40% 60% 70% 30% / 40% 50% 60% 50%",
+            "60% 40% 30% 70% / 60% 30% 70% 40%",
+            "50% 50% 60% 40% / 50% 60% 40% 50%",
+            "40% 60% 70% 30% / 40% 50% 60% 50%",
+          ],
+        }}
+        transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-[-30%] right-[-10%] w-[120vw] h-[120vw] max-w-[1400px] max-h-[1400px] bg-gradient-to-tr from-[#7dd3fc] via-[#bae6fd] to-[#f0f9ff] opacity-40 mix-blend-multiply"
       />
 
-      {/* Left Purple/Lavender Shape */}
+      {/* Left Purple Blob */}
       <motion.div
         style={{ y: y2 }}
-        className="absolute top-[0%] left-[-20%] w-[90vw] h-[90vw] max-w-[1000px] max-h-[1000px] rounded-[55%_45%_51%_49%/50%_53%_47%_50%] bg-gradient-to-b from-[#F3E5F5] to-[#e6dbf5] opacity-100 mix-blend-multiply"
-        animate={{ rotate: -360 }}
-        transition={{ duration: 180, repeat: Infinity, ease: "linear" }}
+        animate={{
+          rotate: [0, -10, 5, 0],
+          borderRadius: [
+            "55% 45% 50% 50% / 50% 55% 45% 50%",
+            "45% 55% 60% 40% / 40% 50% 60% 55%",
+            "60% 40% 40% 60% / 60% 40% 50% 50%",
+            "55% 45% 50% 50% / 50% 55% 45% 50%",
+          ],
+        }}
+        transition={{ duration: 32, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-[-10%] left-[-25%] w-[110vw] h-[110vw] max-w-[1300px] max-h-[1300px] bg-gradient-to-b from-[#d8b4fe] via-[#e9d5ff] to-[#faf5ff] opacity-40 mix-blend-multiply"
       />
 
-      {/* Bottom Right Peach/Orange Shape */}
+      {/* Bottom Right Peach Blob */}
       <motion.div
         style={{ y: y3 }}
-        className="absolute bottom-[-20%] right-[0%] w-[80vw] h-[80vw] max-w-[900px] max-h-[900px] rounded-[41%_59%_37%_63%/57%_43%_57%_43%] bg-gradient-to-tl from-[#FFF3E0] to-[#ffead2] opacity-100 mix-blend-multiply"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 160, repeat: Infinity, ease: "linear" }}
+        animate={{
+          rotate: [0, 5, -5, 0],
+          borderRadius: [
+            "50% 50% 60% 40% / 50% 50% 40% 60%",
+            "40% 60% 50% 50% / 60% 40% 50% 50%",
+            "60% 40% 40% 60% / 40% 60% 60% 40%",
+            "50% 50% 60% 40% / 50% 50% 40% 60%",
+          ],
+        }}
+        transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-[-30%] right-[0%] w-[100vw] h-[100vw] max-w-[1100px] max-h-[1100px] bg-gradient-to-tl from-[#fdba74] via-[#fed7aa] to-[#fff7ed] opacity-40 mix-blend-multiply"
       />
     </div>
   );

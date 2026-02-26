@@ -7,14 +7,25 @@
   },
   "hero": {
     "headline": "Your voice, typed instantly. Privately.",
-    "subheadline": "Local speech-to-text for Mac. No cloud. No subscription. No account.",
+    "subheadline": "Flow seamlessly across all your Mac apps with AI auto-editing, custom vocabularies, and snippet libraries. Local, private speech-to-text.",
     "cta_primary": "Download Free Trial",
     "cta_secondary": "Buy License",
     "badge_local": "100% Local",
     "badge_offline": "Works Offline",
     "badge_no_account": "No Account Required",
     "badge_silicon": "Apple Silicon",
-    "note": "macOS 15+ · Apple Silicon · 50 free transcriptions included"
+    "note": "macOS 15+ · Apple Silicon · 50 free transcriptions included",
+    "headline_part1": "Type 4x Faster.",
+    "headline_part2": "Effortlessly.",
+    "live_transcription_title": "Live Transcription",
+    "live_transcription_speaking": "Speaking: ",
+    "live_transcription_text": "\"Hey team, just summarizing the meeting. We are going to prioritize the new dashboard for Q3 to boost user engagement.\"",
+    "key_features_title": "Key Features",
+    "feature_1": "Auto-Edits & Snippets",
+    "feature_2": "100% Local & Private Processing",
+    "feature_3": "Support for 100+ Languages",
+    "cta_button": "Get Started for Free",
+    "demo_button": "Watch Demo"
   },
   "demo": {
     "headline": "Press a key. Speak. Done.",

@@ -7,14 +7,25 @@
   },
   "hero": {
     "headline": "Jouw stem, direct getypt. Privé.",
-    "subheadline": "Lokale spraakherkenning voor Mac. Geen cloud. Geen abonnement. Geen account.",
+    "subheadline": "Naadloos in al je Mac-apps met AI-autocorrectie, eigen vocabulaire en teksten. Lokale, veilige speech-to-text.",
     "cta_primary": "Gratis proefversie downloaden",
     "cta_secondary": "Licentie kopen",
     "badge_local": "100% Lokaal",
     "badge_offline": "Werkt offline",
     "badge_no_account": "Geen account vereist",
     "badge_silicon": "Apple Silicon",
-    "note": "macOS 15+ · Apple Silicon · 50 gratis transcripties inbegrepen"
+    "note": "macOS 15+ · Apple Silicon · 50 gratis transcripties inbegrepen",
+    "headline_part1": "Typ 4x sneller.",
+    "headline_part2": "Moeiteloos.",
+    "live_transcription_title": "Live Transcriptie",
+    "live_transcription_speaking": "Spreekt: ",
+    "live_transcription_text": "\"Hoi team, even samenvattend: we geven prioriteit aan het nieuwe dashboard voor Q3 voor betere user engagement.\"",
+    "key_features_title": "Belangrijkste Functies",
+    "feature_1": "Autocorrectie & Snippets",
+    "feature_2": "100% Lokale & Privé Verwerking",
+    "feature_3": "Ondersteuning voor 100+ Talen",
+    "cta_button": "Waanzinnig Gratis",
+    "demo_button": "Bekijk de Demo"
   },
   "demo": {
     "headline": "Druk op een toets. Spreek. Klaar.",
