@@ -59,18 +59,18 @@ export default function Nav({ locale }: { locale: string }) {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 flex justify-center bg-white/30 dark:bg-black/30 backdrop-blur-xl border-b border-glass-border shadow-sm shadow-black/5"
+      className="fixed top-4 left-0 right-0 z-50 flex justify-center w-full px-4 md:px-6 pointer-events-none"
     >
-      <div className="flex items-center w-full max-w-5xl justify-between h-16 px-6 sm:px-8">
-        <Link href="/" className="flex items-center gap-3 shrink-0 group">
+      <div className="flex items-center w-full max-w-5xl justify-between h-14 px-6 bg-white/40 dark:bg-black/40 backdrop-blur-xl border border-glass-border shadow-sm shadow-black/5 rounded-full pointer-events-auto transition-all">
+        <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
           <Image
             src="/logo.svg"
             alt="Verba logo"
-            width={28}
-            height={28}
+            width={24}
+            height={24}
             className="group-hover:opacity-80 transition-opacity"
           />
-          <span className="font-medium text-foreground tracking-tight text-xl">
+          <span className="font-medium text-foreground tracking-tight text-lg">
             Verba
           </span>
         </Link>
