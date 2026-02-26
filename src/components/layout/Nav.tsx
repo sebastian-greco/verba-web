@@ -59,9 +59,9 @@ export default function Nav({ locale }: { locale: string }) {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 px-6 sm:px-10 h-20 flex items-center justify-between pointer-events-none"
+      className="fixed top-0 left-0 right-0 z-50 flex justify-center bg-white/30 dark:bg-black/30 backdrop-blur-xl border-b border-glass-border shadow-sm shadow-black/5"
     >
-      <div className="flex items-center w-full justify-between pointer-events-auto">
+      <div className="flex items-center w-full max-w-5xl justify-between h-16 px-6 sm:px-8">
         <Link href="/" className="flex items-center gap-3 shrink-0 group">
           <Image
             src="/logo.svg"

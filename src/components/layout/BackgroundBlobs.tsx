@@ -11,35 +11,29 @@ export default function BackgroundBlobs() {
   const y3 = useTransform(scrollY, [0, 2000], [0, 250]);
 
   return (
-    <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-      {/* A distinct background color layer in case globals.css gets overridden */}
-      <div className="absolute inset-0 bg-background" />
-
-      {/* Parallax Blobs */}
+    <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-[#F7F9FC]">
+      {/* Top Right Blue Shape */}
       <motion.div
         style={{ y: y1 }}
-        animate={{ rotate: 360, x: [0, 50, 0] }}
-        transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
-        className="absolute top-[-20%] left-[-10%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] rounded-full bg-primary/20 mix-blend-multiply blur-[120px] opacity-80"
-      />
-      <motion.div
-        style={{ y: y2 }}
-        className="absolute top-[10%] right-[-10%] w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] rounded-full bg-secondary/30 mix-blend-multiply blur-[120px] opacity-70"
-      />
-      <motion.div
-        style={{ y: y3 }}
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-[-20%] left-[10%] w-[55vw] h-[55vw] max-w-[750px] max-h-[750px] rounded-full bg-accent/20 mix-blend-multiply blur-[120px] opacity-80"
+        className="absolute top-[-30%] right-[-10%] w-[120vw] h-[120vw] max-w-[1400px] max-h-[1400px] rounded-[45%] bg-gradient-to-tr from-[#bae6fd] to-[#e0f2fe] opacity-80 blur-[80px]"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
       />
 
-      {/* Ambient Pulsing Glow */}
+      {/* Left Purple Shape */}
       <motion.div
-        animate={{
-          opacity: [0.1, 0.3, 0.1],
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[30%] left-[30%] w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] rounded-full bg-blue-300/20 mix-blend-multiply blur-[140px] pointer-events-none"
+        style={{ y: y2 }}
+        className="absolute top-[-10%] left-[-30%] w-[100vw] h-[100vw] max-w-[1200px] max-h-[1200px] rounded-[40%] bg-gradient-to-b from-[#e9d5ff] to-[#f3e8ff] opacity-80 blur-[80px]"
+        animate={{ rotate: -360 }}
+        transition={{ duration: 150, repeat: Infinity, ease: "linear" }}
+      />
+
+      {/* Bottom Right Peach Shape */}
+      <motion.div
+        style={{ y: y3 }}
+        className="absolute bottom-[-30%] right-[-10%] w-[90vw] h-[90vw] max-w-[1000px] max-h-[1000px] rounded-[50%] bg-gradient-to-tl from-[#fed7aa] to-[#ffedd5] opacity-80 blur-[60px]"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 180, repeat: Infinity, ease: "linear" }}
       />
     </div>
   );
