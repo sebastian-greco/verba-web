@@ -149,15 +149,15 @@ function BackgroundWaveform() {
       className="absolute inset-0 rounded-3xl overflow-hidden flex items-center justify-center gap-[3px] opacity-[0.10] pointer-events-none z-0 py-2"
       style={{
         maskImage:
-          "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+          "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
         WebkitMaskImage:
-          "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+          "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
       }}
     >
       {WAVE_DATA.map((data) => (
         <motion.div
           key={data.id}
-          className="w-1.5 bg-primary/60 rounded-full"
+          className="w-1 shrink-0 bg-primary/60 rounded-full "
           animate={{ height: data.heights }}
           transition={{
             duration: data.duration,
