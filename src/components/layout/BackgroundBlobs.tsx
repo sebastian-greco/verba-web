@@ -24,7 +24,7 @@ export default function BackgroundBlobs() {
           ],
         }}
         transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[-30%] right-[-10%] w-[120vw] h-[120vw] max-w-[1400px] max-h-[1400px] bg-accent opacity-[0.15] mix-blend-multiply dark:opacity-[0.05] filter blur-[80px]"
+        className="absolute top-[-30%] right-[-10%] w-[120vw] h-[120vw] max-w-[1400px] max-h-[1400px] bg-accent opacity-[0.15] mix-blend-multiply dark:opacity-[0.05]"
       />
 
       {/* Left Highlight/Mint Blob */}
@@ -40,7 +40,7 @@ export default function BackgroundBlobs() {
           ],
         }}
         transition={{ duration: 32, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[-10%] left-[-25%] w-[110vw] h-[110vw] max-w-[1300px] max-h-[1300px] bg-highlight opacity-[0.15] mix-blend-multiply dark:opacity-[0.05] filter blur-[80px]"
+        className="absolute top-[-10%] left-[-25%] w-[110vw] h-[110vw] max-w-[1300px] max-h-[1300px] bg-highlight opacity-[0.15] mix-blend-multiply dark:opacity-[0.05]"
       />
 
       {/* Bottom Right Primary/Green Blob */}
@@ -56,7 +56,7 @@ export default function BackgroundBlobs() {
           ],
         }}
         transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-[-30%] right-[0%] w-[100vw] h-[100vw] max-w-[1100px] max-h-[1100px] bg-primary opacity-[0.1] mix-blend-multiply dark:opacity-[0.05] filter blur-[80px]"
+        className="absolute bottom-[-30%] right-[0%] w-[100vw] h-[100vw] max-w-[1100px] max-h-[1100px] bg-primary opacity-[0.1] mix-blend-multiply dark:opacity-[0.05]"
       />
     </div>
   );
