@@ -1,51 +1,139 @@
-import { useTranslations } from 'next-intl';
-import { Badge } from '@/components/ui/badge';
-import { Check } from 'lucide-react';
+"use client";
+
+import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function CleanupSection() {
-  const t = useTranslations('cleanup');
-
-  const cleanupFeatures = [
-    t('feature_fillers'),
-    t('feature_grammar'),
-    t('feature_lists'),
-    t('feature_styles'),
-  ];
+  const t = useTranslations("cleanup");
+  const [isClean, setIsClean] = useState(true);
 
   return (
-    <section className="py-24 bg-card/30">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <h2 className="text-3xl sm:text-4xl font-bold">{t('headline')}</h2>
-            <Badge className="bg-amber-500/15 text-amber-400 border-amber-500/30 hover:bg-amber-500/15">
-              {t('badge')}
-            </Badge>
+    <section className="py-40 bg-background overflow-hidden relative">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-24">
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="md:w-1/2"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 text-accent text-[10px] font-black uppercase tracking-widest rounded-lg mb-10">
+            <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+            {t("headline")}
           </div>
-          <p className="text-lg text-muted-foreground">{t('subheadline')}</p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-          <div className="p-5 rounded-2xl bg-card border border-border/50">
-            <p className="text-xs font-mono text-muted-foreground mb-3 uppercase tracking-wider">{t('before_label')}</p>
-            <p className="text-sm leading-relaxed text-muted-foreground italic">{t('before_text')}</p>
-          </div>
-          <div className="p-5 rounded-2xl bg-primary/5 border border-primary/20">
-            <p className="text-xs font-mono text-primary mb-3 uppercase tracking-wider">{t('after_label')}</p>
-            <p className="text-sm leading-relaxed">{t('after_text')}</p>
-          </div>
-        </div>
+          <h2 className="text-5xl md:text-6xl font-black mb-10 text-primary leading-[1.15] font-serif">
+            Polished text, <br />
+            <span className="italic font-normal">without the filler.</span>
+          </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
-          {cleanupFeatures.map((feature) => (
-            <div key={feature} className="flex gap-2 text-sm text-muted-foreground">
-              <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-              <span>{feature}</span>
+          <p className="text-xl text-muted-foreground serif-body mb-12 leading-relaxed font-serif">
+            Verba's local AI intelligently removes "ums" and "uhs", fixes your
+            grammar, and structures your stream of consciousness into
+            professional prose.
+          </p>
+
+          <div className="space-y-8">
+            <div className="flex items-center gap-5">
+              <div className="w-12 h-12 rounded-full bg-highlight/10 flex items-center justify-center text-highlight shrink-0">
+                <span className="material-symbols-outlined text-2xl">
+                  check_circle
+                </span>
+              </div>
+              <span className="font-bold text-lg text-primary serif-body font-serif">
+                {t("feature_fillers")}
+              </span>
             </div>
-          ))}
-        </div>
+            <div className="flex items-center gap-5">
+              <div className="w-12 h-12 rounded-full bg-highlight/10 flex items-center justify-center text-highlight shrink-0">
+                <span className="material-symbols-outlined text-2xl">
+                  check_circle
+                </span>
+              </div>
+              <span className="font-bold text-lg text-primary serif-body font-serif">
+                {t("feature_grammar")}
+              </span>
+            </div>
+          </div>
+        </motion.div>
 
-        <p className="text-xs text-muted-foreground font-mono text-center">{t('note')}</p>
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="md:w-1/2 w-full"
+        >
+          <div className="bg-card rounded-[40px] p-10 soft-shadow border border-border">
+            <div className="flex items-center justify-between mb-12">
+              <span className="text-xs font-bold text-muted-foreground tracking-widest uppercase">
+                Visual Transformation
+              </span>
+              <div className="flex items-center gap-3">
+                <span className="text-xs font-bold text-muted-foreground">
+                  Clean Mode
+                </span>
+                <div
+                  className={`tactile-toggle ${isClean ? "active" : ""}`}
+                  onClick={() => setIsClean(!isClean)}
+                ></div>
+              </div>
+            </div>
+
+            <div className="space-y-12">
+              <div className="relative">
+                <div className="absolute -left-6 top-0 bottom-0 w-1 bg-red-200/50 rounded-full"></div>
+                <div
+                  className={
+                    isClean ? "blur-filter" : "transition-all duration-500"
+                  }
+                >
+                  <p className="text-lg text-muted-foreground serif-body italic leading-relaxed font-serif">
+                    "So, um, I was thinking like, basically we should probably
+                    launch the feature, uh, next Tuesday? No wait, let's go with
+                    Wednesday because of the holiday."
+                  </p>
+                </div>
+                <div className="mt-3 text-[10px] font-black text-red-300 uppercase tracking-widest">
+                  {t("before_label")}
+                </div>
+              </div>
+
+              <div className="relative">
+                <div
+                  className={`absolute -left-6 top-0 bottom-0 w-1 rounded-full transition-colors duration-500 ${isClean ? "bg-highlight" : "bg-highlight/30"}`}
+                ></div>
+                <div
+                  className={
+                    !isClean ? "blur-filter" : "transition-all duration-500"
+                  }
+                >
+                  <p className="text-2xl text-primary font-black leading-relaxed serif-body font-serif">
+                    "We should launch the feature next Wednesday to account for
+                    the holiday."
+                  </p>
+                </div>
+                <div
+                  className={`mt-3 text-[10px] font-black uppercase tracking-widest transition-colors duration-500 ${isClean ? "text-highlight" : "text-highlight/50"}`}
+                >
+                  {t("after_label")}
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-14 pt-8 border-t border-muted flex items-center justify-between">
+              <div
+                className={`flex items-center gap-2 transition-colors duration-500 ${isClean ? "text-highlight" : "text-muted-foreground"}`}
+              >
+                <span className="material-symbols-outlined text-sm">
+                  auto_awesome
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-widest">
+                  Smart Cleanup {isClean ? "Active" : "Inactive"}
+                </span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

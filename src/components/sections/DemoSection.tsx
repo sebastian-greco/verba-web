@@ -1,91 +1,120 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Keyboard, Mic, CheckCircle } from "lucide-react";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function DemoSection() {
   const t = useTranslations("demo");
 
-  const steps = [
-    { icon: Keyboard, label: t("step_hold") },
-    { icon: Mic, label: t("step_speak") },
-    { icon: CheckCircle, label: t("step_done") },
-  ];
-
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 },
-    },
-  };
-
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
   return (
-    <section id="demo" className="py-32 relative overflow-hidden">
-      {/* Soft Background Tint */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
-
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
+    <section className="py-40 bg-muted relative">
+      <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-24"
         >
-          <h2 className="heading-serif text-4xl sm:text-5xl font-medium tracking-tight text-foreground">
-            {t("headline")}
+          <h2 className="text-5xl md:text-6xl font-black text-primary mb-6 font-serif">
+            How it Works
           </h2>
+          <div className="w-24 h-1.5 bg-accent mx-auto rounded-full"></div>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-2"
-        >
-          {steps.map((step, i) => {
-            const Icon = step.icon;
-            return (
-              <motion.div
-                key={i}
-                variants={itemVariants}
-                className="flex flex-col sm:flex-row items-center relative group"
-              >
-                <div className="glass-panel w-56 h-48 flex flex-col items-center justify-center gap-5 transition-transform duration-500 hover:-translate-y-2 hover:shadow-xl">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-500">
-                    <Icon className="w-7 h-7" strokeWidth={1.5} />
-                  </div>
-                  <p className="text-base font-medium text-foreground tracking-tight">
-                    {step.label}
-                  </p>
-                </div>
+        <div className="relative flex flex-col md:flex-row justify-between items-center gap-16">
+          <svg
+            className="absolute top-1/2 left-0 w-full h-12 hidden md:block -translate-y-1/2 z-0 overflow-visible"
+            viewBox="0 0 1000 50"
+          >
+            <path
+              className="organic-path"
+              d="M150,25 Q300,5 450,25 T750,25"
+              fill="none"
+              strokeWidth="2"
+            ></path>
+          </svg>
 
-                {i < steps.length - 1 && (
-                  <div className="hidden sm:flex w-12 items-center justify-center opacity-30 px-2">
-                    <div className="w-full h-px bg-foreground" />
-                  </div>
-                )}
-                {i < steps.length - 1 && (
-                  <div className="sm:hidden h-12 flex items-center justify-center opacity-30 py-2">
-                    <div className="h-full w-px bg-foreground" />
-                  </div>
-                )}
-              </motion.div>
-            );
-          })}
-        </motion.div>
+          {/* Step 1 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="relative z-10 flex-1 flex flex-col items-center text-center group"
+          >
+            <div className="w-40 h-40 organic-shape bg-card flex items-center justify-center mb-10 soft-shadow border border-border transition-transform group-hover:scale-105">
+              <span className="material-symbols-outlined text-4xl text-primary">
+                keyboard_command_key
+              </span>
+            </div>
+            <div className="mb-4 px-3 py-1 rounded-full bg-highlight/20 text-highlight text-[10px] font-black tracking-widest">
+              STEP 01
+            </div>
+            <h3 className="text-3xl font-bold text-primary mb-5 font-serif">
+              {t("step_hold")}
+            </h3>
+            <p className="text-muted-foreground serif-body leading-relaxed max-w-[240px] font-serif">
+              Tap a key to wake Verba. The transcription overlay appears
+              instantly.
+            </p>
+          </motion.div>
+
+          {/* Step 2 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative z-10 flex-1 flex flex-col items-center text-center group"
+          >
+            <div
+              className="w-48 h-48 organic-shape bg-card flex items-center justify-center mb-10 soft-shadow border border-border transition-transform group-hover:scale-105"
+              style={{ borderRadius: "40% 60% 30% 70% / 50% 40% 60% 50%" }}
+            >
+              <span className="material-symbols-outlined text-5xl text-accent">
+                mic
+              </span>
+            </div>
+            <div className="mb-4 px-3 py-1 rounded-full bg-highlight/20 text-highlight text-[10px] font-black tracking-widest">
+              STEP 02
+            </div>
+            <h3 className="text-3xl font-bold text-primary mb-5 font-serif">
+              {t("step_speak")}
+            </h3>
+            <p className="text-muted-foreground serif-body leading-relaxed max-w-[240px] font-serif">
+              No need for robot voice. Whisper captures every nuance with
+              precision.
+            </p>
+          </motion.div>
+
+          {/* Step 3 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="relative z-10 flex-1 flex flex-col items-center text-center group"
+          >
+            <div
+              className="w-40 h-40 organic-shape bg-card flex items-center justify-center mb-10 soft-shadow border border-border transition-transform group-hover:scale-105"
+              style={{ borderRadius: "70% 30% 50% 50% / 30% 60% 40% 70%" }}
+            >
+              <span className="material-symbols-outlined text-4xl text-highlight">
+                auto_fix_high
+              </span>
+            </div>
+            <div className="mb-4 px-3 py-1 rounded-full bg-highlight/20 text-highlight text-[10px] font-black tracking-widest">
+              STEP 03
+            </div>
+            <h3 className="text-3xl font-bold text-primary mb-5 font-serif">
+              {t("step_done")}
+            </h3>
+            <p className="text-muted-foreground serif-body leading-relaxed max-w-[240px] font-serif">
+              Let go of the key and watch as your words are typed perfectly.
+            </p>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

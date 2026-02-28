@@ -2,139 +2,110 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Play, Sparkles, Shield, Globe, Mic } from "lucide-react";
-
-const DOWNLOAD_URL = "https://verbaspeech.app/download";
+import { Mic } from "lucide-react";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
 
   return (
-    <section
-      id="hero"
-      className="relative min-h-[95vh] pt-32 pb-20 flex flex-col justify-center items-center overflow-hidden"
-    >
-      <div className="relative z-10 max-w-5xl mx-auto px-6 w-full flex flex-col items-center">
-        {/* Top Typography */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center max-w-3xl mb-16 flex flex-col items-center"
-        >
-          <div className="bg-primary/10 p-3 rounded-full mb-8 shadow-sm text-primary">
-            <Mic className="w-6 h-6" strokeWidth={2} />
-          </div>
-          <h1 className="heading-serif text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.1] text-foreground mb-6">
-            {t("headline_part1")} <br />
-            <span className="italic text-primary/80">
-              {t("headline_part2")}
-            </span>
-          </h1>
-
-          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed font-light">
-            {t("subheadline")}
-          </p>
-        </motion.div>
-
-        {/* Two Glass Panels */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mb-12">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="glass-panel p-8 sm:p-10 rounded-3xl flex flex-col justify-between group"
-          >
-            <h3 className="font-semibold text-lg mb-8">
-              {t("live_transcription_title")}
-            </h3>
-
-            <div className="flex items-center gap-4 mb-8">
-              <button className="h-12 w-12 shrink-0 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground shadow-sm transition-all duration-300">
-                <Play className="w-5 h-5 ml-1" fill="currentColor" />
-              </button>
-              <div className="flex items-center gap-[3px] h-10 w-full opacity-60">
-                {[...Array(24)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    animate={{ height: ["20%", "100%", "20%"] }}
-                    transition={{
-                      repeat: Infinity,
-                      duration: 1.5,
-                      delay: i * 0.05,
-                      ease: "easeInOut",
-                    }}
-                    className="w-1.5 rounded-full bg-primary/60"
-                  />
-                ))}
-              </div>
-            </div>
-
-            <p className="text-sm font-medium text-foreground/80 leading-relaxed bg-foreground/5 p-4 rounded-2xl border border-glass-border">
-              <span className="text-muted-foreground font-semibold">
-                {t("live_transcription_speaking")}
-              </span>
-              {t("live_transcription_text")}
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            className="glass-panel p-8 sm:p-10 rounded-3xl flex flex-col"
-          >
-            <h3 className="font-semibold text-lg mb-8">
-              {t("key_features_title")}
-            </h3>
-
-            <div className="flex flex-col gap-6">
-              <div className="flex items-center gap-4">
-                <div className="p-2 rounded-full bg-blue-500/10 text-blue-500 shrink-0 shadow-sm border border-blue-500/20">
-                  <Sparkles className="w-5 h-5" />
-                </div>
-                <span className="text-base font-medium">{t("feature_1")}</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="p-2 rounded-full bg-primary/10 text-primary shrink-0 shadow-sm border border-primary/20">
-                  <Shield className="w-5 h-5" />
-                </div>
-                <span className="text-base font-medium">{t("feature_2")}</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="p-2 rounded-full bg-orange-500/10 text-orange-500 shrink-0 shadow-sm border border-orange-500/20">
-                  <Globe className="w-5 h-5" />
-                </div>
-                <span className="text-base font-medium">{t("feature_3")}</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Buttons */}
+    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 py-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full"
+          transition={{ duration: 0.8 }}
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-highlight/10 text-highlight text-xs font-bold mb-10 border border-highlight/20"
         >
-          <Button
-            asChild
-            size="lg"
-            className="rounded-full w-full sm:w-auto h-14 px-10 text-base shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all hover:-translate-y-0.5"
-          >
-            <a href={DOWNLOAD_URL}>{t("cta_button")}</a>
-          </Button>
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="rounded-full w-full sm:w-auto h-14 px-10 text-base bg-transparent border-glass-border hover:bg-black/5 dark:hover:bg-white/5 transition-all"
-          >
-            <a href="#demo">{t("demo_button")}</a>
-          </Button>
+          <span className="w-2 h-2 rounded-full bg-highlight animate-pulse"></span>
+          Ready for your next idea
         </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="text-6xl md:text-8xl font-black mb-12 text-primary leading-[1.1] font-serif"
+        >
+          Your voice, <br />
+          <span className="text-accent italic">typed instantly.</span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-16 serif-body leading-relaxed font-serif"
+        >
+          Write emails, documents, and messages just by speaking. Private, fast,
+          and stays entirely on your Mac.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-28"
+        >
+          <a
+            className="btn-warm px-10 py-5 rounded-full font-bold text-lg flex items-center gap-3"
+            href="https://verbaspeech.app/download"
+          >
+            <span className="material-symbols-outlined shrink-0 text-xl font-medium">
+              download
+            </span>
+            {t("cta_primary")}
+          </a>
+          <a
+            className="px-10 py-5 rounded-full font-bold text-lg text-primary bg-white border border-border hover:bg-muted transition-all"
+            href="https://verbaspeech.app/buy"
+          >
+            {t("cta_secondary")} ($22)
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="relative h-64 max-w-3xl mx-auto"
+        >
+          <div className="thought-bubble absolute top-0 left-0 p-6 max-w-xs text-left rotate-[-2deg]">
+            <p className="text-sm text-muted-foreground serif-body italic font-serif">
+              "The future of writing isn't typing..."
+            </p>
+          </div>
+          <div className="thought-bubble absolute top-20 right-0 p-8 max-w-sm text-left rotate-[3deg]">
+            <p className="text-lg font-bold text-primary leading-snug serif-body font-serif">
+              It's speaking naturally and having it appear exactly where you
+              need it.
+            </p>
+          </div>
+          <div className="thought-bubble absolute bottom-0 left-1/4 p-4 flex items-center gap-4 border-none bg-primary text-primary-foreground">
+            <div className="flex gap-1">
+              <div className="w-1 h-4 bg-white/40 rounded-full animate-bounce"></div>
+              <div
+                className="w-1 h-6 bg-white/80 rounded-full animate-bounce"
+                style={{ animationDelay: "0.1s" }}
+              ></div>
+              <div
+                className="w-1 h-3 bg-white/60 rounded-full animate-bounce"
+                style={{ animationDelay: "0.2s" }}
+              ></div>
+            </div>
+            <span className="text-xs font-bold tracking-widest uppercase">
+              Capturing Audio...
+            </span>
+          </div>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="mt-24 text-[10px] text-muted-foreground font-bold tracking-[0.2em] uppercase"
+        >
+          {t("note")}
+        </motion.p>
       </div>
     </section>
   );

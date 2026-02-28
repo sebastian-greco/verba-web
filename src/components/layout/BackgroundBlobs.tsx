@@ -5,15 +5,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 export default function BackgroundBlobs() {
   const { scrollY } = useScroll();
 
-  // Gentle, slower parallax to prevent clunky jumps during scroll.
-  // Using very small movement ranges for fluid effect.
   const y1 = useTransform(scrollY, [0, 2000], [0, 100]);
   const y2 = useTransform(scrollY, [0, 2000], [0, -120]);
   const y3 = useTransform(scrollY, [0, 2000], [0, 80]);
 
   return (
-    <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-[#F8FAFC]">
-      {/* Top Right Cyan Blob */}
+    <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-background">
+      {/* Top Right Warm Coral Blob */}
       <motion.div
         style={{ y: y1 }}
         animate={{
@@ -26,10 +24,10 @@ export default function BackgroundBlobs() {
           ],
         }}
         transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[-30%] right-[-10%] w-[120vw] h-[120vw] max-w-[1400px] max-h-[1400px] bg-gradient-to-tr from-[#7dd3fc] via-[#bae6fd] to-[#f0f9ff] opacity-40 mix-blend-multiply"
+        className="absolute top-[-30%] right-[-10%] w-[120vw] h-[120vw] max-w-[1400px] max-h-[1400px] bg-accent opacity-[0.15] mix-blend-multiply dark:opacity-[0.05] filter blur-[80px]"
       />
 
-      {/* Left Purple Blob */}
+      {/* Left Highlight/Mint Blob */}
       <motion.div
         style={{ y: y2 }}
         animate={{
@@ -42,10 +40,10 @@ export default function BackgroundBlobs() {
           ],
         }}
         transition={{ duration: 32, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[-10%] left-[-25%] w-[110vw] h-[110vw] max-w-[1300px] max-h-[1300px] bg-gradient-to-b from-[#d8b4fe] via-[#e9d5ff] to-[#faf5ff] opacity-40 mix-blend-multiply"
+        className="absolute top-[-10%] left-[-25%] w-[110vw] h-[110vw] max-w-[1300px] max-h-[1300px] bg-highlight opacity-[0.15] mix-blend-multiply dark:opacity-[0.05] filter blur-[80px]"
       />
 
-      {/* Bottom Right Peach Blob */}
+      {/* Bottom Right Primary/Green Blob */}
       <motion.div
         style={{ y: y3 }}
         animate={{
@@ -58,7 +56,7 @@ export default function BackgroundBlobs() {
           ],
         }}
         transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-[-30%] right-[0%] w-[100vw] h-[100vw] max-w-[1100px] max-h-[1100px] bg-gradient-to-tl from-[#fdba74] via-[#fed7aa] to-[#fff7ed] opacity-40 mix-blend-multiply"
+        className="absolute bottom-[-30%] right-[0%] w-[100vw] h-[100vw] max-w-[1100px] max-h-[1100px] bg-primary opacity-[0.1] mix-blend-multiply dark:opacity-[0.05] filter blur-[80px]"
       />
     </div>
   );

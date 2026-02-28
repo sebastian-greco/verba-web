@@ -1,61 +1,88 @@
-import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-import { HardDrive, UserX, WifiOff } from 'lucide-react';
+"use client";
+
+import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 export default function PrivacySection() {
-  const t = useTranslations('privacy_section');
-
-  const cards = [
-    { icon: HardDrive, title: t('local_storage_title'), desc: t('local_storage_desc') },
-    { icon: UserX, title: t('no_account_title'), desc: t('no_account_desc') },
-    { icon: WifiOff, title: t('offline_title'), desc: t('offline_desc') },
-  ];
+  const t = useTranslations("privacy_section");
 
   return (
-    <section id="privacy" className="py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="flex flex-col gap-8">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t('headline')}</h2>
-              <p className="text-lg text-muted-foreground">{t('subheadline')}</p>
-            </div>
+    <section className="py-40 bg-card" id="privacy">
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        <motion.span
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-xs font-black text-highlight uppercase tracking-[0.3em] mb-8 block"
+        >
+          Your Privacy is Native
+        </motion.span>
 
-            <div className="flex flex-col gap-4">
-              {cards.map((card) => {
-                const Icon = card.icon;
-                return (
-                  <div key={card.title} className="flex gap-4 p-4 rounded-xl bg-card border border-border/50">
-                    <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center shrink-0">
-                      <Icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-sm mb-1">{card.title}</p>
-                      <p className="text-sm text-muted-foreground">{card.desc}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-5xl md:text-6xl font-black mb-12 text-primary font-serif"
+        >
+          {t("headline")}
+        </motion.h2>
 
-            <blockquote className="border-l-2 border-primary pl-4">
-              <p className="text-lg font-medium text-primary italic">{t('quote')}</p>
-            </blockquote>
-          </div>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="text-2xl text-muted-foreground serif-body mb-24 max-w-2xl mx-auto leading-relaxed italic font-serif"
+        >
+          "{t("quote")} Unlike cloud dictation tools, Verba processes everything
+          on your Mac's Neural Engine. We physically cannot see your data."
+        </motion.p>
 
-          <div className="relative">
-            <div className="absolute inset-0 rounded-2xl bg-primary/5 blur-3xl" />
-            <div className="relative rounded-2xl border border-border/50 overflow-hidden bg-card aspect-[4/3] min-h-[280px]">
-              <Image
-                src="/images/privacy-visual.jpg"
-                alt="Privacy architecture diagram"
-                fill
-                sizes="(max-width: 1024px) 100vw, 560px"
-                className="object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
-            </div>
-          </div>
+        <div className="grid sm:grid-cols-3 gap-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="flex flex-col items-center gap-8 p-10 rounded-[40px] bg-muted hover:bg-card border border-transparent hover:border-border transition-all soft-shadow"
+          >
+            <span className="material-symbols-outlined text-5xl text-primary/40">
+              no_accounts
+            </span>
+            <h3 className="font-bold text-2xl text-primary serif-body font-serif">
+              {t("no_account_title")}
+            </h3>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="flex flex-col items-center gap-8 p-10 rounded-[40px] bg-muted hover:bg-card border border-transparent hover:border-border transition-all soft-shadow"
+          >
+            <span className="material-symbols-outlined text-5xl text-primary/40">
+              wifi_off
+            </span>
+            <h3 className="font-bold text-2xl text-primary serif-body font-serif">
+              {t("offline_title")}
+            </h3>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="flex flex-col items-center gap-8 p-10 rounded-[40px] bg-muted hover:bg-card border border-transparent hover:border-border transition-all soft-shadow"
+          >
+            <span className="material-symbols-outlined text-5xl text-primary/40">
+              memory
+            </span>
+            <h3 className="font-bold text-2xl text-primary serif-body font-serif">
+              {t("local_storage_title")}
+            </h3>
+          </motion.div>
         </div>
       </div>
     </section>

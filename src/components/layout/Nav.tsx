@@ -11,10 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Menu, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
 
 const DOWNLOAD_URL = "https://verbaspeech.app/download";
 
@@ -39,12 +36,15 @@ function LocaleSwitcher({ locale }: { locale: string }) {
           size="sm"
           className="h-8 gap-1 text-xs px-2 font-medium text-muted-foreground hover:text-foreground rounded-full"
         >
-          {localeNames[locale]} <ChevronDown className="w-3 h-3 opacity-50" />
+          {localeNames[locale]}{" "}
+          <span className="material-symbols-outlined text-[10px] opacity-50">
+            keyboard_arrow_down
+          </span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className="min-w-[80px] bg-background/90 backdrop-blur-xl border-glass-border"
+        className="min-w-[80px] bg-background/90 backdrop-blur-xl border-border"
       >
         {routing.locales.map((l) => (
           <DropdownMenuItem
@@ -75,81 +75,72 @@ export default function Nav({ locale }: { locale: string }) {
   ];
 
   return (
-    <motion.header
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-6 left-0 right-0 z-50 flex justify-center w-full px-4 md:px-6 pointer-events-none"
-    >
-      <div className="flex items-center w-full max-w-4xl justify-between h-14 px-6 md:px-8 bg-white/60 dark:bg-black/40 backdrop-blur-2xl border border-white/40 shadow-lg shadow-black/5 rounded-full pointer-events-auto transition-all">
-        <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
-          <Image
-            src="/logo.svg"
-            alt="Verba logo"
-            width={24}
-            height={24}
-            className="group-hover:opacity-80 transition-opacity"
-          />
-          <span className="font-semibold text-foreground tracking-tight text-lg">
+    <header className="fixed top-0 w-full z-50 glass-header">
+      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+            <span className="material-symbols-outlined text-primary-foreground">
+              keyboard_command_key
+            </span>
+          </div>
+          <span className="font-bold tracking-tight text-lg text-primary font-serif">
             Verba
           </span>
         </Link>
-
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-10 text-sm text-muted-foreground font-semibold">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
+              className="hover:text-accent transition-colors font-sans uppercase tracking-[0.1em]"
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full rounded-full opacity-50" />
             </a>
           ))}
         </nav>
-
         <div className="hidden md:flex items-center gap-4">
           <LocaleSwitcher locale={locale} />
-          <Button
-            asChild
-            size="sm"
-            className="rounded-full px-6 shadow-sm shadow-primary/10 hover:shadow-primary/20"
+          <a
+            href={DOWNLOAD_URL}
+            className="btn-warm px-6 py-2.5 rounded-full text-sm font-bold block"
           >
-            <a href={DOWNLOAD_URL}>{t("download")}</a>
-          </Button>
+            {t("download")}
+          </a>
         </div>
-
         <div className="flex md:hidden items-center gap-2">
           <LocaleSwitcher locale={locale} />
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="rounded-full">
-                <Menu className="h-5 w-5" />
+                <span className="material-symbols-outlined">menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-64 border-l-glass-border bg-background/95 backdrop-blur-xl"
+              className="w-64 border-l-border bg-background/95 backdrop-blur-xl"
             >
               <nav className="flex flex-col gap-4 mt-8">
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
-                    className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors uppercase tracking-[0.1em]"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}
                   </a>
                 ))}
-                <Button asChild className="mt-4 rounded-full">
-                  <a href={DOWNLOAD_URL}>{t("download")}</a>
-                </Button>
+                <a
+                  href={DOWNLOAD_URL}
+                  className="btn-warm mt-4 text-center py-3 rounded-full font-bold block"
+                >
+                  {t("download")}
+                </a>
               </nav>
             </SheetContent>
           </Sheet>
         </div>
       </div>
-    </motion.header>
+    </header>
   );
 }
