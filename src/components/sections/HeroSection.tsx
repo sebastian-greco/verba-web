@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Mic } from "lucide-react";
+import MacOverlaySimulator from "@/components/ui/MacOverlaySimulator";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
@@ -110,28 +110,10 @@ export default function HeroSection() {
               ”
             </span>
           </motion.div>
-
-          <motion.div
-            style={{ y: y4 }}
-            className="thought-bubble absolute -bottom-4 right-1/4 p-4 flex items-center gap-4 border-none bg-primary text-primary-foreground shadow-xl"
-          >
-            <div className="flex gap-1">
-              <div className="w-1 h-4 bg-white/40 rounded-full animate-bounce"></div>
-              <div
-                className="w-1 h-6 bg-white/80 rounded-full animate-bounce"
-                style={{ animationDelay: "0.1s" }}
-              ></div>
-              <div
-                className="w-1 h-3 bg-white/60 rounded-full animate-bounce"
-                style={{ animationDelay: "0.2s" }}
-              ></div>
-            </div>
-            <span className="text-xs font-bold tracking-widest uppercase">
-              Capturing Audio...
-            </span>
-          </motion.div>
         </motion.div>
-
+        <motion.div style={{ y: y4 }}>
+          <MacOverlaySimulator />
+        </motion.div>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
