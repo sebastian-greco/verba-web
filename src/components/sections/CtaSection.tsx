@@ -21,9 +21,6 @@ export default function CtaSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="glass-panel p-12 sm:p-20 relative group overflow-hidden"
         >
-          {/* Subtle Glow */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-primary/20 blur-3xl opacity-50 pointer-events-none" />
-
           <h2 className="heading-serif text-4xl sm:text-5xl lg:text-6xl font-medium mb-8 leading-tight tracking-tight text-foreground">
             {t("headline")}
           </h2>

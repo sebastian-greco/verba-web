@@ -1,11 +1,18 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import MacOverlaySimulator from "@/components/ui/MacOverlaySimulator";
+import { useRef } from "react";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
+
+  const triggerRef = useRef<HTMLDivElement>(null);
+  const isFinished = useInView(triggerRef, {
+    once: false,
+    margin: "-100px 0px 0px 0px",
+  });
 
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, -30]);
@@ -14,7 +21,7 @@ export default function HeroSection() {
   const y4 = useTransform(scrollY, [0, 500], [0, 40]);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-24 overflow-x-clip">
       <div className="relative z-10 max-w-5xl mx-auto px-6 py-24 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -63,7 +70,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative h-96 max-w-4xl mx-auto"
+          className="relative h-96 max-w-4xl mx-auto z-10"
         >
           <motion.div
             style={{ y: y1 }}
@@ -114,14 +121,19 @@ export default function HeroSection() {
             </span>
           </motion.div>
         </motion.div>
-        <motion.div style={{ y: y4 }}>
-          <MacOverlaySimulator />
-        </motion.div>
+
+        <div className="sticky bottom-8 z-50 flex justify-center w-full mb-6">
+          <MacOverlaySimulator isFinished={isFinished} />
+        </div>
+
+        {/* This empty div acts as the tripwire for the IntersectionObserver */}
+        <div ref={triggerRef} className="w-full h-px pointer-events-none" />
+
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="mt-24 text-[10px] text-muted-foreground font-bold tracking-[0.2em] uppercase"
+          className="mt-4 text-[10px] text-muted-foreground font-bold tracking-[0.2em] uppercase"
         >
           {t("note")}
         </motion.p>

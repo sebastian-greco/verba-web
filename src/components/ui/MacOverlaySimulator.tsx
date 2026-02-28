@@ -12,7 +12,11 @@ type OverlayState =
   | "success"
   | "error";
 
-export default function MacOverlaySimulator() {
+export default function MacOverlaySimulator({
+  isFinished = false,
+}: {
+  isFinished?: boolean;
+}) {
   const [state, setState] = useState<OverlayState>("recording");
   const [audioLevel, setAudioLevel] = useState(0.5);
 
@@ -28,29 +32,24 @@ export default function MacOverlaySimulator() {
     return () => clearInterval(interval);
   }, [state]);
 
-  // Handle automatic state transitions to demo the different states
+  // Handle triggered state transitions
   useEffect(() => {
     let timeout: NodeJS.Timeout;
 
-    const cycleStates = () => {
-      setState((prev) => {
-        if (prev === "recording") return "processing";
-        if (prev === "processing") return "success";
-        if (prev === "success") return "recording"; // loop back
-        return "recording";
-      });
-    };
+    if (isFinished && state === "recording") {
+      setState("processing");
+    }
 
-    if (state === "recording") {
-      timeout = setTimeout(cycleStates, 4000); // 4 seconds recording
-    } else if (state === "processing") {
-      timeout = setTimeout(cycleStates, 2500); // 2.5 seconds processing
-    } else if (state === "success") {
-      timeout = setTimeout(cycleStates, 1500); // 1.5 seconds success
+    if (state === "processing") {
+      timeout = setTimeout(() => setState("success"), 2000); // 2 seconds processing
+    }
+
+    if (!isFinished && state !== "recording") {
+      setState("recording"); // Reset if user scrolls back up
     }
 
     return () => clearTimeout(timeout);
-  }, [state]);
+  }, [state, isFinished]);
 
   return (
     <div className="relative inline-flex items-center gap-2.5 px-1.5 py-0.5 bg-white/20 dark:bg-black/20 backdrop-blur-xl border border-white/30 dark:border-white/10 rounded-2xl shadow-2xl transition-all duration-300">
