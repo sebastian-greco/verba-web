@@ -1,11 +1,17 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Mic } from "lucide-react";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
+
+  const { scrollY } = useScroll();
+  const y1 = useTransform(scrollY, [0, 500], [0, -30]);
+  const y2 = useTransform(scrollY, [0, 500], [0, 25]);
+  const y3 = useTransform(scrollY, [0, 500], [0, -15]);
+  const y4 = useTransform(scrollY, [0, 500], [0, 40]);
 
   return (
     <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
@@ -57,20 +63,58 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative h-64 max-w-3xl mx-auto"
+          className="relative h-96 max-w-4xl mx-auto"
         >
-          <div className="thought-bubble absolute top-0 left-0 p-6 max-w-xs text-left rotate-[-2deg]">
-            <p className="text-sm text-muted-foreground serif-body italic font-serif">
-              "The future of writing isn't typing..."
+          <motion.div
+            style={{ y: y1 }}
+            className="thought-bubble absolute top-0 left-0 p-6 max-w-xs text-left rotate-[-2deg]"
+          >
+            <span className="absolute -top-5 -left-3 text-8xl text-accent/25 font-serif leading-none select-none">
+              “
+            </span>
+            <p className="relative z-10 text-sm text-muted-foreground serif-body italic font-serif">
+              The future of writing isn't typing...
             </p>
-          </div>
-          <div className="thought-bubble absolute top-20 right-0 p-8 max-w-sm text-left rotate-[3deg]">
-            <p className="text-lg font-bold text-primary leading-snug serif-body font-serif">
+            <span className="absolute -bottom-20 -right-2 text-8xl text-accent/25 font-serif leading-none select-none">
+              ”
+            </span>
+          </motion.div>
+
+          <motion.div
+            style={{ y: y2 }}
+            className="thought-bubble absolute top-12 right-0 p-6 max-w-sm text-left rotate-[3deg]"
+          >
+            <span className="absolute -top-5 -left-3 text-8xl text-highlight/35 font-serif leading-none select-none">
+              “
+            </span>
+            <p className="relative z-10 text-md text-muted-foreground serif-body italic font-serif">
               It's speaking naturally and having it appear exactly where you
               need it.
             </p>
-          </div>
-          <div className="thought-bubble absolute bottom-0 left-1/4 p-4 flex items-center gap-4 border-none bg-primary text-primary-foreground">
+            <span className="absolute -bottom-20 -right-2 text-8xl text-highlight/35 font-serif leading-none select-none">
+              ”
+            </span>
+          </motion.div>
+
+          <motion.div
+            style={{ y: y3 }}
+            className="thought-bubble absolute bottom-8 left-12 p-6 max-w-xs text-left rotate-[-1deg]"
+          >
+            <span className="absolute -top-5 -left-3 text-8xl text-accent/25 font-serif leading-none select-none">
+              “
+            </span>
+            <p className="relative z-10 text-lg text-muted-foreground serif-body italic font-serif">
+              Spoken words fly away, written ones remain.
+            </p>
+            <span className="absolute -bottom-20 -right-2 text-8xl text-accent/25 font-serif leading-none select-none">
+              ”
+            </span>
+          </motion.div>
+
+          <motion.div
+            style={{ y: y4 }}
+            className="thought-bubble absolute -bottom-4 right-1/4 p-4 flex items-center gap-4 border-none bg-primary text-primary-foreground shadow-xl"
+          >
             <div className="flex gap-1">
               <div className="w-1 h-4 bg-white/40 rounded-full animate-bounce"></div>
               <div
@@ -85,7 +129,7 @@ export default function HeroSection() {
             <span className="text-xs font-bold tracking-widest uppercase">
               Capturing Audio...
             </span>
-          </div>
+          </motion.div>
         </motion.div>
 
         <motion.p
