@@ -10,16 +10,6 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
       <div className="relative z-10 max-w-5xl mx-auto px-6 py-24 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-highlight/10 text-highlight text-xs font-bold mb-10 border border-highlight/20"
-        >
-          <span className="w-2 h-2 rounded-full bg-highlight animate-pulse"></span>
-          Ready for your next idea
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
