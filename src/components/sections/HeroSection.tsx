@@ -69,13 +69,14 @@ export default function HeroSection() {
             style={{ y: y1 }}
             className="thought-bubble absolute top-0 left-0 p-6 max-w-xs text-left rotate-[-2deg]"
           >
-            <span className="absolute -top-5 -left-3 text-8xl text-accent/25 font-serif leading-none select-none">
+            <BackgroundWaveform />
+            <span className="hidden absolute -top-5 -left-3 text-8xl text-accent/25 font-serif leading-none select-none">
               “
             </span>
             <p className="relative z-10 text-sm text-muted-foreground serif-body italic font-serif">
               The future of writing isn't typing...
             </p>
-            <span className="absolute -bottom-20 -right-2 text-8xl text-accent/25 font-serif leading-none select-none">
+            <span className="hidden absolute -bottom-20 -right-2 text-8xl text-accent/25 font-serif leading-none select-none">
               ”
             </span>
           </motion.div>
@@ -84,14 +85,15 @@ export default function HeroSection() {
             style={{ y: y2 }}
             className="thought-bubble absolute top-12 right-0 p-6 max-w-sm text-left rotate-[3deg]"
           >
-            <span className="absolute -top-5 -left-3 text-8xl text-highlight/35 font-serif leading-none select-none">
+            <BackgroundWaveform />
+            <span className="hidden absolute -top-5 -left-3 text-8xl text-highlight/35 font-serif leading-none select-none">
               “
             </span>
             <p className="relative z-10 text-md text-muted-foreground serif-body italic font-serif">
               It's speaking naturally and having it appear exactly where you
               need it.
             </p>
-            <span className="absolute -bottom-20 -right-2 text-8xl text-highlight/35 font-serif leading-none select-none">
+            <span className="hidden absolute -bottom-20 -right-2 text-8xl text-highlight/35 font-serif leading-none select-none">
               ”
             </span>
           </motion.div>
@@ -100,13 +102,14 @@ export default function HeroSection() {
             style={{ y: y3 }}
             className="thought-bubble absolute bottom-8 left-12 p-6 max-w-xs text-left rotate-[-1deg]"
           >
-            <span className="absolute -top-5 -left-3 text-8xl text-accent/25 font-serif leading-none select-none">
+            <BackgroundWaveform />
+            <span className="hidden absolute -top-5 -left-3 text-8xl text-accent/25 font-serif leading-none select-none">
               “
             </span>
             <p className="relative z-10 text-lg text-muted-foreground serif-body italic font-serif">
               Spoken words fly away, written ones remain.
             </p>
-            <span className="absolute -bottom-20 -right-2 text-8xl text-accent/25 font-serif leading-none select-none">
+            <span className="hidden absolute -bottom-20 -right-2 text-8xl text-accent/25 font-serif leading-none select-none">
               ”
             </span>
           </motion.div>
@@ -124,5 +127,47 @@ export default function HeroSection() {
         </motion.p>
       </div>
     </section>
+  );
+}
+
+const WAVE_DATA = Array.from({ length: 50 }).map((_, i) => ({
+  id: i,
+  duration: 1.5 + (i % 3) * 0.2 + (i % 5) * 0.1,
+  delay: (i % 7) * 0.15,
+  heights: [
+    `${10 + (i % 5) * 10}%`,
+    `${40 + (i % 3) * 20}%`,
+    `${20 + (i % 4) * 10}%`,
+    `${60 + (i % 2) * 20}%`,
+    `${10 + (i % 5) * 10}%`,
+  ],
+}));
+
+function BackgroundWaveform() {
+  return (
+    <div
+      className="absolute inset-0 rounded-3xl overflow-hidden flex items-center justify-center gap-[3px] opacity-[0.10] pointer-events-none z-0 py-2"
+      style={{
+        maskImage:
+          "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+        WebkitMaskImage:
+          "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+      }}
+    >
+      {WAVE_DATA.map((data) => (
+        <motion.div
+          key={data.id}
+          className="w-1.5 bg-primary/60 rounded-full"
+          animate={{ height: data.heights }}
+          transition={{
+            duration: data.duration,
+            repeat: Infinity,
+            repeatType: "mirror",
+            ease: "easeInOut",
+            delay: data.delay,
+          }}
+        />
+      ))}
+    </div>
   );
 }
