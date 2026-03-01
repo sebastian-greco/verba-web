@@ -6,15 +6,23 @@ export default function Footer() {
   return (
     <footer className="py-24 bg-card border-t border-border relative z-10">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12">
-        <div className="flex items-center gap-4">
-          <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-            <span className="material-symbols-outlined text-primary-foreground">
-              keyboard_command_key
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+              <span className="material-symbols-outlined text-primary-foreground">
+                keyboard_command_key
+              </span>
+            </div>
+            <span className="text-2xl font-bold tracking-tight text-primary font-serif">
+              Verba
             </span>
           </div>
-          <span className="text-2xl font-bold tracking-tight text-primary font-serif">
-            Verba
-          </span>
+          <div className="text-sm text-muted-foreground font-serif italic text-left">
+            "Verba volant, scripta manent" <br />
+            <span className="text-xs font-sans opacity-70 not-italic">
+              Spoken words fly away, written ones remain.
+            </span>
+          </div>
         </div>
 
         <div className="flex gap-12 text-sm font-bold text-muted-foreground uppercase tracking-widest">
