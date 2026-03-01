@@ -78,12 +78,12 @@ export default function Nav({ locale }: { locale: string }) {
     <header className="fixed top-0 w-full z-50 glass-header">
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-            <span className="material-symbols-outlined text-primary-foreground">
-              keyboard_command_key
-            </span>
-          </div>
-          <span className="font-bold tracking-tight text-lg text-primary font-serif">
+          <img
+            src="/verba-logo.svg"
+            alt="Verba Logo"
+            className="w-7 h-7 object-contain bottom-3"
+          />
+          <span className="font-bold tracking-tight text-xl text-primary font-serif">
             Verba
           </span>
         </Link>

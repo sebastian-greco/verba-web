@@ -10,6 +10,7 @@ type OverlayState =
   | "paused"
   | "processing"
   | "success"
+  | "resetting"
   | "error";
 
 export default function MacOverlaySimulator({
@@ -19,6 +20,7 @@ export default function MacOverlaySimulator({
 }) {
   const [state, setState] = useState<OverlayState>("recording");
   const [audioLevel, setAudioLevel] = useState(0.5);
+  const [hasTriggered, setHasTriggered] = useState(false);
 
   // Simulate audio level changes when recording
   useEffect(() => {
@@ -36,7 +38,8 @@ export default function MacOverlaySimulator({
   useEffect(() => {
     let timeout: NodeJS.Timeout;
 
-    if (isFinished && state === "recording") {
+    if (isFinished && !hasTriggered && state === "recording") {
+      setHasTriggered(true);
       setState("processing");
     }
 
@@ -44,12 +47,23 @@ export default function MacOverlaySimulator({
       timeout = setTimeout(() => setState("success"), 2000); // 2 seconds processing
     }
 
-    if (!isFinished && state !== "recording") {
-      setState("recording"); // Reset if user scrolls back up
+    if (state === "success") {
+      timeout = setTimeout(() => setState("resetting"), 1000); // 1s green success -> resetting
+    }
+
+    if (state === "resetting") {
+      timeout = setTimeout(() => setState("recording"), 600); // 0.6s white full height -> back to active recording
+    }
+
+    if (!isFinished) {
+      setHasTriggered(false);
+      if (state !== "recording" && state !== "resetting") {
+        setState("recording"); // Reset if user scrolls back up
+      }
     }
 
     return () => clearTimeout(timeout);
-  }, [state, isFinished]);
+  }, [state, isFinished, hasTriggered]);
 
   return (
     <div className="relative inline-flex items-center gap-2.5 px-1.5 py-0.5 bg-white/20 dark:bg-black/20 backdrop-blur-xl border border-white/30 dark:border-white/10 rounded-2xl shadow-2xl transition-all duration-300">
@@ -122,7 +136,8 @@ function AnimatedBars({
   }, [state]);
 
   const getBarHeight = (index: number) => {
-    if (state === "idle" || state === "error") return baseHeight;
+    if (state === "idle" || state === "error" || state === "resetting")
+      return baseHeight;
 
     if (state === "success") return baseHeight + maxAmp;
 
@@ -159,6 +174,7 @@ function AnimatedBars({
         return "bg-[#ff9500]"; // macOS system orange
       case "error":
         return "bg-[#ff3b30]"; // macOS system red
+      case "resetting":
       default:
         return "bg-white";
     }
