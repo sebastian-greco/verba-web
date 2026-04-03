@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
+import { Plus_Jakarta_Sans, Merriweather } from "next/font/google";
 import "./globals.css";
 import BackgroundBlobs from "@/components/layout/BackgroundBlobs";
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const merri = Merriweather({
+  subsets: ["latin"],
+  variable: "--font-merriweather",
+  weight: ["400", "700", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Verba — Local Speech-to-Text for Mac",
@@ -17,18 +30,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className={`font-sans antialiased`}>
+      <body className={`${jakarta.variable} ${merri.variable} font-sans antialiased`}>
         <BackgroundBlobs />
         {children}
       </body>

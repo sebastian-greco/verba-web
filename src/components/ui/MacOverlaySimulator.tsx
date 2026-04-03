@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Pause, X } from "lucide-react";
+import { X } from "lucide-react";
 
 type OverlayState =
   | "idle"

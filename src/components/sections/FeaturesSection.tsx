@@ -42,7 +42,7 @@ export default function FeaturesSection() {
             {t("headline").split(".")[0]}.
           </h2>
           <p className="text-xl text-muted-foreground serif-body italic font-serif">
-            Powerful features wrapped in a simple experience.
+            {t("subheadline")}
           </p>
         </motion.div>
 
@@ -54,7 +54,7 @@ export default function FeaturesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-10 bg-muted rounded-[32px] hover:bg-[var(--accent-light)] transition-all group border border-transparent hover:border-accent/20"
+              className="p-10 bg-muted rounded-[32px] hover:bg-(--accent-light) transition-all group border border-transparent hover:border-accent/20"
             >
               <div className="w-14 h-14 bg-card rounded-2xl flex items-center justify-center mb-10 soft-shadow group-hover:scale-110 transition-transform">
                 <span className="material-symbols-outlined text-primary">

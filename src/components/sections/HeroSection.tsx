@@ -18,7 +18,6 @@ export default function HeroSection() {
   const y1 = useTransform(scrollY, [0, 500], [0, -30]);
   const y2 = useTransform(scrollY, [0, 500], [0, 25]);
   const y3 = useTransform(scrollY, [0, 500], [0, -15]);
-  const y4 = useTransform(scrollY, [0, 500], [0, 40]);
 
   return (
     <section className="relative min-h-screen flex items-center pt-24 overflow-x-clip">
@@ -29,8 +28,8 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="text-6xl md:text-8xl font-black mb-12 text-primary leading-[1.1] font-serif"
         >
-          Your voice, <br />
-          <span className="text-accent italic">typed instantly.</span>
+          {t("title_p1")} <br />
+          <span className="text-accent italic">{t("title_p2")}</span>
         </motion.h1>
 
         <motion.p
@@ -39,8 +38,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-16 serif-body leading-relaxed font-serif"
         >
-          Write emails, documents, and messages just by speaking. Private, fast,
-          and stays entirely on your Mac.
+          {t("subtitle_p1")}
         </motion.p>
 
         <motion.div
@@ -53,9 +51,7 @@ export default function HeroSection() {
             className="btn-warm px-10 py-5 rounded-full font-bold text-lg flex items-center gap-3"
             href="https://verbaspeech.app/download"
           >
-            <span className="material-symbols-outlined shrink-0 text-xl font-medium">
-              download
-            </span>
+            <span className="material-symbols-outlined shrink-0 text-xl font-medium">{"download"}</span>
             {t("cta_primary")}
           </a>
           <a
@@ -81,7 +77,7 @@ export default function HeroSection() {
               “
             </span>
             <p className="relative z-10 text-sm text-muted-foreground serif-body italic font-serif">
-              The future of writing isn't typing...
+              {t("thought_1")}
             </p>
             <span className="hidden absolute -bottom-20 -right-2 text-8xl text-accent/25 font-serif leading-none select-none">
               ”
@@ -97,8 +93,7 @@ export default function HeroSection() {
               “
             </span>
             <p className="relative z-10 text-md text-muted-foreground serif-body italic font-serif">
-              It's speaking naturally and having it appear exactly where you
-              need it.
+              {t("thought_2")}
             </p>
             <span className="hidden absolute -bottom-20 -right-2 text-8xl text-highlight/35 font-serif leading-none select-none">
               ”
@@ -114,7 +109,7 @@ export default function HeroSection() {
               “
             </span>
             <p className="relative z-10 text-lg text-muted-foreground serif-body italic font-serif">
-              Spoken words fly away, written ones remain.
+              {t("thought_3")}
             </p>
             <span className="hidden absolute -bottom-20 -right-2 text-8xl text-accent/25 font-serif leading-none select-none">
               ”

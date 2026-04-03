@@ -25,13 +25,26 @@
     "feature_2": "Elaborazione Privata e Locale al 100%",
     "feature_3": "Supporto per oltre 100 Lingue",
     "cta_button": "Inizia Subito",
-    "demo_button": "Guarda la Demo"
+    "demo_button": "Guarda la Demo",
+    "title_p1": "La tua voce,",
+    "title_p2": "digitata all'istante.",
+    "subtitle_p1": "Scrivi email, documenti e messaggi semplicemente parlando. Privato, veloce e resta tutto sul tuo Mac.",
+    "thought_1": "Il futuro della scrittura non è digitare...",
+    "thought_2": "È parlare in modo naturale e farlo apparire dove serve.",
+    "thought_3": "Le parole pronunciate volano via, quelle scritte restano."
   },
   "demo": {
     "headline": "Premi un tasto. Parla. Fatto.",
     "step_hold": "Tieni premuto Fn",
     "step_speak": "Parla naturalmente",
-    "step_done": "Il testo appare all'istante"
+    "step_done": "Il testo appare all'istante",
+    "how_it_works": "Come funziona",
+    "step_01": "PASSO 01",
+    "step_01_desc": "Tocca un tasto per attivare Verba. L'overlay di trascrizione appare all'istante.",
+    "step_02": "PASSO 02",
+    "step_02_desc": "Non c'è bisogno di una voce robotica. Whisper cattura ogni sfumatura con precisione.",
+    "step_03": "PASSO 03",
+    "step_03_desc": "Rilascia il tasto e guarda le tue parole essere scritte perfettamente."
   },
   "privacy_section": {
     "headline": "Progettato per la Privacy.",
@@ -42,7 +55,9 @@
     "no_account_desc": "Scarica, apri l'app, parla. Zero iscrizioni, zero login, zero tracciamenti.",
     "offline_title": "Funziona Offline",
     "offline_desc": "Nessuna connessione Internet necessaria. Tutto viene eseguito nell'hardware del tuo Apple Silicon.",
-    "quote": "La tua voce è tua. Noi non la ascolteremo mai."
+    "quote": "La tua voce è tua. Noi non la ascolteremo mai.",
+    "badge": "La tua privacy è nativa",
+    "quote_extension": " A differenza degli strumenti di dettatura cloud, Verba elabora tutto sul Neural Engine del tuo Mac. Fisicamente non possiamo vedere i tuoi dati."
   },
   "features": {
     "headline": "Tutto ciò di cui hai bisogno. Nulla che tu non debba averlo.",
@@ -61,7 +76,8 @@
     "cleanup_title": "Ripulimento Intelligente",
     "cleanup_desc": "La nostra tecnologia integrata non fa l'uso di nuvola permettendovi l'assoluta precisione sulle pause per aiutarvi e rendere i testi formali nel pulirlo dei vostri eventuali ritardi ed elisione degli articoli sbagliati.",
     "telemetry_title": "Zero Metadati e Telemetria",
-    "telemetry_desc": "Mai più rapporti online sul server senza senso e ne rapporti crash anonimi , semplicemente nessuno ne approfitta a sfavore tuo, zero fuori uscite su tutto quanto"
+    "telemetry_desc": "Mai più rapporti online sul server senza senso e ne rapporti crash anonimi , semplicemente nessuno ne approfitta a sfavore tuo, zero fuori uscite su tutto quanto",
+    "subheadline": "Funzionalità potenti racchiuse in un'esperienza semplice."
   },
   "pricing": {
     "headline": "Un unico pagamento. Tutto tuo in eterno",
@@ -85,7 +101,19 @@
     "comparison_verba_account": "Non Hai Necessità Di Registrarti con Nient'altro ",
     "comparison_row_price": "Contributo Richiesto Monitario e Costi Vari In Generale.  ",
     "comparison_row_cloud": "Tipo Formato Dati e Sicurezza Di Trasmissione .",
-    "comparison_row_account": "Autenticazione Per Operatività Su Identità e Modalità Da Profilazione e Profilo .  "
+    "comparison_row_account": "Account",
+    "paid_feature_1": "3 Attivazioni di dispositivi",
+    "paid_feature_2": "Tutti gli aggiornamenti futuri inclusi",
+    "paid_feature_3": "Modelli IA locali a vita",
+    "comparison_headline_1": "Meglio per te,",
+    "comparison_headline_2": "e per il tuo portafoglio.",
+    "comparison_row_cost": "Costo",
+    "comparison_old_price": "$120/anno",
+    "comparison_row_data_privacy": "Privacy dei dati",
+    "comparison_privacy_value": "100% Privato",
+    "comparison_account_value": "Non necessario",
+    "comparison_row_offline": "Offline",
+    "comparison_offline_value": "Supporto completo"
   },
   "cleanup": {
     "headline": "Il Vero Tool Modulo Del IA Di Supporto ",
@@ -100,7 +128,9 @@
     "feature_grammar": "Ed Oltretutto Mette Di Sua Spontanea Iniziativa Correttamente Le Opzioni Puntate Ai Termini ",
     "feature_lists": "Identificherà Dalla Parlatina Il Punto Della Riga , Se Hai Messo Un Elenco L'Elogerà In Elementit Puntati Automaticamente Su Varie Linee Senza Tu Intervieni . ",
     "feature_styles": "Puoi Usufruirne Come  I Stili Che Segue Nella Scelta Su L'Umore Ed Aspetto Delle Parole  Nelle Opzioni , Fra Quale:   Modello Semplice , Quello Dal Verbo Autorevole Di Contenuto In Effetto Lavorativo Impiegabile ( Formale ) ,   Un Conversazioanle Ed In Infine Quello Giocherellone E Motivato Di Natura Entusiastico ",
-    "note": "Nota Dello Sviluppo Interno Per Renderne L'Utilizzazione   Del Paccheto Lingue Di Testi Modali Di Dimensioni 985 Megabyte, Bisognerrà Inizializzare Solo Un Donwloadd Dalla Rete E Concludendolo  Ad App , Su Successivi Mai Piu Vi Aggangierete Anche Per Minimo Tempo Ad Un IP Pubblico Nonostante Vi Rimarrebbe .    "
+    "note": "Nota Dello Sviluppo Interno Per Renderne L'Utilizzazione   Del Paccheto Lingue Di Testi Modali Di Dimensioni 985 Megabyte, Bisognerrà Inizializzare Solo Un Donwloadd Dalla Rete E Concludendolo  Ad App , Su Successivi Mai Piu Vi Aggangierete Anche Per Minimo Tempo Ad Un IP Pubblico Nonostante Vi Rimarrebbe .    ",
+    "status_active": "Pulizia Intelligente Attiva",
+    "status_inactive": "Pulizia Intelligente Inattiva"
   },
   "cta_block": {
     "headline": "L'Interessante Avvio E' A Te Decisa , La Scrittura Affidata Ad Esa Piena Di Parola Nostra.  ",
@@ -124,5 +154,8 @@
     "privacy_title": "Regola Principale Trattenuta Alla Polita  Privacy in Privacy",
     "terms_title": "Come Ci Muoviamo Per Dare Tutte Le Tipi Di Garanzie , Informatevi Sui Nostri Piani Trattati Sul  Nostro Accordo Ai  Servizie Ai Prodotti    ",
     "last_updated": "Dati Mostrati Ufficialmente Per Legge Mutevoli Al Pubblico Alla Data Attuale Aggiornati Alla Nostra Pubblica Registrazione Su Pagina Sito Dalla Fine Di  Febbraio Nel Lontano Fine 26 ' 2026. "
+  },
+  "common": {
+    "close": "Chiudi"
   }
 }

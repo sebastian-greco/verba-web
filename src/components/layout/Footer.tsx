@@ -1,4 +1,6 @@
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import Image from "next/image";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -8,30 +10,32 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-4">
-            <img
+            <Image
               src="/verba-logo.svg"
               alt="Verba Logo"
+              width={40}
+              height={40}
               className="w-10 h-10 object-contain"
             />
             <span className="text-2xl font-bold tracking-tight text-primary font-serif">
-              Verba
-            </span>
+            {"Verba"}
+          </span>
           </div>
           <div className="text-sm text-muted-foreground font-serif italic text-left">
-            "Verba volant, scripta manent" <br />
+            &quot;{"Verba volant, scripta manent"}&quot; <br />
             <span className="text-xs font-sans opacity-70 not-italic">
-              Spoken words fly away, written ones remain.
+              {t("tagline")}
             </span>
           </div>
         </div>
 
         <div className="flex gap-12 text-sm font-bold text-muted-foreground uppercase tracking-widest">
-          <a className="hover:text-accent transition-colors" href="/terms">
+          <Link className="hover:text-accent transition-colors" href="/terms">
             {t("terms")}
-          </a>
-          <a className="hover:text-accent transition-colors" href="/privacy">
+          </Link>
+          <Link className="hover:text-accent transition-colors" href="/privacy">
             {t("privacy_policy")}
-          </a>
+          </Link>
           <a
             className="hover:text-accent transition-colors"
             href={`mailto:${t("contact_email")}`}
@@ -41,7 +45,7 @@ export default function Footer() {
         </div>
 
         <div className="text-xs font-bold text-muted-foreground opacity-40 tracking-widest uppercase">
-          {t("copyright")}. Handcrafted for macOS.
+          {t("copyright")}
         </div>
       </div>
     </footer>

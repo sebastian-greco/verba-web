@@ -45,22 +45,16 @@ export default function PricingSection() {
               </div>
               <ul className="space-y-8 mb-14">
                 <li className="flex items-center gap-5 text-muted-foreground text-lg serif-body font-serif">
-                  <span className="material-symbols-outlined text-highlight">
-                    task_alt
-                  </span>
-                  3 Device Activations
+                  <span className="material-symbols-outlined text-highlight">{"task_alt"}</span>
+                  {t("paid_feature_1")}
                 </li>
                 <li className="flex items-center gap-5 text-muted-foreground text-lg serif-body font-serif">
-                  <span className="material-symbols-outlined text-highlight">
-                    task_alt
-                  </span>
-                  All future updates included
+                  <span className="material-symbols-outlined text-highlight">{"task_alt"}</span>
+                  {t("paid_feature_2")}
                 </li>
                 <li className="flex items-center gap-5 text-muted-foreground text-lg serif-body font-serif">
-                  <span className="material-symbols-outlined text-highlight">
-                    task_alt
-                  </span>
-                  Lifetime local AI models
+                  <span className="material-symbols-outlined text-highlight">{"task_alt"}</span>
+                  {t("paid_feature_3")}
                 </li>
               </ul>
               <a
@@ -82,49 +76,49 @@ export default function PricingSection() {
             className="px-6"
           >
             <h3 className="text-4xl font-black text-primary mb-12 serif-body italic leading-tight font-serif">
-              Better for you, <br />
-              and your wallet.
+              {t("comparison_headline_1")} <br />
+              {t("comparison_headline_2")}
             </h3>
 
             <div className="space-y-10">
               <div className="flex items-center justify-between py-6 border-b border-border">
                 <span className="text-muted-foreground font-bold text-sm tracking-widest uppercase">
-                  Cost
+                  {t("comparison_row_cost")}
                 </span>
                 <div className="text-right">
                   <div className="text-accent font-black text-2xl serif-body font-serif">
                     {t("paid_price")} {t("paid_period")}
                   </div>
                   <div className="text-xs text-muted-foreground line-through opacity-40">
-                    $120/year
+                    {t("comparison_old_price")}
                   </div>
                 </div>
               </div>
 
               <div className="flex items-center justify-between py-6 border-b border-border">
                 <span className="text-muted-foreground font-bold text-sm tracking-widest uppercase">
-                  Data Privacy
+                  {t("comparison_row_data_privacy")}
                 </span>
                 <span className="text-primary font-black text-xl serif-body font-serif">
-                  100% Private
+                  {t("comparison_privacy_value")}
                 </span>
               </div>
 
               <div className="flex items-center justify-between py-6 border-b border-border">
                 <span className="text-muted-foreground font-bold text-sm tracking-widest uppercase">
-                  Account
+                  {t("comparison_row_account")}
                 </span>
                 <span className="text-primary font-black text-xl serif-body font-serif">
-                  Not Needed
+                  {t("comparison_account_value")}
                 </span>
               </div>
 
               <div className="flex items-center justify-between py-6">
                 <span className="text-muted-foreground font-bold text-sm tracking-widest uppercase">
-                  Offline
+                  {t("comparison_row_offline")}
                 </span>
                 <span className="text-primary font-black text-xl serif-body font-serif">
-                  Full support
+                  {t("comparison_offline_value")}
                 </span>
               </div>
             </div>

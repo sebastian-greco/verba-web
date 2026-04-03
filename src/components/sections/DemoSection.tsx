@@ -17,7 +17,7 @@ export default function DemoSection() {
           className="text-center mb-24"
         >
           <h2 className="text-5xl md:text-6xl font-black text-primary mb-6 font-serif">
-            How it Works
+            {t("how_it_works")}
           </h2>
           <div className="w-24 h-1.5 bg-accent mx-auto rounded-full"></div>
         </motion.div>
@@ -44,19 +44,16 @@ export default function DemoSection() {
             className="relative z-10 flex-1 flex flex-col items-center text-center group"
           >
             <div className="w-40 h-40 organic-shape bg-card flex items-center justify-center mb-10 soft-shadow border border-border transition-transform group-hover:scale-105">
-              <span className="material-symbols-outlined text-4xl text-primary">
-                keyboard_command_key
-              </span>
+              <span className="material-symbols-outlined text-4xl text-primary">{"keyboard_command_key"}</span>
             </div>
             <div className="mb-4 px-3 py-1 rounded-full bg-highlight/20 text-highlight text-[10px] font-black tracking-widest">
-              STEP 01
+              {t("step_01")}
             </div>
             <h3 className="text-3xl font-bold text-primary mb-5 font-serif">
               {t("step_hold")}
             </h3>
             <p className="text-muted-foreground serif-body leading-relaxed max-w-[240px] font-serif">
-              Tap a key to wake Verba. The transcription overlay appears
-              instantly.
+              {t("step_01_desc")}
             </p>
           </motion.div>
 
@@ -72,19 +69,16 @@ export default function DemoSection() {
               className="w-48 h-48 organic-shape bg-card flex items-center justify-center mb-10 soft-shadow border border-border transition-transform group-hover:scale-105"
               style={{ borderRadius: "40% 60% 30% 70% / 50% 40% 60% 50%" }}
             >
-              <span className="material-symbols-outlined text-5xl text-accent">
-                mic
-              </span>
+              <span className="material-symbols-outlined text-5xl text-accent">{"mic"}</span>
             </div>
             <div className="mb-4 px-3 py-1 rounded-full bg-highlight/20 text-highlight text-[10px] font-black tracking-widest">
-              STEP 02
+              {t("step_02")}
             </div>
             <h3 className="text-3xl font-bold text-primary mb-5 font-serif">
               {t("step_speak")}
             </h3>
             <p className="text-muted-foreground serif-body leading-relaxed max-w-[240px] font-serif">
-              No need for robot voice. Whisper captures every nuance with
-              precision.
+              {t("step_02_desc")}
             </p>
           </motion.div>
 
@@ -100,18 +94,16 @@ export default function DemoSection() {
               className="w-40 h-40 organic-shape bg-card flex items-center justify-center mb-10 soft-shadow border border-border transition-transform group-hover:scale-105"
               style={{ borderRadius: "70% 30% 50% 50% / 30% 60% 40% 70%" }}
             >
-              <span className="material-symbols-outlined text-4xl text-highlight">
-                auto_fix_high
-              </span>
+              <span className="material-symbols-outlined text-4xl text-highlight">{"auto_fix_high"}</span>
             </div>
             <div className="mb-4 px-3 py-1 rounded-full bg-highlight/20 text-highlight text-[10px] font-black tracking-widest">
-              STEP 03
+              {t("step_03")}
             </div>
             <h3 className="text-3xl font-bold text-primary mb-5 font-serif">
               {t("step_done")}
             </h3>
             <p className="text-muted-foreground serif-body leading-relaxed max-w-[240px] font-serif">
-              Let go of the key and watch as your words are typed perfectly.
+              {t("step_03_desc")}
             </p>
           </motion.div>
         </div>

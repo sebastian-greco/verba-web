@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { usePathname, useRouter, Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   DropdownMenu,
@@ -38,7 +39,7 @@ function LocaleSwitcher({ locale }: { locale: string }) {
         >
           {localeNames[locale]}{" "}
           <span className="material-symbols-outlined text-[10px] opacity-50">
-            keyboard_arrow_down
+            {"keyboard_arrow_down"}
           </span>
         </Button>
       </DropdownMenuTrigger>
@@ -78,13 +79,15 @@ export default function Nav({ locale }: { locale: string }) {
     <header className="fixed top-0 w-full z-50 glass-header">
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <img
+          <Image
             src="/verba-logo.svg"
             alt="Verba Logo"
-            className="w-7 h-7 object-contain bottom-3"
+            width={28}
+            height={28}
+            className="w-7 h-7 object-contain"
           />
           <span className="font-bold tracking-tight text-xl text-primary font-serif">
-            Verba
+            {"Verba"}
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-10 text-sm text-muted-foreground font-semibold">
@@ -92,7 +95,7 @@ export default function Nav({ locale }: { locale: string }) {
             <a
               key={link.href}
               href={link.href}
-              className="hover:text-accent transition-colors font-sans uppercase tracking-[0.1em]"
+              className="hover:text-accent transition-colors font-sans uppercase tracking-widest"
             >
               {link.label}
             </a>
@@ -112,7 +115,7 @@ export default function Nav({ locale }: { locale: string }) {
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="rounded-full">
-                <span className="material-symbols-outlined">menu</span>
+                <span className="material-symbols-outlined">{"menu"}</span>
               </Button>
             </SheetTrigger>
             <SheetContent
@@ -124,7 +127,7 @@ export default function Nav({ locale }: { locale: string }) {
                   <a
                     key={link.href}
                     href={link.href}
-                    className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors uppercase tracking-[0.1em]"
+                    className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors uppercase tracking-widest"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}

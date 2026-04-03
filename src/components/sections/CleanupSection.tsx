@@ -23,21 +23,21 @@ export default function CleanupSection() {
           </div>
 
           <h2 className="text-5xl md:text-6xl font-black mb-10 text-primary leading-[1.15] font-serif">
-            Polished text, <br />
-            <span className="italic font-normal">without the filler.</span>
+            {t.rich("subheadline", {
+              br: () => <br />,
+              span: (chunks) => <span className="italic font-normal">{chunks}</span>
+            })}
           </h2>
 
           <p className="text-xl text-muted-foreground serif-body mb-12 leading-relaxed font-serif">
-            Verba's local AI intelligently removes "ums" and "uhs", fixes your
-            grammar, and structures your stream of consciousness into
-            professional prose.
+            {t("note")}
           </p>
 
           <div className="space-y-8">
             <div className="flex items-center gap-5">
               <div className="w-12 h-12 rounded-full bg-highlight/10 flex items-center justify-center text-highlight shrink-0">
                 <span className="material-symbols-outlined text-2xl">
-                  check_circle
+                  {"check_circle"}
                 </span>
               </div>
               <span className="font-bold text-lg text-primary serif-body font-serif">
@@ -47,7 +47,7 @@ export default function CleanupSection() {
             <div className="flex items-center gap-5">
               <div className="w-12 h-12 rounded-full bg-highlight/10 flex items-center justify-center text-highlight shrink-0">
                 <span className="material-symbols-outlined text-2xl">
-                  check_circle
+                  {"check_circle"}
                 </span>
               </div>
               <span className="font-bold text-lg text-primary serif-body font-serif">
@@ -66,11 +66,11 @@ export default function CleanupSection() {
           <div className="bg-card rounded-[40px] p-10 soft-shadow border border-border">
             <div className="flex items-center justify-between mb-12">
               <span className="text-xs font-bold text-muted-foreground tracking-widest uppercase">
-                Visual Transformation
+                {t("features_title")}
               </span>
               <div className="flex items-center gap-3">
                 <span className="text-xs font-bold text-muted-foreground">
-                  Clean Mode
+                  {t("badge")}
                 </span>
                 <div
                   className={`tactile-toggle ${isClean ? "active" : ""}`}
@@ -88,9 +88,7 @@ export default function CleanupSection() {
                   }
                 >
                   <p className="text-lg text-muted-foreground serif-body italic leading-relaxed font-serif">
-                    "So, um, I was thinking like, basically we should probably
-                    launch the feature, uh, next Tuesday? No wait, let's go with
-                    Wednesday because of the holiday."
+                    &quot;{t("before_text")}&quot;
                   </p>
                 </div>
                 <div className="mt-3 text-[10px] font-black text-red-300 uppercase tracking-widest">
@@ -108,8 +106,7 @@ export default function CleanupSection() {
                   }
                 >
                   <p className="text-2xl text-primary font-black leading-relaxed serif-body font-serif">
-                    "We should launch the feature next Wednesday to account for
-                    the holiday."
+                    &quot;{t("after_text")}&quot;
                   </p>
                 </div>
                 <div
@@ -125,10 +122,10 @@ export default function CleanupSection() {
                 className={`flex items-center gap-2 transition-colors duration-500 ${isClean ? "text-highlight" : "text-muted-foreground"}`}
               >
                 <span className="material-symbols-outlined text-sm">
-                  auto_awesome
+                  {"auto_awesome"}
                 </span>
                 <span className="text-[10px] font-bold uppercase tracking-widest">
-                  Smart Cleanup {isClean ? "Active" : "Inactive"}
+                  {isClean ? t("status_active") : t("status_inactive")}
                 </span>
               </div>
             </div>

@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import { setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';

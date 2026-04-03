@@ -25,13 +25,26 @@
     "feature_2": "Procesamiento 100% Local y Privado",
     "feature_3": "Soporte para Más de 100 Idiomas",
     "cta_button": "Comienza Gratis",
-    "demo_button": "Ver Demostración"
+    "demo_button": "Ver Demostración",
+    "title_p1": "Tu voz,",
+    "title_p2": "escrita al instante.",
+    "subtitle_p1": "Escribe correos electrónicos, documentos y mensajes solo con hablar. Privado, rápido y se queda en tu Mac.",
+    "thought_1": "El futuro de la escritura no es tipear...",
+    "thought_2": "Es hablar naturalmente y hacer que aparezca exactamente donde lo necesitas.",
+    "thought_3": "Las palabras habladas vuelan, las escritas permanecen."
   },
   "demo": {
     "headline": "Pulsa una tecla. Habla. Listo.",
     "step_hold": "Mantén pulsado Fn",
     "step_speak": "Habla con naturalidad",
-    "step_done": "El texto aparece al instante"
+    "step_done": "El texto aparece al instante",
+    "how_it_works": "Cómo funciona",
+    "step_01": "PASO 01",
+    "step_01_desc": "Toca una tecla para despertar a Verba. La superposición de transcripción aparece al instante.",
+    "step_02": "PASO 02",
+    "step_02_desc": "No necesitas una voz robótica. Whisper captura cada matiz con precisión.",
+    "step_03": "PASO 03",
+    "step_03_desc": "Suelta la tecla y mira cómo tus palabras se escriben a la perfección."
   },
   "privacy_section": {
     "headline": "Privacidad por Diseño.",
@@ -42,7 +55,9 @@
     "no_account_desc": "Descarga, abre, habla. Cero registros, cero inicios de sesión, cero rastreo.",
     "offline_title": "Funciona Sin Conexión",
     "offline_desc": "No requiere Internet. Todo se ejecuta en tu hardware Apple Silicon.",
-    "quote": "Tu voz es tuya. Nosotros nunca la escuchamos."
+    "quote": "Tu voz es tuya. Nosotros nunca la escuchamos.",
+    "badge": "Tu privacidad es nativa",
+    "quote_extension": " A diferencia de las herramientas de dictado en la nube, Verba procesa todo en el motor neuronal de tu Mac. Físicamente no podemos ver tus datos."
   },
   "features": {
     "headline": "Todo lo que necesitas. Nada de lo que no.",
@@ -61,7 +76,8 @@
     "cleanup_title": "Limpieza Inteligente",
     "cleanup_desc": "La inteligencia artificial integrada en el dispositivo elimina palabras de relleno y corrige la gramática.",
     "telemetry_title": "Cero Telemetría",
-    "telemetry_desc": "Sin analíticas, sin informes de fallos, nada sale de tu Mac."
+    "telemetry_desc": "Sin analíticas, sin informes de fallos, nada sale de tu Mac.",
+    "subheadline": "Características poderosas envueltas en una experiencia simple."
   },
   "pricing": {
     "headline": "Paga una vez. Es tuyo para siempre.",
@@ -85,7 +101,19 @@
     "comparison_verba_account": "No requiere de cuenta",
     "comparison_row_price": "Precio",
     "comparison_row_cloud": "Procesamiento",
-    "comparison_row_account": "Cuenta"
+    "comparison_row_account": "Cuenta",
+    "paid_feature_1": "3 Activaciones de dispositivos",
+    "paid_feature_2": "Todas las actualizaciones futuras incluidas",
+    "paid_feature_3": "Modelos de IA locales de por vida",
+    "comparison_headline_1": "Mejor para ti,",
+    "comparison_headline_2": "y para tu bolsillo.",
+    "comparison_row_cost": "Costo",
+    "comparison_old_price": "$120/año",
+    "comparison_row_data_privacy": "Privacidad de datos",
+    "comparison_privacy_value": "100% Privado",
+    "comparison_account_value": "No es necesaria",
+    "comparison_row_offline": "Sin conexión",
+    "comparison_offline_value": "Soporte completo"
   },
   "cleanup": {
     "headline": "Limpieza de Texto por IA",
@@ -100,7 +128,9 @@
     "feature_grammar": "Corrige la gramática y puntuación",
     "feature_lists": "Convierte el dictado de listas en verdaderos puntos de viñetas",
     "feature_styles": "Modos de estilo: Estándar, Formal, Casual, Entusiasta",
-    "note": "Requiere descargar un modelo de 985MB. Funciona enteramente en tu Mac. Nunca utiliza Internet."
+    "note": "Requiere descargar un modelo de 985MB. Funciona enteramente en tu Mac. Nunca utiliza Internet.",
+    "status_active": "Limpieza Inteligente Activa",
+    "status_inactive": "Limpieza Inteligente Inactiva"
   },
   "cta_block": {
     "headline": "Empieza a hablar. Deja de escribir.",
@@ -124,5 +154,8 @@
     "privacy_title": "Política de Privacidad",
     "terms_title": "Términos del Servicio",
     "last_updated": "Última actualización: Febrero de 2026"
+  },
+  "common": {
+    "close": "Cerrar"
   }
 }

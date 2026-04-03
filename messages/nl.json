@@ -25,13 +25,26 @@
     "feature_2": "100% lokale en privé verwerking",
     "feature_3": "Ondersteuning voor 100+ talen",
     "cta_button": "Begin gratis",
-    "demo_button": "Bekijk demo"
+    "demo_button": "Bekijk demo",
+    "title_p1": "Jouw stem,",
+    "title_p2": "werkt direct.",
+    "subtitle_p1": "Schrijf e-mails, documenten en berichten door te praten. Privé, snel en alles blijft op je Mac.",
+    "thought_1": "De toekomst van schrijven is niet typen...",
+    "thought_2": "Het is natuurlijk spreken en het precies daar laten verschijnen waar je het nodig hebt.",
+    "thought_3": "Gesproken woorden vliegen weg, geschreven woorden blijven."
   },
   "demo": {
     "headline": "Druk op een toets. Spreek. Klaar.",
     "step_hold": "Houd Fn vast",
     "step_speak": "Spreek natuurlijk",
-    "step_done": "Tekst verschijnt direct"
+    "step_done": "Tekst verschijnt direct",
+    "how_it_works": "Hoe het werkt",
+    "step_01": "STAP 01",
+    "step_01_desc": "Tik op een toets om Verba te wekken. De transcriptie-overlay verschijnt direct.",
+    "step_02": "STAP 02",
+    "step_02_desc": "Geen robotstem nodig. Whisper legt elke nuance nauwkeurig vast.",
+    "step_03": "STAP 03",
+    "step_03_desc": "Laat de toets los en zie hoe je woorden perfect worden getypt."
   },
   "privacy_section": {
     "headline": "Ontworpen voor privacy.",
@@ -42,7 +55,9 @@
     "no_account_desc": "Download, open, spreek. Geen registratie, geen login, geen tracking.",
     "offline_title": "Werkt offline",
     "offline_desc": "Geen internet nodig. Alles draait op je Apple Silicon hardware.",
-    "quote": "Jouw stem is van jou. Wij horen deze nooit."
+    "quote": "Jouw stem is van jou. Wij horen deze nooit.",
+    "badge": "Je privacy is native",
+    "quote_extension": " In tegenstelling tot cloud-dicteertools verwerkt Verba alles op de Neural Engine van je Mac. Wij kunnen je gegevens fysiek niet zien."
   },
   "features": {
     "headline": "Alles wat je nodig hebt. Niets wat je niet gebruikt.",
@@ -61,7 +76,8 @@
     "cleanup_title": "Slimme opschoning",
     "cleanup_desc": "Lokale AI verwijdert stopwoorden en repareert grammatica.",
     "telemetry_title": "Geen Telemetrie",
-    "telemetry_desc": "Geen analytics, geen crashrapporten, niets verlaat je Mac."
+    "telemetry_desc": "Geen analytics, geen crashrapporten, niets verlaat je Mac.",
+    "subheadline": "Krachtige functies verpakt in een eenvoudige ervaring."
   },
   "pricing": {
     "headline": "Betaal eenmalig. Bezit het voor altijd.",
@@ -85,7 +101,19 @@
     "comparison_verba_account": "Geen account nodig",
     "comparison_row_price": "Prijs",
     "comparison_row_cloud": "Verwerking",
-    "comparison_row_account": "Account"
+    "comparison_row_account": "Account",
+    "paid_feature_1": "3 Apparaatactiveringen",
+    "paid_feature_2": "Alle toekomstige updates inbegrepen",
+    "paid_feature_3": "Levenslange lokale AI-modellen",
+    "comparison_headline_1": "Beter voor jou,",
+    "comparison_headline_2": "en je portemonnee.",
+    "comparison_row_cost": "Kosten",
+    "comparison_old_price": "$120/jaar",
+    "comparison_row_data_privacy": "Gegevensprivacy",
+    "comparison_privacy_value": "100% Privé",
+    "comparison_account_value": "Niet nodig",
+    "comparison_row_offline": "Offline",
+    "comparison_offline_value": "Volledige ondersteuning"
   },
   "cleanup": {
     "headline": "AI Tekstopruiming",
@@ -100,7 +128,9 @@
     "feature_grammar": "Repareert grammatica en interpunctie",
     "feature_lists": "Formatteert gesproken lijsten in echte opsommingstekens",
     "feature_styles": "Stijlen: Standaard, Formeel, Casual, Enthousiast",
-    "note": "Vereist download van een 985MB model. Draait volledig op je Mac. Nooit online."
+    "note": "Vereist download van een 985MB model. Draait volledig op je Mac. Nooit online.",
+    "status_active": "Slim Opschonen Actief",
+    "status_inactive": "Slim Opschonen Inactief"
   },
   "cta_block": {
     "headline": "Begin met spreken. Stop met typen.",
@@ -124,5 +154,8 @@
     "privacy_title": "Privacybeleid",
     "terms_title": "Servicevoorwaarden",
     "last_updated": "Laatst bijgewerkt: Februari 2026"
+  },
+  "common": {
+    "close": "Sluiten"
   }
 }

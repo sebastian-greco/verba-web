@@ -25,13 +25,26 @@
     "feature_2": "100% Local & Private Processing",
     "feature_3": "Support for 100+ Languages",
     "cta_button": "Get Started for Free",
-    "demo_button": "Watch Demo"
+    "demo_button": "Watch Demo",
+    "title_p1": "Your voice,",
+    "title_p2": "typed instantly.",
+    "subtitle_p1": "Write emails, documents, and messages just by speaking. Private, fast, and stays entirely on your Mac.",
+    "thought_1": "The future of writing isn't typing...",
+    "thought_2": "It's speaking naturally and having it appear exactly where you need it.",
+    "thought_3": "Spoken words fly away, written ones remain."
   },
   "demo": {
     "headline": "Press a key. Speak. Done.",
     "step_hold": "Hold Fn",
     "step_speak": "Speak naturally",
-    "step_done": "Text appears instantly"
+    "step_done": "Text appears instantly",
+    "how_it_works": "How it Works",
+    "step_01": "STEP 01",
+    "step_01_desc": "Tap a key to wake Verba. The transcription overlay appears instantly.",
+    "step_02": "STEP 02",
+    "step_02_desc": "No need for robot voice. Whisper captures every nuance with precision.",
+    "step_03": "STEP 03",
+    "step_03_desc": "Let go of the key and watch as your words are typed perfectly."
   },
   "privacy_section": {
     "headline": "Private by Design.",
@@ -42,7 +55,9 @@
     "no_account_desc": "Download, launch, speak. Zero signup, zero login, zero tracking.",
     "offline_title": "Works Offline",
     "offline_desc": "No internet needed. Everything runs on your Apple Silicon hardware.",
-    "quote": "Your voice is yours. We never hear it."
+    "quote": "Your voice is yours. We never hear it.",
+    "badge": "Your Privacy is Native",
+    "quote_extension": " Unlike cloud dictation tools, Verba processes everything on your Mac's Neural Engine. We physically cannot see your data."
   },
   "features": {
     "headline": "Everything you need. Nothing you don't.",
@@ -61,7 +76,8 @@
     "cleanup_title": "Smart Cleanup",
     "cleanup_desc": "On-device AI removes filler words and fixes grammar.",
     "telemetry_title": "Zero Telemetry",
-    "telemetry_desc": "No analytics, no crash reports, nothing leaves your Mac."
+    "telemetry_desc": "No analytics, no crash reports, nothing leaves your Mac.",
+    "subheadline": "Powerful features wrapped in a simple experience."
   },
   "pricing": {
     "headline": "Pay once. Own it forever.",
@@ -85,7 +101,19 @@
     "comparison_verba_account": "No account needed",
     "comparison_row_price": "Price",
     "comparison_row_cloud": "Processing",
-    "comparison_row_account": "Account"
+    "comparison_row_account": "Account",
+    "paid_feature_1": "3 Device Activations",
+    "paid_feature_2": "All future updates included",
+    "paid_feature_3": "Lifetime local AI models",
+    "comparison_headline_1": "Better for you,",
+    "comparison_headline_2": "and your wallet.",
+    "comparison_row_cost": "Cost",
+    "comparison_old_price": "$120/year",
+    "comparison_row_data_privacy": "Data Privacy",
+    "comparison_privacy_value": "100% Private",
+    "comparison_account_value": "Not Needed",
+    "comparison_row_offline": "Offline",
+    "comparison_offline_value": "Full support"
   },
   "cleanup": {
     "headline": "AI Text Cleanup",
@@ -100,7 +128,9 @@
     "feature_grammar": "Fixes grammar and punctuation",
     "feature_lists": "Formats spoken lists into actual bullet points",
     "feature_styles": "Style modes: Standard, Formal, Casual, Excited",
-    "note": "Requires downloading a 985MB model. Runs entirely on your Mac. Never online."
+    "note": "Requires downloading a 985MB model. Runs entirely on your Mac. Never online.",
+    "status_active": "Smart Cleanup Active",
+    "status_inactive": "Smart Cleanup Inactive"
   },
   "cta_block": {
     "headline": "Start speaking. Stop typing.",
@@ -124,5 +154,8 @@
     "privacy_title": "Privacy Policy",
     "terms_title": "Terms of Service",
     "last_updated": "Last updated: February 2026"
+  },
+  "common": {
+    "close": "Close"
   }
 }

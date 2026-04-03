@@ -25,13 +25,26 @@
     "feature_2": "100% lokale & private Verarbeitung",
     "feature_3": "Unterstützung für über 100 Sprachen",
     "cta_button": "Kostenlos starten",
-    "demo_button": "Demo ansehen"
+    "demo_button": "Demo ansehen",
+    "title_p1": "Ihre Stimme,",
+    "title_p2": "sofort getippt.",
+    "subtitle_p1": "Schreiben Sie E-Mails, Dokumente und Nachrichten einfach durch Sprechen. Privat, schnell und bleibt auf Ihrem Mac.",
+    "thought_1": "Die Zukunft des Schreibens ist nicht das Tippen...",
+    "thought_2": "Es ist natürliches Sprechen, das genau dort erscheint, wo Sie es brauchen.",
+    "thought_3": "Gesprochene Worte verfliegen, geschriebene bleiben."
   },
   "demo": {
     "headline": "Taste drücken. Sprechen. Fertig.",
     "step_hold": "Fn gedrückt halten",
     "step_speak": "Natürlich sprechen",
-    "step_done": "Text erscheint sofort"
+    "step_done": "Text erscheint sofort",
+    "how_it_works": "Wie es funktioniert",
+    "step_01": "SCHRITT 01",
+    "step_01_desc": "Tippen Sie auf eine Taste, um Verba zu wecken. Das Transkriptions-Overlay wird sofort angezeigt.",
+    "step_02": "SCHRITT 02",
+    "step_02_desc": "Keine Roboterstimme erforderlich. Whisper erfasst jede Nuance präzise.",
+    "step_03": "SCHRITT 03",
+    "step_03_desc": "Lassen Sie die Taste los und sehen Sie zu, wie Ihre Worte perfekt getippt werden."
   },
   "privacy_section": {
     "headline": "Privat by Design.",
@@ -42,7 +55,9 @@
     "no_account_desc": "Herunterladen, starten, sprechen. Keine Anmeldung, kein Login, kein Tracking.",
     "offline_title": "Funktioniert offline",
     "offline_desc": "Kein Internet erforderlich. Alles läuft auf Ihrer Apple Silicon-Hardware.",
-    "quote": "Ihre Stimme gehört Ihnen. Wir hören sie nie."
+    "quote": "Ihre Stimme gehört Ihnen. Wir hören sie nie.",
+    "badge": "Ihre Privatsphäre ist nativ",
+    "quote_extension": " Im Gegensatz zu Cloud-Diktat-Tools verarbeitet Verba alles auf der Neural Engine Ihres Macs. Wir können Ihre Daten physisch nicht sehen."
   },
   "features": {
     "headline": "Alles, was Sie brauchen. Nichts anderes.",
@@ -61,7 +76,8 @@
     "cleanup_title": "Intelligente Bereinigung",
     "cleanup_desc": "On-Device-KI entfernt Füllwörter und korrigiert die Grammatik.",
     "telemetry_title": "Null Telemetrie",
-    "telemetry_desc": "Keine Analysen, keine Absturzberichte, nichts verlässt Ihren Mac."
+    "telemetry_desc": "Keine Analysen, keine Absturzberichte, nichts verlässt Ihren Mac.",
+    "subheadline": "Leistungsstarke Funktionen verpackt in einem einfachen Erlebnis."
   },
   "pricing": {
     "headline": "Einmal zahlen. Für immer besitzen.",
@@ -85,7 +101,19 @@
     "comparison_verba_account": "Kein Konto erforderlich",
     "comparison_row_price": "Preis",
     "comparison_row_cloud": "Verarbeitung",
-    "comparison_row_account": "Konto"
+    "comparison_row_account": "Konto",
+    "paid_feature_1": "3 Geräteaktivierungen",
+    "paid_feature_2": "Alle zukünftigen Updates inklusive",
+    "paid_feature_3": "Lokale KI-Modelle auf Lebenszeit",
+    "comparison_headline_1": "Besser für Sie,",
+    "comparison_headline_2": "und Ihren Geldbeutel.",
+    "comparison_row_cost": "Kosten",
+    "comparison_old_price": "120 $/Jahr",
+    "comparison_row_data_privacy": "Datenschutz",
+    "comparison_privacy_value": "100% Privat",
+    "comparison_account_value": "Nicht erforderlich",
+    "comparison_row_offline": "Offline",
+    "comparison_offline_value": "Volle Unterstützung"
   },
   "cleanup": {
     "headline": "KI-Textbereinigung",
@@ -100,7 +128,9 @@
     "feature_grammar": "Korrigiert Grammatik und Zeichensetzung",
     "feature_lists": "Formatiert gesprochene Listen in echte Aufzählungspunkte",
     "feature_styles": "Stil-Modi: Standard, Formell, Lässig, Begeistert",
-    "note": "Erfordert den Download eines 985-MB-Modells. Läuft vollständig auf Ihrem Mac. Niemals online."
+    "note": "Erfordert den Download eines 985-MB-Modells. Läuft vollständig auf Ihrem Mac. Niemals online.",
+    "status_active": "Intelligente Bereinigung Aktiv",
+    "status_inactive": "Intelligente Bereinigung Inaktiv"
   },
   "cta_block": {
     "headline": "Fangen Sie an zu sprechen. Hören Sie auf zu tippen.",
@@ -124,5 +154,8 @@
     "privacy_title": "Datenschutzerklärung",
     "terms_title": "Nutzungsbedingungen",
     "last_updated": "Zuletzt aktualisiert: Februar 2026"
+  },
+  "common": {
+    "close": "Schließen"
   }
 }

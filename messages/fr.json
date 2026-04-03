@@ -25,13 +25,26 @@
     "feature_2": "Traitement 100% local et privé",
     "feature_3": "Prise en charge de plus de 100 langues",
     "cta_button": "Commencer gratuitement",
-    "demo_button": "Regarder la démo"
+    "demo_button": "Regarder la démo",
+    "title_p1": "Votre voix,",
+    "title_p2": "tapée instantanément.",
+    "subtitle_p1": "Rédigez des e-mails, des documents et des messages simplement en parlant. Privé, rapide, et reste entièrement sur votre Mac.",
+    "thought_1": "L'avenir de l'écriture n'est pas de taper...",
+    "thought_2": "C'est de parler naturellement et de le voir apparaître là où vous en avez besoin.",
+    "thought_3": "Les paroles s'envolent, les écrits restent."
   },
   "demo": {
     "headline": "Appuyez sur une touche. Parlez. Terminé.",
     "step_hold": "Maintenez Fn",
     "step_speak": "Parlez naturellement",
-    "step_done": "Le texte apparaît instantanément"
+    "step_done": "Le texte apparaît instantanément",
+    "how_it_works": "Comment ça marche",
+    "step_01": "ÉTAPE 01",
+    "step_01_desc": "Appuyez sur une touche pour réveiller Verba. La superposition de transcription apparaît instantanément.",
+    "step_02": "ÉTAPE 02",
+    "step_02_desc": "Pas besoin d'une voix de robot. Whisper capture chaque nuance avec précision.",
+    "step_03": "ÉTAPE 03",
+    "step_03_desc": "Relâchez la touche et regardez vos mots être tapés parfaitement."
   },
   "privacy_section": {
     "headline": "Privé par conception.",
@@ -42,7 +55,9 @@
     "no_account_desc": "Téléchargez, lancez, parlez. Zéro inscription, zéro connexion, zéro suivi.",
     "offline_title": "Fonctionne hors ligne",
     "offline_desc": "Pas besoin d'internet. Tout fonctionne sur votre matériel Apple Silicon.",
-    "quote": "Votre voix est à vous. Nous ne l'entendons jamais."
+    "quote": "Votre voix est à vous. Nous ne l'entendons jamais.",
+    "badge": "Votre confidentialité est native",
+    "quote_extension": " Contrairement aux outils de dictée dans le cloud, Verba traite tout sur le moteur neuronal de votre Mac. Nous ne pouvons physiquement pas voir vos données."
   },
   "features": {
     "headline": "Tout ce dont vous avez besoin. Rien d'autre.",
@@ -61,7 +76,8 @@
     "cleanup_title": "Nettoyage intelligent",
     "cleanup_desc": "L'IA intégrée élimine les mots de remplissage et corrige la grammaire.",
     "telemetry_title": "Zéro télémétrie",
-    "telemetry_desc": "Pas d'analyses, pas de rapports de plantage, rien ne quitte votre Mac."
+    "telemetry_desc": "Pas d'analyses, pas de rapports de plantage, rien ne quitte votre Mac.",
+    "subheadline": "Des fonctionnalités puissantes dans une expérience simple."
   },
   "pricing": {
     "headline": "Payez une fois. C'est à vous pour toujours.",
@@ -85,7 +101,19 @@
     "comparison_verba_account": "Aucun compte requis",
     "comparison_row_price": "Prix",
     "comparison_row_cloud": "Traitement",
-    "comparison_row_account": "Compte"
+    "comparison_row_account": "Compte",
+    "paid_feature_1": "3 Activations d'appareils",
+    "paid_feature_2": "Toutes les futures mises à jour incluses",
+    "paid_feature_3": "Modèles d'IA locaux à vie",
+    "comparison_headline_1": "Mieux pour vous,",
+    "comparison_headline_2": "et pour votre portefeuille.",
+    "comparison_row_cost": "Coût",
+    "comparison_old_price": "120 $/an",
+    "comparison_row_data_privacy": "Confidentialité",
+    "comparison_privacy_value": "100% Privé",
+    "comparison_account_value": "Non requis",
+    "comparison_row_offline": "Hors ligne",
+    "comparison_offline_value": "Support complet"
   },
   "cleanup": {
     "headline": "Nettoyage de texte par l'IA",
@@ -100,7 +128,9 @@
     "feature_grammar": "Corrige la grammaire et la ponctuation",
     "feature_lists": "Formate les listes parlées en vraies puces",
     "feature_styles": "Modes de style : Standard, Formel, Décontracté, Enthousiaste",
-    "note": "Nécessite le téléchargement d'un modèle de 985 Mo. S'exécute entièrement sur votre Mac. Jamais en ligne."
+    "note": "Nécessite le téléchargement d'un modèle de 985 Mo. S'exécute entièrement sur votre Mac. Jamais en ligne.",
+    "status_active": "Nettoyage Intelligent Actif",
+    "status_inactive": "Nettoyage Intelligent Inactif"
   },
   "cta_block": {
     "headline": "Commencez à parler. Arrêtez de taper.",
@@ -124,5 +154,8 @@
     "privacy_title": "Politique de confidentialité",
     "terms_title": "Conditions d'utilisation",
     "last_updated": "Dernière mise à jour : Février 2026"
+  },
+  "common": {
+    "close": "Fermer"
   }
 }

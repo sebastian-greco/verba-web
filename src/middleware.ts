@@ -12,7 +12,7 @@ export default function middleware(request: NextRequest) {
 
   // If the first segment looks like a language code but isn't supported, redirect to English
   if (firstSegment && /^[a-zA-Z]{2}(-[a-zA-Z]{2})?$/.test(firstSegment)) {
-    if (!routing.locales.includes(firstSegment as any)) {
+    if (!(routing.locales as readonly string[]).includes(firstSegment)) {
       segments[1] = routing.defaultLocale;
       const newUrl = request.nextUrl.clone();
       newUrl.pathname = segments.join('/');
