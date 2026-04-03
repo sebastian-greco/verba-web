@@ -3,12 +3,12 @@
     "features": "Funktionen",
     "privacy": "Datenschutz",
     "pricing": "Preise",
-    "download": "Kostenlos herunterladen"
+    "download": "Kostenlos laden"
   },
   "hero": {
     "headline": "Ihre Stimme, sofort abgetippt. Privat.",
     "subheadline": "Arbeiten Sie nahtlos in allen Mac-Apps mit automatischer KI-Bearbeitung, benutzerdefinierten Vokabularen und Snippet-Bibliotheken. Lokales, privates Speech-to-Text.",
-    "cta_primary": "Kostenlose Testversion herunterladen",
+    "cta_primary": "Free Trial",
     "cta_secondary": "Lizenz kaufen",
     "badge_local": "100% lokal",
     "badge_offline": "Funktioniert offline",
@@ -84,7 +84,7 @@
     "subheadline": "Keine Abonnements. Keine versteckten Gebühren. Keine Überraschungen.",
     "trial_label": "Kostenlose Testversion",
     "trial_desc": "50 Transkriptionen inklusive — keine Kreditkarte, kein Zeitlimit, keine Anmeldung",
-    "trial_cta": "Kostenlos herunterladen",
+    "trial_cta": "Kostenlos laden",
     "paid_label": "Volle Lizenz",
     "paid_price": "22 $",
     "paid_period": "einmalig",
@@ -134,7 +134,7 @@
   },
   "cta_block": {
     "headline": "Fangen Sie an zu sprechen. Hören Sie auf zu tippen.",
-    "button": "Kostenlos herunterladen — 50 Transkriptionen inklusive",
+    "button": "Kostenlos laden — 50 Transkriptionen inklusive",
     "note": "macOS 15+ · Apple Silicon erforderlich · Kein Konto erforderlich"
   },
   "footer": {

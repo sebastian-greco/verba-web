@@ -3,12 +3,12 @@
     "features": "Funciones",
     "privacy": "Privacidad",
     "pricing": "Precios",
-    "download": "Descargar Gratis"
+    "download": "Descargar gratis"
   },
   "hero": {
     "headline": "Tu voz, escrita al instante. En privado.",
     "subheadline": "Fluye de forma fluida por todas tus aplicaciones de Mac con edición automática mediante IA, vocabularios personalizados y bibliotecas de fragmentos. Funciona en modo local y privado.",
-    "cta_primary": "Descargar Prueba Gratuita",
+    "cta_primary": "Free Trial",
     "cta_secondary": "Comprar Licencia",
     "badge_local": "100% Local",
     "badge_offline": "Funciona Sin Conexión",
@@ -83,14 +83,14 @@
     "headline": "Paga una vez. Es tuyo para siempre.",
     "subheadline": "Sin suscripciones. Sin pagos recurrentes. Sin sorpresas.",
     "trial_label": "Prueba Gratuita",
-    "trial_desc": "50 transcripciones incluidas — sin tarjeta de crédito, sin límite de tiempo, sin necesidad de registro.",
-    "trial_cta": "Descargar Gratis",
+    "trial_desc": "50 transcripciones — sin tarjeta de crédito, sin límite de tiempo, sin registro",
+    "trial_cta": "Descargar gratis",
     "paid_label": "Licencia Completa",
     "paid_price": "$22",
     "paid_period": "pago único",
     "paid_desc": "Transcripciones ilimitadas, 3 dispositivos, todas las futuras actualizaciones",
     "paid_cta": "Comprar Licencia",
-    "guarantee": "Garantía de devolución de dinero de 30 días",
+    "guarantee": "Garantía de devolución de 30 días",
     "comparison_title": "¿Por qué Verba?",
     "comparison_others_label": "Otras aplicaciones",
     "comparison_others_price": "$8–15/mes",
@@ -134,7 +134,7 @@
   },
   "cta_block": {
     "headline": "Empieza a hablar. Deja de escribir.",
-    "button": "Descargar Gratis — Incluye 50 Transcripciones",
+    "button": "Descargar gratis — 50 transcripciones incluidas",
     "note": "macOS 15+ · Requiere Apple Silicon · No necesita cuenta"
   },
   "footer": {

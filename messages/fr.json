@@ -3,12 +3,12 @@
     "features": "Fonctionnalités",
     "privacy": "Confidentialité",
     "pricing": "Tarifs",
-    "download": "Télécharger gratuitement"
+    "download": "Télécharger"
   },
   "hero": {
     "headline": "Votre voix, tapée instantanément. En privé.",
     "subheadline": "Naviguez de façon fluide sur toutes vos applications Mac avec l'édition automatique par l'IA, des vocabulaires personnalisés et des bibliothèques d'extraits. Synthèse vocale locale et privée.",
-    "cta_primary": "Télécharger l'essai gratuit",
+    "cta_primary": "Free Trial",
     "cta_secondary": "Acheter une licence",
     "badge_local": "100% Local",
     "badge_offline": "Fonctionne hors ligne",
@@ -134,7 +134,7 @@
   },
   "cta_block": {
     "headline": "Commencez à parler. Arrêtez de taper.",
-    "button": "Télécharger gratuitement — 50 transcriptions incluses",
+    "button": "Télécharger — 50 transcriptions incluses",
     "note": "macOS 15+ · Apple Silicon requis · Aucun compte requis"
   },
   "footer": {
