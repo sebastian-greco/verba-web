@@ -13,11 +13,6 @@ export default function FeaturesSection() {
       descKey: "languages_desc",
     },
     {
-      icon: "language",
-      titleKey: "translation_title",
-      descKey: "translation_desc",
-    },
-    {
       icon: "history",
       titleKey: "history_title",
       descKey: "history_desc",
@@ -46,7 +41,7 @@ export default function FeaturesSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid md:grid-cols-3 gap-10">
           {featureList.map((feature, i) => (
             <motion.div
               key={i}
