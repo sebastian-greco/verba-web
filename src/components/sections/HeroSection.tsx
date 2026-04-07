@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import MacOverlaySimulator from "@/components/ui/MacOverlaySimulator";
 import { useRef } from "react";
+import { PRICE } from "@/lib/constants";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
@@ -58,7 +59,7 @@ export default function HeroSection() {
             className="px-10 py-5 rounded-full font-bold text-lg text-primary bg-white border border-border hover:bg-muted transition-all"
             href="https://verbaspeech.app/buy"
           >
-            {t("cta_secondary")} ($22)
+            {t("cta_secondary")} ({PRICE})
           </a>
         </motion.div>
 

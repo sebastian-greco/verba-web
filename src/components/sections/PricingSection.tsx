@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { PRICE } from "@/lib/constants";
 
 export default function PricingSection() {
   const t = useTranslations("pricing");
@@ -37,7 +38,7 @@ export default function PricingSection() {
               </h3>
               <div className="flex items-baseline gap-3 mb-12">
                 <span className="text-8xl font-black text-primary serif-body font-serif">
-                  {t("paid_price")}
+                  {PRICE}
                 </span>
                 <span className="text-muted-foreground font-bold text-xl">
                   {t("paid_period")}
@@ -87,7 +88,7 @@ export default function PricingSection() {
                 </span>
                 <div className="text-right">
                   <div className="text-accent font-black text-2xl serif-body font-serif">
-                    {t("paid_price")} {t("paid_period")}
+                    {PRICE} {t("paid_period")}
                   </div>
                   <div className="text-xs text-muted-foreground line-through opacity-40">
                     {t("comparison_old_price")}
