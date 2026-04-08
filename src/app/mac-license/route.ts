@@ -1,6 +1,5 @@
 import { Polar } from "@polar-sh/sdk";
 import { NextRequest, NextResponse } from "next/server";
-import { CHECKOUT_SUCCESS_URL } from "@/lib/constants";
 
 /**
  * GET /mac-license
@@ -27,7 +26,7 @@ export async function GET(_req: NextRequest): Promise<Response> {
 
   const checkout = await polar.checkouts.create({
     products: [productId],
-    successUrl: CHECKOUT_SUCCESS_URL,
+    successUrl: `${_req.nextUrl.origin}/thanks?checkout_id={CHECKOUT_ID}`,
   });
 
   return NextResponse.redirect(checkout.url);

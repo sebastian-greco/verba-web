@@ -32,8 +32,4 @@ export const CONTACT_EMAIL = `hello@${APP_DOMAIN}`;
 
 // ─── Polar / Checkout ────────────────────────────────────────────────────────
 
-/** Checkout entry point — used by website CTAs and Mac app. Product ID is resolved server-side. */
-export const BUY_URL = `https://${APP_DOMAIN}/mac-license`;
-
-/** Redirected to after a successful Polar checkout ({CHECKOUT_ID} is replaced by Polar) */
-export const CHECKOUT_SUCCESS_URL = `https://${APP_DOMAIN}/thanks?checkout_id={CHECKOUT_ID}`;
+export const BUY_URL = `/mac-license`;
