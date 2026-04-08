@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Copy } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function LicenseKeyDisplay({ licenseKey }: { licenseKey: string }) {
@@ -15,35 +14,24 @@ export default function LicenseKeyDisplay({ licenseKey }: { licenseKey: string }
   };
 
   return (
-    <div className="mt-6 mb-2">
-      <div className="flex items-center justify-between gap-3 bg-white/5 border border-white/10 rounded-2xl px-5 py-4">
-        <code className="font-mono text-base md:text-lg text-[#ff9f0a] tracking-wider select-all break-all">
+    <div className="mb-16 w-full max-w-sm mx-auto flex flex-col items-center">
+      <div className="w-full bg-white/60 rounded-2xl p-5 flex items-center justify-between border border-white/80 shadow-sm relative z-10">
+        <code className="text-stone-900 font-mono text-base tracking-wider font-semibold">
           {licenseKey}
         </code>
         <button
           onClick={copy}
-          className="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200"
-          style={{
-            background: copied ? "rgba(48, 209, 88, 0.15)" : "rgba(255,255,255,0.08)",
-            color: copied ? "#30d158" : "rgba(255,255,255,0.7)",
-            border: copied ? "1px solid rgba(48,209,88,0.3)" : "1px solid rgba(255,255,255,0.1)",
-          }}
+          className="text-stone-500 hover:text-stone-900 transition-colors flex items-center gap-2 text-sm font-bold ml-4"
           aria-label={t("copy")}
         >
           {copied ? (
-            <>
-              <Check size={14} strokeWidth={2.5} />
-              {t("copied")}
-            </>
+            <span className="material-symbols-outlined text-lg text-emerald-600">check</span>
           ) : (
-            <>
-              <Copy size={14} strokeWidth={2} />
-              {t("copy")}
-            </>
+            <span className="material-symbols-outlined text-lg">content_copy</span>
           )}
         </button>
       </div>
-      <p className="text-xs text-center mt-2 text-white/35">
+      <p className="text-xs text-center mt-3 text-stone-500 font-medium">
         {t("save_key_note")}
       </p>
     </div>

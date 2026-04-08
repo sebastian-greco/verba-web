@@ -1,11 +1,9 @@
 import { Polar } from "@polar-sh/sdk";
 import { notFound } from "next/navigation";
-import { Download } from "lucide-react";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import LicenseKeyDisplay from "./LicenseKeyDisplay";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
-import { DOWNLOAD_URL } from "@/lib/constants";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -31,7 +29,6 @@ async function fetchLicenseData(checkoutId: string) {
 
     const checkout = await polar.checkouts.get({ id: checkoutId });
 
-    // Only proceed if checkout is confirmed/completed
     const confirmed = checkout.status === "confirmed" || checkout.status === "succeeded";
     const customerEmail = checkout.customerEmail ?? null;
     const customerId = checkout.customerId ?? null;
@@ -39,7 +36,6 @@ async function fetchLicenseData(checkoutId: string) {
     let licenseKey: string | null = null;
 
     if (orgId && benefitId && customerId) {
-      // Fetch license keys for this org+benefit and find the one for this customer
       const keysPage = await polar.licenseKeys.list({
         organizationId: orgId,
         benefitId: benefitId,
@@ -82,106 +78,112 @@ export default async function ThanksPage({
   return (
     <>
       <Nav locale={locale} />
-      <main className="min-h-screen flex items-center justify-center px-6 py-32 relative z-10">
-        <div className="w-full max-w-xl">
+      <main className="flex-grow pt-32 pb-24 px-6 max-w-4xl mx-auto w-full relative z-10">
+        <div 
+          className="rounded-[2.5rem] p-8 md:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-white/50 relative overflow-hidden"
+          style={{
+            background: "rgba(255, 255, 255, 0.45)",
+            backdropFilter: "blur(24px) saturate(180%)",
+            WebkitBackdropFilter: "blur(24px) saturate(180%)"
+          }}
+        >
+          {/* Decorative Subtle Accent */}
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#ee7752]/5 rounded-full blur-3xl pointer-events-none"></div>
 
-          {/* Success badge */}
-          <div className="flex justify-center mb-10">
-            <div
-              className="w-20 h-20 rounded-full flex items-center justify-center bg-white/5 border border-[#ff9f0a]/30 shadow-[0_0_48px_rgba(255,159,10,0.15)]"
-            >
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#ff9f0a]">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-            </div>
-          </div>
-
-          {/* Headline */}
-          <h1 className="text-4xl md:text-5xl font-black text-center text-foreground mb-4 font-serif leading-tight">
-            {t("headline")}
-          </h1>
-          <p className="text-center text-muted-foreground text-lg mb-10 leading-relaxed font-serif">
-            {licenseKey
-              ? t("subheadline_ready")
-              : confirmed
-                ? t("subheadline_email")
-                : customerEmail
-                  ? t("subheadline_check_email", { email: customerEmail })
-                  : t("subheadline_fallback")}
-          </p>
-
-          {/* License key block */}
-          {licenseKey ? (
-            <section className="bg-white/5 border border-white/10 rounded-[28px] p-8 mb-8">
-              <p className="text-xs font-bold uppercase tracking-widest text-[#ff9f0a]/80 mb-1">
-                {t("license_key_label")}
+          <div className="flex flex-col items-center text-center max-w-3xl mx-auto relative z-10">
+            
+            {/* Hero Section */}
+            <div className="mb-14">
+              <h1 className="text-4xl md:text-5xl font-serif font-bold tracking-tight text-stone-900 mb-5 leading-tight">
+                {t("headline")}
+              </h1>
+              <p className="text-lg text-stone-600 font-medium max-w-md mx-auto">
+                {licenseKey
+                  ? t("subheadline_ready")
+                  : confirmed
+                    ? t("subheadline_email")
+                    : customerEmail
+                      ? t("subheadline_check_email", { email: customerEmail })
+                      : t("subheadline_fallback")}
               </p>
+            </div>
+
+            {/* License Display Block */}
+            {licenseKey ? (
               <LicenseKeyDisplay licenseKey={licenseKey} />
-            </section>
-          ) : (
-            <div className="bg-[#ff9f0a]/10 border border-[#ff9f0a]/20 rounded-[28px] p-6 mb-8 flex items-start gap-4">
-              <span className="material-symbols-outlined text-[#ff9f0a] mt-0.5" style={{ fontSize: 22 }}>
-                mail
-              </span>
-              <p className="text-sm text-foreground/80 leading-relaxed">
-                {t("email_sent_to")}
-                {customerEmail ? (
-                  <strong className="text-foreground">{customerEmail}</strong>
-                ) : (
-                  t("email_address_fallback")
-                )}
-                {t("email_arrive_time")}
-              </p>
+            ) : (
+              <div className="mb-16 w-full max-w-md mx-auto flex items-start gap-4 bg-[#ee7752]/10 border border-[#ee7752]/20 rounded-2xl p-6 text-left shadow-sm">
+                <span className="material-symbols-outlined text-[#ee7752] mt-0.5" style={{ fontSize: 22 }}>
+                  mail
+                </span>
+                <p className="text-sm text-stone-700 leading-relaxed">
+                  {t("email_sent_to")}
+                  {customerEmail ? (
+                    <strong className="text-stone-900 font-bold">{customerEmail}</strong>
+                  ) : (
+                    t("email_address_fallback")
+                  )}
+                  {t("email_arrive_time")}
+                </p>
+              </div>
+            )}
+
+            {/* Activation Steps */}
+            <div className="w-full max-w-xl text-left">
+              <h2 className="text-lg font-bold font-serif text-stone-900 mb-8 flex items-center gap-3">
+                <span className="material-symbols-outlined text-[#ee7752]">check_circle</span>
+                {t("how_to_activate")}
+              </h2>
+              <div className="space-y-8">
+                {steps.map((step, i) => {
+                  const isLast = i === steps.length - 1;
+                  return (
+                    <div key={i} className="flex gap-6 items-start group">
+                      <div className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm transition-colors ${
+                        isLast 
+                          ? "bg-stone-900 text-white" 
+                          : "border-2 border-stone-200 text-stone-500 group-hover:border-stone-400"
+                      }`}>
+                        {i + 1}
+                      </div>
+                      <p className={`leading-relaxed pt-1 w-full ${isLast ? "text-stone-900 font-medium" : "text-stone-700"}`}>
+                        {step}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          )}
 
-          {/* Activation steps */}
-          <section className="bg-white/5 border border-white/10 rounded-[28px] p-8 mb-8">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#ff9f0a]/80 mb-6">
-              {t("how_to_activate")}
-            </p>
-            <ol className="space-y-5">
-              {steps.map((step, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <span className="shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold mt-0.5 bg-[#ff9f0a]/10 border border-[#ff9f0a]/20 text-[#ff9f0a]">
-                    {i + 1}
-                  </span>
-                  <span className="text-foreground/90 text-base leading-relaxed font-serif">
-                    {step}
-                  </span>
-                </li>
-              ))}
-            </ol>
-          </section>
-
-          {/* Helpful note */}
-          <p className="text-sm text-center text-muted-foreground mb-8 leading-relaxed px-2">
-            {t("helpful_note")}
+            {/* Footer-like Info within Glass */}
+            <div className="mt-20 pt-10 border-t border-stone-200/40 w-full grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="material-symbols-outlined text-stone-400 text-xl">devices</span>
+                  <h3 className="font-bold text-stone-900">Multi-device</h3>
+                </div>
+                <p className="text-sm text-stone-500 leading-relaxed">
+                  Your license allows activation on up to 3 personal devices simultaneously. No subscription required.
+                </p>
+              </div>
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="material-symbols-outlined text-stone-400 text-xl">help_outline</span>
+                  <h3 className="font-bold text-stone-900">Need Help?</h3>
+                </div>
+                <p className="text-sm text-stone-500 leading-relaxed">
+                  If you have any issues, check our <a href="#" className="text-stone-900 underline decoration-stone-200 hover:decoration-stone-400 underline-offset-4">support guides</a> or reach out to our team.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div className="mt-12 text-center">
+          <p className="text-xs text-stone-400 uppercase tracking-[0.2em] font-bold">
+            A Digital Sanctuary project
           </p>
-
-          {/* Download CTA */}
-          <div className="flex justify-center mb-12">
-            <a
-              href={DOWNLOAD_URL}
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full font-bold text-base transition-all duration-200 bg-white text-black hover:bg-neutral-200 hover:scale-105 active:scale-95"
-            >
-              <Download size={18} strokeWidth={2.5} />
-              {t("download_cta")}
-            </a>
-          </div>
-
-          {/* Already closed this page */}
-          <div className="bg-white/5 border border-white/10 rounded-2xl px-6 py-5 text-center">
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              <span className="font-semibold text-foreground">{t("already_closed")}</span>{" "}
-              {t("open_from_menu")}
-              <span className="font-mono text-xs bg-white/10 px-2 py-0.5 rounded text-foreground">
-                {t("activate_license")}
-              </span>
-              .
-            </p>
-          </div>
-
         </div>
       </main>
       <Footer />
