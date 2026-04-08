@@ -145,7 +145,7 @@ export default async function ThanksPage({
                   const isLast = i === steps.length - 1;
                   return (
                     <div key={i} className="flex gap-6 items-start group">
-                      <div className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm transition-colors ${
+                      <div className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm transition-colors ${
                         isLast 
                           ? "bg-stone-900 text-white" 
                           : "border-2 border-stone-200 text-stone-500 group-hover:border-stone-400"
@@ -166,19 +166,21 @@ export default async function ThanksPage({
               <div>
                 <div className="flex items-center gap-3 mb-3">
                   <span className="material-symbols-outlined text-stone-400 text-xl">devices</span>
-                  <h3 className="font-bold text-stone-900">Multi-device</h3>
+                  <h3 className="font-bold text-stone-900">{t("multi_device")}</h3>
                 </div>
                 <p className="text-sm text-stone-500 leading-relaxed">
-                  Your license allows activation on up to 3 personal devices simultaneously. No subscription required.
+                  {t("multi_device_desc")}
                 </p>
               </div>
               <div>
                 <div className="flex items-center gap-3 mb-3">
                   <span className="material-symbols-outlined text-stone-400 text-xl">help_outline</span>
-                  <h3 className="font-bold text-stone-900">Need Help?</h3>
+                  <h3 className="font-bold text-stone-900">{t("need_help")}</h3>
                 </div>
                 <p className="text-sm text-stone-500 leading-relaxed">
-                  If you have any issues, check our <a href="#" className="text-stone-900 underline decoration-stone-200 hover:decoration-stone-400 underline-offset-4">support guides</a> or reach out to our team.
+                  {t.rich("need_help_desc", {
+                    support_link: (chunks) => <a href="#" className="text-stone-900 underline decoration-stone-200 hover:decoration-stone-400 underline-offset-4">{chunks}</a>
+                  })}
                 </p>
               </div>
             </div>
@@ -188,7 +190,7 @@ export default async function ThanksPage({
         
         <div className="mt-12 text-center">
           <p className="text-xs text-stone-400 uppercase tracking-[0.2em] font-bold">
-            A Digital Sanctuary project
+            {t("digital_sanctuary")}
           </p>
         </div>
       </main>

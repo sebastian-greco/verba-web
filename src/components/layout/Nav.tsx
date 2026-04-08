@@ -25,9 +25,14 @@ const localeNames: Record<string, string> = {
   nl: "NL",
 };
 
+import { useSearchParams } from "next/navigation";
+
 function LocaleSwitcher({ locale }: { locale: string }) {
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const query = searchParams.toString();
+  const pathWithQuery = query ? `${pathname}?${query}` : pathname;
 
   return (
     <DropdownMenu modal={false}>
@@ -50,7 +55,7 @@ function LocaleSwitcher({ locale }: { locale: string }) {
         {routing.locales.map((l) => (
           <DropdownMenuItem
             key={l}
-            onClick={() => router.replace(pathname, { locale: l })}
+            onClick={() => router.replace(pathWithQuery as any, { locale: l })}
             className={`text-xs cursor-pointer ${
               l === locale
                 ? "bg-primary/10 text-primary font-semibold"

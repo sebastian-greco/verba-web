@@ -179,6 +179,11 @@
     "open_from_menu": "Open Verba from your menu bar and choose ",
     "activate_license": "Activate License",
     "copied": "Copied",
-    "copy": "Copy"
+    "copy": "Copy",
+    "multi_device": "Multi-device",
+    "multi_device_desc": "Your license allows activation on up to 3 personal devices simultaneously. No subscription required.",
+    "need_help": "Need Help?",
+    "need_help_desc": "If you have any issues, check our <support_link>support guides</support_link> or reach out to our team.",
+    "digital_sanctuary": "A Digital Sanctuary project"
   }
 }
