@@ -12,7 +12,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 
 const DOWNLOAD_URL = "https://verbaspeech.app/download";
 
@@ -107,7 +107,9 @@ export default function Nav({ locale }: { locale: string }) {
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-4">
-          <LocaleSwitcher locale={locale} />
+          <Suspense fallback={<div className="w-8 h-8" />}>
+            <LocaleSwitcher locale={locale} />
+          </Suspense>
           <a
             href={DOWNLOAD_URL}
             className="btn-warm px-6 py-2.5 rounded-full text-sm font-bold block"
@@ -116,7 +118,9 @@ export default function Nav({ locale }: { locale: string }) {
           </a>
         </div>
         <div className="flex md:hidden items-center gap-2">
-          <LocaleSwitcher locale={locale} />
+          <Suspense fallback={<div className="w-8 h-8" />}>
+            <LocaleSwitcher locale={locale} />
+          </Suspense>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="rounded-full">
