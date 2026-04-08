@@ -3,21 +3,24 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 
-export default function LicenseKeyDisplay({ licenseKey }: { licenseKey: string }) {
+export default function LicenseKeyDisplay({ fullKey, displayKey }: { fullKey: string, displayKey: string }) {
   const t = useTranslations("thanks");
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
-    await navigator.clipboard.writeText(licenseKey);
+    await navigator.clipboard.writeText(fullKey);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  const prefix = fullKey.split("-")[0];
+  const visualKey = displayKey.startsWith("****") ? `${prefix}-${displayKey}` : displayKey;
 
   return (
     <div className="mb-16 w-full max-w-sm mx-auto flex flex-col items-center">
       <div className="w-full bg-white/60 rounded-2xl p-5 flex items-center justify-between border border-white/80 shadow-sm relative z-10">
         <code className="text-stone-900 font-mono text-base tracking-wider font-semibold">
-          {licenseKey}
+          {visualKey}
         </code>
         <button
           onClick={copy}

@@ -34,20 +34,26 @@ async function fetchLicenseData(checkoutId: string) {
     const customerId = checkout.customerId ?? null;
 
     let licenseKey: string | null = null;
+    let displayKey: string | null = null;
 
     if (orgId && benefitId && customerId) {
-      const keysPage = await polar.licenseKeys.list({
-        organizationId: orgId,
-        benefitId: benefitId,
-        limit: 100,
-      });
-      const match = keysPage.result.items.find((k) => k.customerId === customerId);
-      licenseKey = match?.displayKey ?? null;
+      try {
+        const keysPage = await polar.licenseKeys.list({
+          organizationId: orgId,
+          benefitId: benefitId,
+          limit: 100,
+        });
+        const match = keysPage.result.items.find((k) => k.customerId === customerId);
+        licenseKey = match?.key ?? null;
+        displayKey = match?.displayKey ?? null;
+      } catch (err) {
+        console.error("Failed to fetch license keys:", err);
+      }
     }
 
-    return { customerEmail, licenseKey, confirmed };
+    return { customerEmail, licenseKey, displayKey, confirmed };
   } catch {
-    return { customerEmail: null, licenseKey: null, confirmed: false };
+    return { customerEmail: null, licenseKey: null, displayKey: null, confirmed: false };
   }
 }
 
@@ -65,7 +71,7 @@ export default async function ThanksPage({
   const { checkout_id } = await searchParams;
   if (!checkout_id) notFound();
 
-  const { customerEmail, licenseKey, confirmed } = await fetchLicenseData(checkout_id);
+  const { customerEmail, licenseKey, displayKey, confirmed } = await fetchLicenseData(checkout_id);
 
   const steps = [
     t("step_1"),
@@ -109,8 +115,8 @@ export default async function ThanksPage({
             </div>
 
             {/* License Display Block */}
-            {licenseKey ? (
-              <LicenseKeyDisplay licenseKey={licenseKey} />
+            {licenseKey && displayKey ? (
+              <LicenseKeyDisplay fullKey={licenseKey} displayKey={displayKey} />
             ) : (
               <div className="mb-16 w-full max-w-md mx-auto flex items-start gap-4 bg-[#ee7752]/10 border border-[#ee7752]/20 rounded-2xl p-6 text-left shadow-sm">
                 <span className="material-symbols-outlined text-[#ee7752] mt-0.5" style={{ fontSize: 22 }}>
