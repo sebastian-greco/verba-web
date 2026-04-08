@@ -73,18 +73,14 @@ export default async function ThanksPage({
 
   const { customerEmail, licenseKey, displayKey, confirmed } = await fetchLicenseData(checkout_id);
 
-  const steps = [
-    t("step_1"),
-    t("step_2"),
-    t("step_3"),
-    t("step_4"),
-    t("step_5"),
-  ];
+  const steps = licenseKey 
+    ? [t("step_copy"), t("step_open"), t("step_paste"), t("step_activate"), t("step_done")]
+    : [t("step_open"), t("step_settings"), t("step_paste"), t("step_activate"), t("step_done")];
 
   return (
     <>
       <Nav locale={locale} />
-      <main className="flex-grow pt-32 pb-24 px-6 max-w-4xl mx-auto w-full relative z-10">
+      <main className="grow pt-32 pb-24 px-6 max-w-4xl mx-auto w-full relative z-10">
         <div 
           className="rounded-[2.5rem] p-8 md:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-white/50 relative overflow-hidden"
           style={{

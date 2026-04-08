@@ -168,11 +168,6 @@
     "email_address_fallback": "il tuo indirizzo e-mail",
     "email_arrive_time": ". Dovrebbe arrivare a breve.",
     "how_to_activate": "Come attivare",
-    "step_1": "Copia la tua chiave di licenza qui sopra.",
-    "step_2": "Apri l'app Verba Mac.",
-    "step_3": "Incolla la tua chiave di licenza nella finestra Licenza di Verba.",
-    "step_4": "Fai clic su Attiva.",
-    "step_5": "Fatto! Verba si sbloccherà immediatamente su questo dispositivo.",
     "helpful_note": "Se la prova gratuita è già scaduta, puoi comunque attivare la chiave dalla stessa schermata e continuare a usare Verba.",
     "download_cta": "Scarica Verba",
     "already_closed": "Hai già chiuso questa pagina?",
@@ -184,6 +179,12 @@
     "multi_device_desc": "La tua licenza consente l'attivazione su un massimo di 3 dispositivi personali contemporaneamente. Nessun abbonamento richiesto.",
     "need_help": "Serve aiuto?",
     "need_help_desc": "In caso di problemi, consulta le nostre <support_link>guide di supporto</support_link> o contatta il nostro team.",
-    "digital_sanctuary": "Un progetto Digital Sanctuary"
+    "digital_sanctuary": "Un progetto Digital Sanctuary",
+    "step_copy": "Copia la chiave di licenza mostrata sopra.",
+    "step_open": "Apri Verba sul tuo Mac.",
+    "step_settings": "Apri la finestra 'Attiva licenza' dalla barra dei menu di Verba.",
+    "step_paste": "Incolla la tua chiave di licenza nel campo.",
+    "step_activate": "Fai clic su Attiva.",
+    "step_done": "Fatto! Verba si sbloccherà immediatamente su questo dispositivo."
   }
 }

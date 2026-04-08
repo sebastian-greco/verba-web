@@ -168,11 +168,6 @@
     "email_address_fallback": "Ihre E-Mail-Adresse",
     "email_arrive_time": " gesendet. Er sollte kurzfristig ankommen.",
     "how_to_activate": "So aktivieren Sie",
-    "step_1": "Kopieren Sie Ihren Lizenzschlüssel oben.",
-    "step_2": "Öffnen Sie die Verba Mac-Anwendung.",
-    "step_3": "Fügen Sie Ihren Lizenzschlüssel in das Verba-Lizenzfenster ein.",
-    "step_4": "Klicken Sie auf Aktivieren.",
-    "step_5": "Fertig! Verba wird auf diesem Gerät sofort freigeschaltet.",
     "helpful_note": "Wenn Ihre kostenlose Testversion bereits abgelaufen ist, können Sie Ihren Schlüssel trotzdem vom selben Bildschirm aus aktivieren.",
     "download_cta": "Verba Herunterladen",
     "already_closed": "Haben Sie diese Seite bereits geschlossen?",
@@ -184,6 +179,12 @@
     "multi_device_desc": "Ihre Lizenz ermöglicht die gleichzeitige Aktivierung auf bis zu 3 persönlichen Geräten. Kein Abonnement erforderlich.",
     "need_help": "Brauchen Sie Hilfe?",
     "need_help_desc": "Wenn Sie Probleme haben, überprüfen Sie unsere <support_link>Support-Leitfäden</support_link> oder kontaktieren Sie unser Team.",
-    "digital_sanctuary": "Ein Projekt von Digital Sanctuary"
+    "digital_sanctuary": "Ein Projekt von Digital Sanctuary",
+    "step_copy": "Kopieren Sie den oben angezeigten Lizenzschlüssel.",
+    "step_open": "Öffnen Sie Verba auf Ihrem Mac.",
+    "step_settings": "Öffnen Sie das Fenster 'Lizenz aktivieren' über die Verba-Menüleiste.",
+    "step_paste": "Fügen Sie Ihren Lizenzschlüssel in das Feld ein.",
+    "step_activate": "Klicken Sie auf Aktivieren.",
+    "step_done": "Fertig! Verba wird auf diesem Gerät sofort freigeschaltet."
   }
 }

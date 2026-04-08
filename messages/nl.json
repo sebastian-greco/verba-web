@@ -168,11 +168,6 @@
     "email_address_fallback": "je e-mailadres",
     "email_arrive_time": " verzonden. Het zal snel aankomen.",
     "how_to_activate": "Hoe te activeren",
-    "step_1": "Kopieer de licentiesleutel hierboven.",
-    "step_2": "Open de Verba Mac-toepassing.",
-    "step_3": "Plak je licentiesleutel in het Verba Licentievenster.",
-    "step_4": "Klik op Activeren.",
-    "step_5": "Klaar! Verba wordt onmiddellijk ontgrendeld op dit apparaat.",
     "helpful_note": "Als je gratis proefperiode al is afgelopen, kun je nog steeds je sleutel vanaf hetzelfde scherm activeren.",
     "download_cta": "Verba Downloaden",
     "already_closed": "Heb je deze pagina al gesloten?",
@@ -184,6 +179,12 @@
     "multi_device_desc": "Uw licentie staat activering toe op maximaal 3 persoonlijke apparaten tegelijk. Geen abonnement vereist.",
     "need_help": "Hulp nodig?",
     "need_help_desc": "Als u problemen heeft, bekijk dan onze <support_link>ondersteuningsgidsen</support_link> of neem contact op met ons team.",
-    "digital_sanctuary": "Een project van Digital Sanctuary"
+    "digital_sanctuary": "Een project van Digital Sanctuary",
+    "step_copy": "Kopieer de licentiesleutel die hierboven wordt getoond.",
+    "step_open": "Open Verba op je Mac.",
+    "step_settings": "Open het venster 'Licentie activeren' via de Verba-menubalk.",
+    "step_paste": "Plak je licentiesleutel in het veld.",
+    "step_activate": "Klik op Activeren.",
+    "step_done": "Klaar! Verba wordt onmiddellijk ontgrendeld op dit apparaat."
   }
 }
