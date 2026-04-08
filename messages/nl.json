@@ -155,5 +155,30 @@
   },
   "common": {
     "close": "Sluiten"
+  },
+  "thanks": {
+    "headline": "Thanks for purchasing Verba",
+    "subheadline_ready": "Your license key is ready to use in the app.",
+    "subheadline_email": "Your purchase is confirmed. Your license key will arrive by email shortly.",
+    "subheadline_check_email": "Check {email} for your license key.",
+    "subheadline_fallback": "Your purchase is confirmed. Check your email for your license key.",
+    "license_key_label": "Your License Key",
+    "save_key_note": "Save this key — it's also in your confirmation email.",
+    "email_sent_to": "Your license key has been sent to ",
+    "email_address_fallback": "your email address",
+    "email_arrive_time": ". It will arrive within a few minutes.",
+    "how_to_activate": "How to activate",
+    "step_1": "Open Verba on your Mac.",
+    "step_2": "Open Settings from the menu bar, or click Activate License from the Verba menu.",
+    "step_3": "Paste your license key into the Verba License window.",
+    "step_4": "Click Activate.",
+    "step_5": "You're done — Verba will unlock immediately on this device.",
+    "helpful_note": "If your free trial had already ended, you can still activate your key from the same screen and continue using Verba right away.",
+    "download_cta": "Download Verba",
+    "already_closed": "Already closed this page?",
+    "open_from_menu": "Open Verba from your menu bar and choose ",
+    "activate_license": "Activate License",
+    "copied": "Copied",
+    "copy": "Copy"
   }
 }

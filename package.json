@@ -18,6 +18,8 @@
 		"@fontsource/inter": "^5.2.8",
 		"@fontsource/newsreader": "^5.2.10",
 		"@opennextjs/cloudflare": "^1.17.1",
+		"@polar-sh/nextjs": "^0.9.5",
+		"@polar-sh/sdk": "^0.47.0",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"framer-motion": "^12.34.3",

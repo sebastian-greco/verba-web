@@ -151,7 +151,7 @@ export default function MacOverlaySimulator({
               viewBox="0 0 24 24"
               fill="currentColor"
               style={{ color: t.pauseIconColor }}
-              className="translate-x-[1px]"
+              className="translate-x-px"
             >
               <path d="M8 5v14l11-7z" />
             </svg>
@@ -178,18 +178,18 @@ export default function MacOverlaySimulator({
  */
 const barColors: Record<OverlayTheme, Record<string, string>> = {
   dark: {
-    success: "#30d158",              // systemGreen dark
-    processing: "#ffd60a",           // systemYellow dark
-    paused: "#ff9f0a",               // systemOrange dark
-    error: "#ff453a",                // systemRed dark
+    success: "#30d158", // systemGreen dark
+    processing: "#ffd60a", // systemYellow dark
+    paused: "#ff9f0a", // systemOrange dark
+    error: "#ff453a", // systemRed dark
     default: "rgba(255,255,255,0.9)", // OverlayTheme.Colors.white
   },
   light: {
-    success: "#34c759",              // systemGreen light
-    processing: "#ffcc00",           // systemYellow light
-    paused: "#ff9500",               // systemOrange light
-    error: "#ff3b30",                // systemRed light
-    default: "rgba(255,255,255,1)",  // white on frosted glass
+    success: "#34c759", // systemGreen light
+    processing: "#ffcc00", // systemYellow light
+    paused: "#ff9500", // systemOrange light
+    error: "#ff3b30", // systemRed light
+    default: "rgba(255,255,255,1)", // white on frosted glass
   },
 };
 
@@ -249,11 +249,16 @@ function AnimatedBars({
   const getBarColor = () => {
     const c = barColors[theme];
     switch (state) {
-      case "success":    return c.success;
-      case "processing": return c.processing;
-      case "paused":     return c.paused;
-      case "error":      return c.error;
-      default:           return c.default;
+      case "success":
+        return c.success;
+      case "processing":
+        return c.processing;
+      case "paused":
+        return c.paused;
+      case "error":
+        return c.error;
+      default:
+        return c.default;
     }
   };
 

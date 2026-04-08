@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
-import { PRICE } from "@/lib/constants";
+import { PRICE, BUY_URL } from "@/lib/constants";
 
 export default function PricingSection() {
   const t = useTranslations("pricing");
@@ -60,7 +60,7 @@ export default function PricingSection() {
               </ul>
               <a
                 className="btn-warm block w-full text-center py-6 rounded-full font-bold text-2xl"
-                href="https://verbaspeech.app/buy"
+                href={BUY_URL}
               >
                 {t("paid_cta")}
               </a>
