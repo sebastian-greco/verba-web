@@ -27,7 +27,7 @@ export const TRIAL_TRANSCRIPTIONS = 50;
 
 export const APP_NAME = "Verba";
 export const APP_DOMAIN = "verbaspeech.app";
-export const DOWNLOAD_URL = `https://${APP_DOMAIN}/download`;
+export const DOWNLOAD_URL = "/download";
 export const CONTACT_EMAIL = `hello@${APP_DOMAIN}`;
 
 // ─── Polar / Checkout ────────────────────────────────────────────────────────

@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import MacOverlaySimulator from "@/components/ui/MacOverlaySimulator";
 import { useRef } from "react";
-import { PRICE, BUY_URL } from "@/lib/constants";
+import { PRICE, BUY_URL, DOWNLOAD_URL } from "@/lib/constants";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
@@ -50,7 +50,7 @@ export default function HeroSection() {
         >
           <a
             className="btn-warm px-10 py-5 rounded-full font-bold text-lg flex items-center gap-3"
-            href="https://verbaspeech.app/download"
+            href={DOWNLOAD_URL}
           >
             <span className="material-symbols-outlined shrink-0 text-xl font-medium">{"download"}</span>
             {t("cta_primary")}

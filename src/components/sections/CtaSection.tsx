@@ -2,9 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
+import { DOWNLOAD_URL } from "@/lib/constants";
 import { motion } from "framer-motion";
-
-const DOWNLOAD_URL = "https://verbaspeech.app/download";
 
 export default function CtaSection() {
   const t = useTranslations("cta_block");

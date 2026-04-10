@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { DOWNLOAD_URL } from "@/lib/constants";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,8 +14,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useState, Suspense } from "react";
-
-const DOWNLOAD_URL = "https://verbaspeech.app/download";
 
 const localeNames: Record<string, string> = {
   en: "EN",
