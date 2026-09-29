@@ -1,4 +1,4 @@
-import { Polar } from "@polar-sh/sdk";
+import { fetchLicenseData } from "@/lib/polar";
 import { notFound } from "next/navigation";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import LicenseKeyDisplay from "./LicenseKeyDisplay";
@@ -14,47 +14,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: t("subheadline_ready"),
     robots: { index: false },
   };
-}
-
-async function fetchLicenseData(checkoutId: string) {
-  const accessToken = process.env.POLAR_ACCESS_TOKEN;
-  const orgId = process.env.POLAR_ORG_ID;
-  const benefitId = process.env.POLAR_BENEFIT_ID;
-
-  if (!accessToken) return { customerEmail: null, licenseKey: null, confirmed: false };
-
-  try {
-    const server = process.env.POLAR_ENV === "sandbox" ? "sandbox" : "production";
-    const polar = new Polar({ accessToken, server });
-
-    const checkout = await polar.checkouts.get({ id: checkoutId });
-
-    const confirmed = checkout.status === "confirmed" || checkout.status === "succeeded";
-    const customerEmail = checkout.customerEmail ?? null;
-    const customerId = checkout.customerId ?? null;
-
-    let licenseKey: string | null = null;
-    let displayKey: string | null = null;
-
-    if (orgId && benefitId && customerId) {
-      try {
-        const keysPage = await polar.licenseKeys.list({
-          organizationId: orgId,
-          benefitId: benefitId,
-          limit: 100,
-        });
-        const match = keysPage.result.items.find((k) => k.customerId === customerId);
-        licenseKey = match?.key ?? null;
-        displayKey = match?.displayKey ?? null;
-      } catch (err) {
-        console.error("Failed to fetch license keys:", err);
-      }
-    }
-
-    return { customerEmail, licenseKey, displayKey, confirmed };
-  } catch {
-    return { customerEmail: null, licenseKey: null, displayKey: null, confirmed: false };
-  }
 }
 
 export default async function ThanksPage({
@@ -116,7 +75,7 @@ export default async function ThanksPage({
             ) : (
               <div className="mb-16 w-full max-w-md mx-auto flex items-start gap-4 bg-[#ee7752]/10 border border-[#ee7752]/20 rounded-2xl p-6 text-left shadow-sm">
                 <span className="material-symbols-outlined text-[#ee7752] mt-0.5" style={{ fontSize: 22 }}>
-                  mail
+                  {"mail"}
                 </span>
                 <p className="text-sm text-stone-700 leading-relaxed">
                   {t("email_sent_to")}
@@ -133,7 +92,7 @@ export default async function ThanksPage({
             {/* Activation Steps */}
             <div className="w-full max-w-xl text-left">
               <h2 className="text-lg font-bold font-serif text-stone-900 mb-8 flex items-center gap-3">
-                <span className="material-symbols-outlined text-[#ee7752]">check_circle</span>
+                <span className="material-symbols-outlined text-[#ee7752]">{"check_circle"}</span>
                 {t("how_to_activate")}
               </h2>
               <div className="space-y-8">
@@ -161,7 +120,7 @@ export default async function ThanksPage({
             <div className="mt-20 pt-10 border-t border-stone-200/40 w-full grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="material-symbols-outlined text-stone-400 text-xl">devices</span>
+                  <span className="material-symbols-outlined text-stone-400 text-xl">{"devices"}</span>
                   <h3 className="font-bold text-stone-900">{t("multi_device")}</h3>
                 </div>
                 <p className="text-sm text-stone-500 leading-relaxed">
@@ -170,7 +129,7 @@ export default async function ThanksPage({
               </div>
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="material-symbols-outlined text-stone-400 text-xl">help_outline</span>
+                  <span className="material-symbols-outlined text-stone-400 text-xl">{"help_outline"}</span>
                   <h3 className="font-bold text-stone-900">{t("need_help")}</h3>
                 </div>
                 <p className="text-sm text-stone-500 leading-relaxed">

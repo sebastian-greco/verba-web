@@ -1,4 +1,4 @@
-import { Polar } from "@polar-sh/sdk";
+import { createPolarClient } from "@/lib/polar";
 import { NextRequest, NextResponse } from "next/server";
 
 /**
@@ -21,12 +21,11 @@ export async function GET(_req: NextRequest): Promise<Response> {
     return new Response("Checkout not configured", { status: 503 });
   }
 
-  const server = process.env.POLAR_ENV === "sandbox" ? "sandbox" : "production";
-  const polar = new Polar({ accessToken, server });
+  const polar = createPolarClient(accessToken);
 
   const checkout = await polar.checkouts.create({
     products: [productId],
-    successUrl: `${_req.nextUrl.origin}/thanks?checkout_id={CHECKOUT_ID}`,
+    success_url: `${_req.nextUrl.origin}/thanks?checkout_id={CHECKOUT_ID}`,
   });
 
   return NextResponse.redirect(checkout.url);
