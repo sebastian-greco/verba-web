@@ -78,23 +78,19 @@
     "subheadline": "Leistungsstarke Funktionen verpackt in einem einfachen Erlebnis."
   },
   "dictionary": {
-    "headline": "Ein Wörterbuch für Ihre Wörter.",
-    "release_note": "Demnächst in Verba 1.1.0",
-    "description": "Speichern Sie Ersetzungen für Namen, Begriffe und Ausdrücke im nativen Wörterbuch von Verba. Ihre Regeln bleiben auf Ihrem Mac und werden nach der Transkription und der optionalen intelligenten Textbereinigung angewendet.",
-    "replacements_title": "Bestimmen Sie genau, was geschrieben wird",
-    "replacements_description": "Fügen Sie Ersetzungen für Wörter und Ausdrücke hinzu, bearbeiten, aktivieren oder entfernen Sie sie. Verba übernimmt die von Ihnen gespeicherte Schreibweise und Großschreibung.",
-    "suggestions_title": "Prüfen Sie Vorschläge aus Ihren Korrekturen",
-    "suggestions_description": "Nachdem Verba eine Transkription eingefügt hat, kann es bei aktiviertem Lernen aus Korrekturen kurz Ihre Änderungen im selben unterstützten Textfeld beobachten und eine Ersetzung für ein Wort oder einen Ausdruck vorschlagen.",
-    "control_title": "Sie entscheiden, was gespeichert wird",
-    "control_description": "Akzeptieren Sie Vorschläge im Wörterbuch, verschieben Sie sie auf später oder lehnen Sie sie ab. Sie können das Lernen aus Korrekturen in den Transkriptionseinstellungen ausschalten.",
+    "headline": "Ihre Wörter. So geschrieben, wie Sie es möchten.",
+    "description": "Namen, Projektbegriffe und Ausdrücke, die Sie täglich verwenden. Speichern Sie sie im nativen Wörterbuch von Verba. Ihre lokalen Ersetzungsregeln schreiben sie dann so, wie Sie es möchten.",
+    "learning_title": "Sie entscheiden, was Verba sich merkt.",
+    "learning_description": "Korrekturen können zu Regelvorschlägen werden. Jeden Vorschlag müssen Sie freigeben, und das Lernen aus Korrekturen lässt sich jederzeit ausschalten.",
     "example_title": "Wörterbuch",
     "replace_label": "Ersetzen",
     "with_label": "Durch",
-    "example_source": "verba",
-    "example_replacement": "Verba",
-    "approval_note": "Ein Vorschlag wird erst zur Regel, wenn Sie ihn akzeptieren.",
-    "example_caption": "Beispielregel: Behalten Sie die Schreibweise und Großschreibung Ihrer Wahl.",
-    "compatibility_note": "Das Lernen aus Korrekturen benötigt Zugriff über die Bedienungshilfen und ein unterstütztes bearbeitbares Feld. Die Verfügbarkeit hängt von der App und dem Feld ab."
+    "example_source": "north star labs",
+    "example_replacement": "Northstar Labs",
+    "result_label": "Mit Ihrer gespeicherten Regel",
+    "result_text": "Senden Sie den Vorschlag an <term>Northstar Labs</term>.",
+    "example_caption": "Eine Beispielregel. Ihr Wörterbuch bleibt auf Ihrem Mac.",
+    "compatibility_note": "Wenn aktiviert, beobachtet das Lernen aus Korrekturen kurz die Änderungen am Text, den Verba gerade in ein unterstütztes Feld eingefügt hat. Dafür ist der Bedienungshilfen-Zugriff erforderlich; die Unterstützung hängt von der App und dem Feld ab."
   },
   "pricing": {
     "headline": "Einmal zahlen. Für immer besitzen.",

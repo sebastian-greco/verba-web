@@ -78,23 +78,19 @@
     "subheadline": "Krachtige functies verpakt in een eenvoudige ervaring."
   },
   "dictionary": {
-    "headline": "Een Woordenboek voor jouw woorden.",
-    "release_note": "Binnenkort in Verba 1.1.0",
-    "description": "Sla vervangingen voor namen, termen en woordgroepen op in het native Woordenboek van Verba. Je regels blijven op je Mac en worden toegepast na de transcriptie en de optionele slimme tekstopruiming.",
-    "replacements_title": "Bepaal precies wat er wordt geschreven",
-    "replacements_description": "Voeg vervangingen voor woorden en woordgroepen toe, bewerk ze, schakel ze in of verwijder ze. Verba gebruikt de spelling en hoofdletters die je opslaat.",
-    "suggestions_title": "Bekijk suggesties op basis van je correcties",
-    "suggestions_description": "Nadat Verba een transcriptie heeft geplakt, kan het kort je wijzigingen in hetzelfde ondersteunde tekstveld bekijken en een vervanging voor een woord of woordgroep voorstellen als het leren van correcties is ingeschakeld.",
-    "control_title": "Jij bepaalt wat wordt onthouden",
-    "control_description": "Accepteer suggesties in het Woordenboek, stel ze uit of wijs ze af. Je kunt het leren van correcties uitschakelen in de transcriptie-instellingen.",
+    "headline": "Je woorden. Geschreven zoals jij het wilt.",
+    "description": "Namen, projecttermen en uitdrukkingen die je elke dag gebruikt. Sla ze op in het native Woordenboek van Verba; je lokale vervangregels zorgen ervoor dat ze worden geschreven zoals jij wilt.",
+    "learning_title": "Jij bepaalt wat Verba onthoudt.",
+    "learning_description": "Correcties kunnen voorgestelde regels worden. Je moet elke regel goedkeuren en je kunt het leren van correcties altijd uitschakelen.",
     "example_title": "Woordenboek",
     "replace_label": "Vervang",
     "with_label": "Door",
-    "example_source": "verba",
-    "example_replacement": "Verba",
-    "approval_note": "Een suggestie wordt pas een regel wanneer je deze accepteert.",
-    "example_caption": "Voorbeeldregel: behoud de spelling en hoofdletters die je kiest.",
-    "compatibility_note": "Het leren van correcties vereist toegang via Toegankelijkheid en een ondersteund bewerkbaar veld. De beschikbaarheid verschilt per app en veld."
+    "example_source": "north star labs",
+    "example_replacement": "Northstar Labs",
+    "result_label": "Met je opgeslagen regel",
+    "result_text": "Stuur het voorstel naar <term>Northstar Labs</term>.",
+    "example_caption": "Een voorbeeldregel. Je Woordenboek blijft op je Mac.",
+    "compatibility_note": "Als het is ingeschakeld, observeert het leren van correcties kort je bewerkingen aan tekst die Verba net in een ondersteund veld heeft geplakt. Hiervoor is toegang via Toegankelijkheid nodig; ondersteuning verschilt per app en veld."
   },
   "pricing": {
     "headline": "Betaal eenmalig. Bezit het voor altijd.",

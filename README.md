@@ -83,12 +83,12 @@ also documents the September 8 signing cutoff; existing legacy secrets retain
 their signing behavior, and regeneration requires a matching handler update.
 
 The macOS repository's `LicenseManager.polarRequest` sends activate, validate,
-and deactivate requests directly to Polar with no version header (audit:
-September 30, 2026). The site's pin does not affect these requests. The published
+and deactivate requests directly to Polar with its own `Polar-Version: 2026-04`
+pin. The site's `2026-10` pin does not affect these requests. The published
 `2026-04` and `2026-10` schemas preserve those request contracts, and the new
-nullable member fields do not affect Swift's existing decoded fields. Add an
-explicit `Polar-Version` pin and exercise the three license operations in the
-macOS release workflow; no macOS source was edited by this website change.
+nullable member fields do not affect Swift's existing decoded fields. Review
+the macOS pin separately against Polar's version lifecycle; no macOS source
+was edited by this website change.
 
 Review the API pin before each quarterly release. Under Polar's documented
 lifecycle, Current becomes Deprecated at the next release and is removed at the

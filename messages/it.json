@@ -78,23 +78,19 @@
     "subheadline": "Funzionalità potenti in un'esperienza semplice."
   },
   "dictionary": {
-    "headline": "Un Dizionario per le tue parole.",
-    "release_note": "In arrivo con Verba 1.1.0",
-    "description": "Salva sostituzioni per nomi, termini ed espressioni nel Dizionario nativo di Verba. Le tue regole restano sul Mac e si applicano dopo la trascrizione e la pulizia intelligente facoltativa.",
-    "replacements_title": "Scegli esattamente cosa viene scritto",
-    "replacements_description": "Aggiungi, modifica, attiva o rimuovi sostituzioni di parole ed espressioni. Verba usa la grafia e le maiuscole che salvi.",
-    "suggestions_title": "Rivedi i suggerimenti dalle tue correzioni",
-    "suggestions_description": "Dopo aver incollato una trascrizione, Verba può osservare brevemente le tue modifiche nello stesso campo compatibile e proporre una sostituzione di parola o espressione, se l’apprendimento delle correzioni è attivo.",
-    "control_title": "Decidi tu cosa ricordare",
-    "control_description": "Accetta, rimanda o rifiuta i suggerimenti nel Dizionario. Puoi disattivare l’apprendimento delle correzioni nelle impostazioni di trascrizione.",
+    "headline": "Le tue parole. Scritte a modo tuo.",
+    "description": "Nomi, termini di progetto ed espressioni che usi ogni giorno. Salvali nel Dizionario nativo di Verba: le regole di sostituzione locali li manterranno scritti a modo tuo.",
+    "learning_title": "Decidi tu cosa ricorda Verba.",
+    "learning_description": "Le correzioni possono diventare regole suggerite. Devi approvare ogni regola e puoi disattivare l’apprendimento delle correzioni in qualsiasi momento.",
     "example_title": "Dizionario",
     "replace_label": "Sostituisci",
     "with_label": "Con",
-    "example_source": "verba",
-    "example_replacement": "Verba",
-    "approval_note": "Un suggerimento diventa una regola solo quando lo accetti.",
-    "example_caption": "Regola illustrativa: mantieni la grafia e le maiuscole che scegli.",
-    "compatibility_note": "L’apprendimento delle correzioni richiede l’accesso ad Accessibilità e un campo modificabile compatibile. La disponibilità varia in base all’app e al campo."
+    "example_source": "north star labs",
+    "example_replacement": "Northstar Labs",
+    "result_label": "Con la regola salvata",
+    "result_text": "Invia la proposta a <term>Northstar Labs</term>.",
+    "example_caption": "Una regola illustrativa. Il tuo Dizionario resta sul Mac.",
+    "compatibility_note": "Quando è attivo, l’apprendimento delle correzioni osserva brevemente le modifiche al testo appena incollato da Verba in un campo supportato. Richiede l’accesso ad Accessibilità; il supporto varia in base all’app e al campo."
   },
   "pricing": {
     "headline": "Paghi una volta. È tuo per sempre.",

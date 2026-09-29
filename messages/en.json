@@ -78,23 +78,19 @@
     "subheadline": "Powerful features wrapped in a simple experience."
   },
   "dictionary": {
-    "headline": "A Dictionary for your words.",
-    "release_note": "Coming in Verba 1.1.0",
-    "description": "Save replacements for names, terms, and phrases in Verba’s native Dictionary. Your rules stay on your Mac and apply after transcription and optional Smart Cleanup.",
-    "replacements_title": "Choose exactly what gets written",
-    "replacements_description": "Add, edit, enable, or remove word and phrase replacements. Verba uses the spelling and capitalization you save.",
-    "suggestions_title": "Review suggestions from your corrections",
-    "suggestions_description": "After Verba pastes a transcript, it can briefly observe your edits in the same supported text field and propose a word or phrase replacement when correction learning is enabled.",
-    "control_title": "You decide what to remember",
-    "control_description": "Accept, defer, or reject suggestions in the Dictionary. You can turn correction learning off in Transcription settings.",
+    "headline": "Your words. Spelled your way.",
+    "description": "Names, project terms, phrases you use every day. Save them in Verba’s native Dictionary, and your local replacement rules keep them written your way.",
+    "learning_title": "You choose what Verba remembers.",
+    "learning_description": "Corrections can become suggested rules. Each needs your approval, and you can turn correction learning off anytime.",
     "example_title": "Dictionary",
     "replace_label": "Replace",
     "with_label": "With",
-    "example_source": "verba",
-    "example_replacement": "Verba",
-    "approval_note": "A suggestion becomes a rule only when you accept it.",
-    "example_caption": "Illustrative rule: keep the spelling and capitalization you choose.",
-    "compatibility_note": "Correction learning requires Accessibility access and a supported editable field. Availability varies by app and field."
+    "example_source": "north star labs",
+    "example_replacement": "Northstar Labs",
+    "result_label": "With your saved rule",
+    "result_text": "Send the proposal to <term>Northstar Labs</term>.",
+    "example_caption": "An illustrative rule. Your Dictionary stays on your Mac.",
+    "compatibility_note": "When enabled, correction learning briefly observes edits to text Verba just pasted in a supported field. It requires Accessibility access; support varies by app and field."
   },
   "pricing": {
     "headline": "Pay once. Own it forever.",

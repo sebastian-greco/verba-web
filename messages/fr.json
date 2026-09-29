@@ -78,23 +78,19 @@
     "subheadline": "Des fonctionnalités puissantes dans une expérience simple."
   },
   "dictionary": {
-    "headline": "Un Dictionnaire pour vos mots.",
-    "release_note": "À venir dans Verba 1.1.0",
-    "description": "Enregistrez des remplacements pour les noms, les termes et les expressions dans le Dictionnaire natif de Verba. Vos règles restent sur votre Mac et s’appliquent après la transcription et le nettoyage intelligent facultatif.",
-    "replacements_title": "Choisissez exactement ce qui est écrit",
-    "replacements_description": "Ajoutez, modifiez, activez ou supprimez des remplacements de mots et d’expressions. Verba utilise l’orthographe et les majuscules que vous enregistrez.",
-    "suggestions_title": "Examinez les suggestions issues de vos corrections",
-    "suggestions_description": "Après avoir collé une transcription, Verba peut observer brièvement vos modifications dans le même champ de texte compatible et proposer un remplacement de mot ou d’expression si l’apprentissage des corrections est activé.",
-    "control_title": "Vous décidez quoi retenir",
-    "control_description": "Acceptez, reportez ou rejetez les suggestions dans le Dictionnaire. Vous pouvez désactiver l’apprentissage des corrections dans les réglages de transcription.",
+    "headline": "Vos mots. Écrits comme vous le souhaitez.",
+    "description": "Des noms, des termes de projet et des expressions du quotidien. Enregistrez-les dans le Dictionnaire natif de Verba ; vos règles de remplacement locales les écriront comme vous le souhaitez.",
+    "learning_title": "Vous choisissez ce que Verba retient.",
+    "learning_description": "Les corrections peuvent devenir des règles suggérées. Chacune doit être approuvée par vos soins, et vous pouvez désactiver l’apprentissage des corrections à tout moment.",
     "example_title": "Dictionnaire",
     "replace_label": "Remplacer",
     "with_label": "Par",
-    "example_source": "verba",
-    "example_replacement": "Verba",
-    "approval_note": "Une suggestion ne devient une règle que lorsque vous l’acceptez.",
-    "example_caption": "Règle illustrative : conservez l’orthographe et les majuscules de votre choix.",
-    "compatibility_note": "L’apprentissage des corrections nécessite l’autorisation Accessibilité et un champ modifiable compatible. La disponibilité varie selon l’app et le champ."
+    "example_source": "north star labs",
+    "example_replacement": "Northstar Labs",
+    "result_label": "Avec votre règle enregistrée",
+    "result_text": "Envoyez la proposition à <term>Northstar Labs</term>.",
+    "example_caption": "Exemple de règle. Votre Dictionnaire reste sur votre Mac.",
+    "compatibility_note": "Lorsqu’il est activé, l’apprentissage des corrections observe brièvement les modifications apportées au texte que Verba vient de coller dans un champ compatible. Il nécessite l’autorisation Accessibilité ; la prise en charge varie selon l’app et le champ."
   },
   "pricing": {
     "headline": "Payez une fois. C'est à vous pour toujours.",

@@ -70,14 +70,13 @@ Alternative: `Fn+Space` locks recording hands-free. Click `||` to pause. Double-
 - Handles self-corrections (e.g., "no wait, I meant...")
 - Requires downloading the model separately; off by default
 
-### Dictionary & Correction Learning (Coming in 1.1.0)
+### Dictionary & Correction Learning
 - Native **Dictionary** for local word and phrase replacement rules; users can add, edit, enable, or delete rules
 - Rules apply after transcription and optional Smart Cleanup, preserving the saved spelling and capitalization
 - Correction learning briefly observes edits to text Verba itself just pasted in one verified, supported editable field
 - Requires Accessibility access; support varies by app and field, so do not claim universal learning
 - Corrections can produce suggestions; the user must accept a suggestion before it becomes a replacement rule
 - Suggestions can be deferred or rejected, and correction learning can be disabled in Transcription settings
-- This feature is being prepared for macOS **1.1.0**; do not describe that version as available until it is published
 
 ### Privacy Architecture
 - **Zero network calls** during operation — no telemetry, no analytics, nothing
@@ -139,7 +138,7 @@ Alternative: `Fn+Space` locks recording hands-free. Click `||` to pause. Double-
 2. **Demo / How It Works** — the 3-step flow (`Fn` → speak → text appears)
 3. **Privacy Architecture** — why local matters; zero cloud dependency
 4. **Feature Grid** — full feature list
-5. **Dictionary** — local replacements, approved correction suggestions, compatibility limits, and upcoming release status
+5. **Dictionary** — local replacements, approved correction suggestions, and compatibility limits
 6. **Smart Cleanup** — before/after example of filler removal
 7. **Pricing** — trial vs license, comparison table vs competitors
 8. **Download CTA** — final push, repeat trial offer
