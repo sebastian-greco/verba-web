@@ -5,6 +5,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import DemoSection from '@/components/sections/DemoSection';
 import PrivacySection from '@/components/sections/PrivacySection';
 import FeaturesSection from '@/components/sections/FeaturesSection';
+import DictionarySection from '@/components/sections/DictionarySection';
 import PricingSection from '@/components/sections/PricingSection';
 import CleanupSection from '@/components/sections/CleanupSection';
 import CtaSection from '@/components/sections/CtaSection';
@@ -25,6 +26,7 @@ export default async function HomePage({ params }: Props) {
         <DemoSection />
         <PrivacySection />
         <FeaturesSection />
+        <DictionarySection />
         <PricingSection />
         <CleanupSection />
         <CtaSection />

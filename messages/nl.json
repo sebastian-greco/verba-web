@@ -77,6 +77,25 @@
     "telemetry_desc": "Geen analytics, geen crashrapporten, niets verlaat je Mac.",
     "subheadline": "Krachtige functies verpakt in een eenvoudige ervaring."
   },
+  "dictionary": {
+    "headline": "Een Woordenboek voor jouw woorden.",
+    "release_note": "Binnenkort in Verba 1.1.0",
+    "description": "Sla vervangingen voor namen, termen en woordgroepen op in het native Woordenboek van Verba. Je regels blijven op je Mac en worden toegepast na de transcriptie en de optionele slimme tekstopruiming.",
+    "replacements_title": "Bepaal precies wat er wordt geschreven",
+    "replacements_description": "Voeg vervangingen voor woorden en woordgroepen toe, bewerk ze, schakel ze in of verwijder ze. Verba gebruikt de spelling en hoofdletters die je opslaat.",
+    "suggestions_title": "Bekijk suggesties op basis van je correcties",
+    "suggestions_description": "Nadat Verba een transcriptie heeft geplakt, kan het kort je wijzigingen in hetzelfde ondersteunde tekstveld bekijken en een vervanging voor een woord of woordgroep voorstellen als het leren van correcties is ingeschakeld.",
+    "control_title": "Jij bepaalt wat wordt onthouden",
+    "control_description": "Accepteer suggesties in het Woordenboek, stel ze uit of wijs ze af. Je kunt het leren van correcties uitschakelen in de transcriptie-instellingen.",
+    "example_title": "Woordenboek",
+    "replace_label": "Vervang",
+    "with_label": "Door",
+    "example_source": "verba",
+    "example_replacement": "Verba",
+    "approval_note": "Een suggestie wordt pas een regel wanneer je deze accepteert.",
+    "example_caption": "Voorbeeldregel: behoud de spelling en hoofdletters die je kiest.",
+    "compatibility_note": "Het leren van correcties vereist toegang via Toegankelijkheid en een ondersteund bewerkbaar veld. De beschikbaarheid verschilt per app en veld."
+  },
   "pricing": {
     "headline": "Betaal eenmalig. Bezit het voor altijd.",
     "subheadline": "Geen abonnementen. Geen terugkerende kosten. Geen verrassingen.",
