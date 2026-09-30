@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { usePathname, useRouter, Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import BrandLogo from "@/components/layout/BrandLogo";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { DOWNLOAD_URL } from "@/lib/constants";
 import {
@@ -82,17 +82,8 @@ export default function Nav({ locale }: { locale: string }) {
   return (
     <header className="fixed top-0 w-full z-50 glass-header">
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/verba-logo.svg"
-            alt="Verba Logo"
-            width={28}
-            height={28}
-            className="w-7 h-7 object-contain"
-          />
-          <span className="font-bold tracking-tight text-xl text-primary font-serif">
-            {"Verba"}
-          </span>
+        <Link href="/" className="flex shrink-0 items-center">
+          <BrandLogo />
         </Link>
         <nav className="hidden md:flex items-center gap-10 text-sm text-muted-foreground font-semibold">
           {navLinks.map((link) => (

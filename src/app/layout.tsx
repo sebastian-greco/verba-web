@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Verba — Local Speech-to-Text for Mac",
   description:
     "Privacy-first local speech-to-text for Mac. No cloud. No subscription. No account.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+  },
 };
 
 export default function RootLayout({
@@ -16,7 +23,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
