@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { APP_NAME } from "@/lib/constants";
 import { useTranslations } from "next-intl";
 import {
   AudioLines,
@@ -39,14 +41,14 @@ export default function PrivacySection() {
                 <AudioLines size={28} aria-hidden="true" />
                 <span className="flow-line" />
                 <div className="local-core">
-                  <LockKeyhole size={30} aria-hidden="true" />
+                  <Image src="/verba-logo.svg" alt="" width={46} height={37} />
                 </div>
                 <span className="flow-line" />
                 <FileText size={28} aria-hidden="true" />
               </div>
               <div className="flow-labels">
                 <span>{t("flow_voice")}</span>
-                <span>{t("flow_local")}</span>
+                <span>{APP_NAME}</span>
                 <span>{t("flow_words")}</span>
               </div>
             </div>

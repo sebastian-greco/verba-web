@@ -1385,3 +1385,308 @@ html {
     grid-template-columns: 32px minmax(0, 1fr);
   }
 }
+
+/* Native Verba HUD, shared by the hero and the three workflow states. */
+.mac-overlay {
+  --hud-bars: oklch(0.96 0 0);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 10px;
+  padding: 2px 6px;
+  height: 30px;
+  width: 110px;
+  border: 1px solid oklch(1 0 0 / 0.2);
+  border-radius: 18px;
+  background: oklch(0.23 0.003 286 / 0.94);
+  box-shadow:
+    0 4px 16px oklch(0 0 0 / 0.18),
+    inset 0 1px 0 oklch(1 0 0 / 0.06);
+  backdrop-filter: blur(20px) saturate(180%);
+}
+.mac-overlay[data-theme="light"] {
+  background: oklch(0.7 0 0 / 0.35);
+}
+.mac-overlay-cancel,
+.mac-overlay-pause {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+.mac-overlay-cancel {
+  background: rgb(255 69 58);
+  color: oklch(0.23 0 0);
+}
+.mac-overlay-pause {
+  background: oklch(0.86 0 0);
+  color: oklch(0.35 0 0);
+}
+.mac-overlay-bars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 24px;
+  width: 40px;
+}
+.mac-overlay-bars i {
+  width: 4px;
+  height: 19px;
+  flex-shrink: 0;
+  background: var(--hud-bars);
+  border-radius: 3px;
+  transform: scaleY(0.32);
+}
+.mac-overlay[data-state="recording"] .mac-overlay-bars i {
+  animation: native-recording 0.7s ease-in-out infinite alternate;
+}
+.mac-overlay[data-state="recording"] .mac-overlay-bars i:nth-child(even) {
+  animation-duration: 0.95s;
+}
+.mac-overlay[data-state="processing"] {
+  --hud-bars: oklch(0.88 0.18 95);
+}
+.mac-overlay[data-state="processing"] .mac-overlay-bars i {
+  animation: native-processing 0.85s ease-in-out infinite;
+}
+.mac-overlay[data-state="success"] {
+  --hud-bars: oklch(0.75 0.21 148);
+}
+.mac-overlay[data-state="success"] .mac-overlay-bars i {
+  transform: scaleY(1);
+}
+.mac-overlay[data-state="paused"] {
+  --hud-bars: oklch(0.77 0.18 62);
+}
+.mac-overlay[data-state="paused"] .mac-overlay-bars i {
+  transform: scaleY(0.55);
+}
+.mac-overlay[data-state="error"] {
+  --hud-bars: oklch(0.68 0.22 28);
+}
+.mac-overlay[data-state="processing"] .mac-overlay-cancel,
+.mac-overlay[data-state="processing"] .mac-overlay-pause,
+.mac-overlay[data-state="success"] .mac-overlay-cancel,
+.mac-overlay[data-state="success"] .mac-overlay-pause {
+  opacity: 0.45;
+}
+.mac-overlay[data-animated="false"] .mac-overlay-bars i {
+  animation-play-state: paused;
+}
+@keyframes native-recording {
+  0% {
+    transform: scaleY(0.3);
+  }
+  60% {
+    transform: scaleY(0.95);
+  }
+  100% {
+    transform: scaleY(0.55);
+  }
+}
+@keyframes native-processing {
+  0%,
+  60%,
+  100% {
+    transform: scaleY(0.3);
+  }
+  30% {
+    transform: scaleY(1);
+  }
+}
+
+/* An email draft gives the native overlay a familiar, realistic context. */
+.email-scene {
+  padding-top: 45px;
+}
+.email-window .window-toolbar > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.email-window .window-toolbar > span:last-child {
+  font-size: 9px;
+  opacity: 0.7;
+}
+.email-fields {
+  padding: 0 24px;
+}
+.email-fields > div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 43px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 11px;
+}
+.email-fields > div > span:first-child {
+  color: var(--text-secondary);
+  font-size: 10px;
+  flex-shrink: 0;
+}
+.email-fields strong {
+  font-weight: 500;
+}
+.email-recipient {
+  padding: 3px 8px;
+  background: var(--warm-gray);
+  border-radius: 4px;
+  color: var(--earth-green);
+}
+.email-body {
+  padding: 23px 24px 16px;
+  min-height: 205px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.email-body .demo-output {
+  padding-top: 13px;
+  min-height: 135px;
+}
+.email-body .demo-output p {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+.email-compose-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 13px 24px;
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+.email-send {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--earth-green);
+  color: var(--bg-page);
+  padding: 6px 13px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+.email-compose-footer > span:last-child {
+  font-size: 9px;
+  margin-left: auto;
+}
+.hero-native-overlay {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: -5px;
+  min-height: 42px;
+}
+.hero-native-overlay .mac-overlay {
+  transform: scale(1.3);
+}
+.scene-control .scene-privacy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 13px;
+}
+
+.native-step {
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+.native-step .mac-overlay {
+  transform: scale(1.15);
+}
+.native-step kbd {
+  width: 60px;
+  height: 60px;
+  font-size: 23px;
+  padding: 9px;
+}
+.native-step.step-visual-1 {
+  padding-bottom: 40px;
+}
+.native-step .typed-sample {
+  font-size: clamp(23px, 2.8vw, 34px);
+}
+.workflow-motion-control {
+  display: flex;
+  justify-content: end;
+  margin-top: 24px;
+}
+.workflow-motion-control button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  color: var(--text-secondary);
+  font-size: 10px;
+  cursor: pointer;
+}
+.workflow-motion-control button:hover {
+  color: var(--earth-green);
+}
+@media (max-width: 767px) {
+  .workflow-step {
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 0 14px;
+  }
+  .native-step {
+    height: 180px;
+  }
+  .native-step .mac-overlay {
+    transform: none;
+  }
+  .native-step.step-visual-1 {
+    padding-bottom: 0;
+  }
+  .native-step .typed-sample {
+    font-size: 22px;
+    white-space: nowrap;
+  }
+  .email-body {
+    min-height: 225px;
+  }
+}
+@media (max-width: 360px) {
+  .workflow-step {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .workflow-step .step-top {
+    grid-column: 1;
+  }
+  .workflow-step .step-visual {
+    grid-row: auto;
+  }
+  .workflow-step h3 {
+    margin-top: 5px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mac-overlay .mac-overlay-bars i {
+    animation: none !important;
+  }
+  .mac-overlay[data-state="recording"] .mac-overlay-bars i {
+    transform: scaleY(0.6);
+  }
+}
+
+/* Keep the three native indicators on one shared baseline. */
+.native-step {
+  display: grid;
+  grid-template-rows: 30px 60px;
+  align-content: center;
+  justify-items: center;
+}
+.native-step.step-visual-1 {
+  padding-bottom: 0;
+}
+.native-step .typed-sample {
+  align-self: center;
+}

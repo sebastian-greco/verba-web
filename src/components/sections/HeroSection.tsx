@@ -11,10 +11,6 @@ export default function HeroSection() {
     <section className="home-hero">
       <div className="page-shell hero-grid">
         <Reveal className="hero-copy">
-          <p className="eyebrow">
-            <span className="status-dot" />
-            {t("eyebrow")}
-          </p>
           <h1>
             {t("hero_line_1")}
             <br />
