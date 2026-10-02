@@ -1,16 +1,19 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState } from "react";
-import { Check, Sparkles, LockKeyhole } from "lucide-react";
+import { useRef } from "react";
+import { useInView, useReducedMotion } from "framer-motion";
+import { ArrowDown, Check, Sparkles, LockKeyhole } from "lucide-react";
 import Reveal from "@/components/home/Reveal";
 
 export default function CleanupSection() {
   const t = useTranslations("cleanup");
   const r = useTranslations("redesign");
-  const [clean, setClean] = useState(true);
+  const example = useRef<HTMLDivElement>(null);
+  const visible = useInView(example, { once: true, amount: 0.4 });
+  const reducedMotion = useReducedMotion();
   return (
-    <section className="section-space cleanup-section">
+    <section className="section-space cleanup-section" id="cleanup">
       <div className="page-shell detail-grid">
         <Reveal>
           <p className="eyebrow">
@@ -32,32 +35,33 @@ export default function CleanupSection() {
             {t("note")}
           </p>
         </Reveal>
-        <Reveal className="cleanup-example">
-          <div className="cleanup-toolbar">
-            <span>{t("headline")}</span>
-            <button
-              type="button"
-              className="cleanup-switch"
-              role="switch"
-              aria-checked={clean}
-              aria-label={t("headline")}
-              onClick={() => setClean(!clean)}
-            >
-              <span />
-            </button>
+        <div
+          ref={example}
+          className="cleanup-comparison"
+          data-reveal={visible && !reducedMotion ? "animate" : "static"}
+        >
+          <div className="cleanup-before">
+            <span className="eyebrow">{t("before_label")}</span>
+            <p>
+              {t.rich("before_annotated", {
+                filler: (chunks) => <span className="filler">{chunks}</span>,
+              })}
+            </p>
           </div>
-          <div className="cleanup-text" aria-live="polite">
-            <span className="eyebrow">
-              {t(clean ? "after_label" : "before_label")}
-            </span>
-            <p key={String(clean)}>{t(clean ? "after_text" : "before_text")}</p>
+          <div className="cleanup-connector" aria-hidden="true">
+            <ArrowDown size={20} />
+            <span />
+            <Sparkles size={17} />
           </div>
-          <div className="cleanup-status">
-            <Sparkles size={15} aria-hidden="true" />
-            {t(clean ? "status_active" : "status_inactive")}
+          <div className="cleanup-after">
+            <span className="eyebrow">{t("after_label")}</span>
+            <p>{t("after_text")}</p>
+            <div className="cleanup-local">
+              <LockKeyhole size={12} aria-hidden="true" />
+              {r("on_your_mac")}
+            </div>
           </div>
-          <p className="example-caption">{r("example_caption")}</p>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

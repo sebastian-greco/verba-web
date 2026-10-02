@@ -4,7 +4,8 @@
     "privacy": "Privacy",
     "pricing": "Pricing",
     "download": "Download Free",
-    "menu": "Open navigation"
+    "menu": "Open navigation",
+    "how_it_works": "How it works"
   },
   "hero": {
     "headline": "Your voice, typed instantly. Privately.",
@@ -45,7 +46,8 @@
     "step_02": "STEP 02",
     "step_02_desc": "Speak in your own rhythm, in your own language. No special commands to learn.",
     "step_03": "STEP 03",
-    "step_03_desc": "Release Fn. Verba transcribes, optionally cleans up, and pastes your words where you’re writing."
+    "step_03_desc": "Release Fn. Verba transcribes, optionally cleans up, and pastes your words where you’re writing.",
+    "step_hold_key": "Hold <key>Fn</key>"
   },
   "privacy_section": {
     "headline": "Private by Design.",
@@ -135,8 +137,8 @@
     "subheadline": "Optional cleanup, fine-tuned for dictation. Remove the hesitations and tidy the punctuation, while keeping your meaning.",
     "before_label": "You said",
     "after_label": "Verba wrote",
-    "before_text": "um so basically I wanted to uh talk about the the project status and like we need to uh finish the API by next week",
-    "after_text": "I wanted to talk about the project status. We need to finish the API by next week.",
+    "before_text": "um can you send the updated proposal by friday and uh include the new timeline",
+    "after_text": "Can you send the updated proposal by Friday and include the new timeline?",
     "features_title": "What it does",
     "feature_fillers": "Removes filler words (um, uh, like, basically)",
     "feature_grammar": "Fixes grammar and punctuation",
@@ -144,7 +146,8 @@
     "feature_styles": "Style modes: Standard, Formal, Casual, Excited",
     "note": "Optional setup download. After that, cleanup runs on your Mac.",
     "status_active": "Smart Cleanup Active",
-    "status_inactive": "Smart Cleanup Inactive"
+    "status_inactive": "Smart Cleanup Inactive",
+    "before_annotated": "<filler>um</filler> can you send the updated proposal by friday and <filler>uh</filler> include the new timeline"
   },
   "cta_block": {
     "headline": "Start speaking. Stop typing.",
@@ -248,8 +251,8 @@
     "example_caption": "Illustrative text · try the switch",
     "closing_eyebrow": "A little more flow. A lot more privacy.",
     "video_eyebrow": "The real thing",
-    "video_title": "From a thought to a finished note.",
-    "video_description": "Watch Verba in Apple Notes: hold the shortcut, speak, and release. The recording overlay processes the audio, then your text appears in the note. Silent demo, with an English sample message.",
+    "video_title": "Say it where you need it.",
+    "video_description": "Draft an email, give an AI assistant a detailed brief, or get an idea into a document. Speak into the text field you’re already using, in Mac apps and on the web. Less typing, less switching between windows, more time for the thought itself.",
     "dictionary_alt": "Verba Dictionary settings with word replacement rules and individual switches.",
     "dictionary_caption": "The Dictionary in Verba. Your rules stay on your Mac.",
     "email_draft": "Draft",
@@ -260,6 +263,10 @@
     "email_saved": "Draft saved",
     "demo_processing": "Tidying up your words…",
     "pause_animation": "Pause animations",
-    "resume_animation": "Resume animations"
+    "resume_animation": "Resume animations",
+    "use_emails": "Emails & messages",
+    "use_prompts": "Prompts & instructions",
+    "use_notes": "Notes & documents",
+    "video_accessible_label": "Silent demo: hold Fn, dictate a sample message in Apple Notes, then release. Verba processes the recording and inserts the finished text."
   }
 }

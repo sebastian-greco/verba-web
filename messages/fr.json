@@ -4,7 +4,8 @@
     "privacy": "Confidentialité",
     "pricing": "Tarifs",
     "download": "Télécharger",
-    "menu": "Ouvrir la navigation"
+    "menu": "Ouvrir la navigation",
+    "how_it_works": "Comment ça marche"
   },
   "hero": {
     "headline": "Votre voix, tapée instantanément. En privé.",
@@ -45,7 +46,8 @@
     "step_02": "ÉTAPE 02",
     "step_02_desc": "Parlez à votre rythme, dans votre langue. Aucune commande spéciale à apprendre.",
     "step_03": "ÉTAPE 03",
-    "step_03_desc": "Relâchez Fn. Verba transcrit, corrige si vous le souhaitez et colle le texte là où vous écrivez."
+    "step_03_desc": "Relâchez Fn. Verba transcrit, corrige si vous le souhaitez et colle le texte là où vous écrivez.",
+    "step_hold_key": "Maintenez <key>Fn</key>"
   },
   "privacy_section": {
     "headline": "Privé par conception.",
@@ -135,8 +137,8 @@
     "subheadline": "Une correction facultative, adaptée à la dictée. Supprimez les hésitations et améliorez la ponctuation en gardant votre sens.",
     "before_label": "Vous avez dit",
     "after_label": "Verba a écrit",
-    "before_text": "euh donc en gros je voulais euh parler de l'état du projet et genre on doit euh terminer l'API d'ici la semaine prochaine",
-    "after_text": "Je voulais parler de l'état du projet. Nous devons terminer l'API d'ici la semaine prochaine.",
+    "before_text": "euh peux-tu envoyer la proposition actualisée pour vendredi et euh inclure le nouveau calendrier",
+    "after_text": "Peux-tu envoyer la proposition actualisée pour vendredi et inclure le nouveau calendrier ?",
     "features_title": "Ce qu'il fait",
     "feature_fillers": "Supprime les tics de langage (euh, genre, en gros)",
     "feature_grammar": "Corrige la grammaire et la ponctuation",
@@ -144,7 +146,8 @@
     "feature_styles": "Modes de style : Standard, Formel, Décontracté, Enthousiaste",
     "note": "Téléchargement initial facultatif. Ensuite, la correction fonctionne sur votre Mac.",
     "status_active": "Nettoyage Intelligent Actif",
-    "status_inactive": "Nettoyage Intelligent Inactif"
+    "status_inactive": "Nettoyage Intelligent Inactif",
+    "before_annotated": "<filler>euh</filler> peux-tu envoyer la proposition actualisée pour vendredi et <filler>euh</filler> inclure le nouveau calendrier"
   },
   "cta_block": {
     "headline": "Commencez à parler. Arrêtez de taper.",
@@ -248,8 +251,8 @@
     "example_caption": "Texte d’exemple · essayez le bouton",
     "closing_eyebrow": "Plus de fluidité. Bien plus de confidentialité.",
     "video_eyebrow": "L’application en action",
-    "video_title": "D’une idée à une note.",
-    "video_description": "Découvrez Verba dans Notes d’Apple : maintenez le raccourci, parlez, puis relâchez. L’indicateur traite l’audio, puis le texte apparaît. Démo muette avec un message d’exemple en anglais.",
+    "video_title": "Dictez là où vous écrivez.",
+    "video_description": "Rédigez un e-mail, donnez des instructions détaillées à un assistant IA ou posez une idée dans un document. Dictez dans le champ de texte que vous utilisez déjà, dans vos apps Mac et sur le web. Moins de frappe, moins de changements de fenêtre, plus de place pour vos idées.",
     "dictionary_alt": "Dictionnaire Verba avec des règles de remplacement et leurs interrupteurs.",
     "dictionary_caption": "Le dictionnaire de Verba. Vos règles restent sur votre Mac.",
     "email_draft": "Brouillon",
@@ -260,6 +263,10 @@
     "email_saved": "Brouillon enregistré",
     "demo_processing": "Vos mots prennent forme…",
     "pause_animation": "Mettre les animations en pause",
-    "resume_animation": "Reprendre les animations"
+    "resume_animation": "Reprendre les animations",
+    "use_emails": "E-mails et messages",
+    "use_prompts": "Prompts et instructions",
+    "use_notes": "Notes et documents",
+    "video_accessible_label": "Démo muette : maintenez Fn, dictez un message dans Notes d’Apple, puis relâchez. Verba traite l’enregistrement et insère le texte."
   }
 }

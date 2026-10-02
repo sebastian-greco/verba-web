@@ -4,7 +4,8 @@
     "privacy": "Privacidad",
     "pricing": "Precios",
     "download": "Descargar gratis",
-    "menu": "Abrir navegación"
+    "menu": "Abrir navegación",
+    "how_it_works": "Cómo funciona"
   },
   "hero": {
     "headline": "Tu voz, escrita al instante. En privado.",
@@ -45,7 +46,8 @@
     "step_02": "PASO 02",
     "step_02_desc": "Habla a tu ritmo y en tu idioma. Sin comandos especiales que aprender.",
     "step_03": "PASO 03",
-    "step_03_desc": "Suelta Fn. Verba transcribe, pule el texto si quieres y lo pega donde estás escribiendo."
+    "step_03_desc": "Suelta Fn. Verba transcribe, pule el texto si quieres y lo pega donde estás escribiendo.",
+    "step_hold_key": "Mantén <key>Fn</key>"
   },
   "privacy_section": {
     "headline": "Privacidad por Diseño.",
@@ -135,8 +137,8 @@
     "subheadline": "Limpieza opcional, afinada para el dictado. Elimina las vacilaciones y mejora la puntuación sin cambiar el sentido.",
     "before_label": "Tú dijiste",
     "after_label": "Verba escribió",
-    "before_text": "eh así que básicamente quería este hablar sobre el estado del proyecto y como que tenemos que eh terminar la API para la próxima semana",
-    "after_text": "Quería hablar sobre el estado del proyecto. Tenemos que terminar la API para la próxima semana.",
+    "before_text": "eh puedes enviar la propuesta actualizada para el viernes y bueno incluir el nuevo calendario",
+    "after_text": "¿Puedes enviar la propuesta actualizada para el viernes e incluir el nuevo calendario?",
     "features_title": "Qué hace",
     "feature_fillers": "Elimina las muletillas y palabras de relleno (este, eh, como, básicamente)",
     "feature_grammar": "Corrige la gramática y puntuación",
@@ -144,7 +146,8 @@
     "feature_styles": "Modos de estilo: Estándar, Formal, Casual, Entusiasta",
     "note": "Descarga inicial opcional. Después, la limpieza se ejecuta en tu Mac.",
     "status_active": "Limpieza Inteligente Activa",
-    "status_inactive": "Limpieza Inteligente Inactiva"
+    "status_inactive": "Limpieza Inteligente Inactiva",
+    "before_annotated": "<filler>eh</filler> puedes enviar la propuesta actualizada para el viernes y <filler>bueno</filler> incluir el nuevo calendario"
   },
   "cta_block": {
     "headline": "Empieza a hablar. Deja de escribir.",
@@ -248,8 +251,8 @@
     "example_caption": "Texto de ejemplo · prueba el interruptor",
     "closing_eyebrow": "Más fluidez. Mucha más privacidad.",
     "video_eyebrow": "La app en acción",
-    "video_title": "De una idea a una nota.",
-    "video_description": "Mira Verba en Notas de Apple: mantén el atajo, habla y suelta. El indicador procesa el audio y el texto aparece en la nota. Demo sin sonido, con un mensaje de ejemplo en inglés.",
+    "video_title": "Dilo donde lo necesites.",
+    "video_description": "Redacta un correo, da instrucciones detalladas a un asistente de IA o plasma una idea en un documento. Habla en el campo de texto que ya estás usando, en apps de Mac y en la web. Menos teclear, menos cambiar de ventana y más tiempo para tus ideas.",
     "dictionary_alt": "Diccionario de Verba con reglas de sustitución e interruptores individuales.",
     "dictionary_caption": "El diccionario de Verba. Tus reglas se quedan en tu Mac.",
     "email_draft": "Borrador",
@@ -260,6 +263,10 @@
     "email_saved": "Borrador guardado",
     "demo_processing": "Puliendo tus palabras…",
     "pause_animation": "Pausar animaciones",
-    "resume_animation": "Reanudar animaciones"
+    "resume_animation": "Reanudar animaciones",
+    "use_emails": "Correos y mensajes",
+    "use_prompts": "Prompts e instrucciones",
+    "use_notes": "Notas y documentos",
+    "video_accessible_label": "Demo sin sonido: mantén Fn, dicta un mensaje de ejemplo en Notas de Apple y suelta. Verba procesa la grabación e inserta el texto."
   }
 }

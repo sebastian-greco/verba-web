@@ -5,12 +5,8 @@ import Reveal from "@/components/home/Reveal";
 export default function FeaturesSection() {
   const t = useTranslations("features");
   return (
-    <section className="features-section section-space" id="features">
+    <section className="supporting-features" aria-label={t("headline")}>
       <div className="page-shell">
-        <Reveal className="section-heading">
-          <p className="eyebrow">{t("subheadline")}</p>
-          <h2>{t("headline")}</h2>
-        </Reveal>
         <div className="feature-list">
           {[
             { icon: Languages, key: "languages" },

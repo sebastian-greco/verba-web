@@ -25,9 +25,9 @@ export default async function HomePage({ params }: Props) {
         <HeroSection />
         <PrivacySection />
         <DemoSection />
-        <FeaturesSection />
-        <DictionarySection />
         <CleanupSection />
+        <DictionarySection />
+        <FeaturesSection />
         <PricingSection />
         <CtaSection />
       </main>

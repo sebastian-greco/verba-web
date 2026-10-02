@@ -4,7 +4,8 @@
     "privacy": "Privacy",
     "pricing": "Prezzi",
     "download": "Download Gratis",
-    "menu": "Apri navigazione"
+    "menu": "Apri navigazione",
+    "how_it_works": "Come funziona"
   },
   "hero": {
     "headline": "La tua voce, digitata all'istante. In privato.",
@@ -45,7 +46,8 @@
     "step_02": "FASE 02",
     "step_02_desc": "Parla al tuo ritmo, nella tua lingua. Nessun comando speciale da imparare.",
     "step_03": "FASE 03",
-    "step_03_desc": "Rilascia Fn. Verba trascrive, rifinisce il testo se vuoi e lo incolla dove stai scrivendo."
+    "step_03_desc": "Rilascia Fn. Verba trascrive, rifinisce il testo se vuoi e lo incolla dove stai scrivendo.",
+    "step_hold_key": "Tieni premuto <key>Fn</key>"
   },
   "privacy_section": {
     "headline": "Privacy by Design.",
@@ -135,8 +137,8 @@
     "subheadline": "Revisione opzionale, ottimizzata per la dettatura. Elimina le esitazioni e sistema la punteggiatura, mantenendo il significato.",
     "before_label": "Hai detto",
     "after_label": "Verba ha scritto",
-    "before_text": "ehm quindi insomma volevo ehm parlare dello stato del progetto e tipo dobbiamo finire l'API entro la settimana prossima",
-    "after_text": "Volevo parlare dello stato del progetto. Dobbiamo finire l'API entro la settimana prossima.",
+    "before_text": "ehm puoi inviare la proposta aggiornata entro venerdì e ecco includere le nuove scadenze",
+    "after_text": "Puoi inviare la proposta aggiornata entro venerdì e includere le nuove scadenze?",
     "features_title": "Cosa fa",
     "feature_fillers": "Rimuove le parole di riempimento (ehm, tipo, insomma, cioè)",
     "feature_grammar": "Corregge grammatica e punteggiatura",
@@ -144,7 +146,8 @@
     "feature_styles": "Stili: Standard, Formale, Casual, Entusiasta",
     "note": "Download iniziale opzionale. Poi la revisione funziona sul tuo Mac.",
     "status_active": "Smart Cleanup Attivo",
-    "status_inactive": "Smart Cleanup Inattivo"
+    "status_inactive": "Smart Cleanup Inattivo",
+    "before_annotated": "<filler>ehm</filler> puoi inviare la proposta aggiornata entro venerdì e <filler>ecco</filler> includere le nuove scadenze"
   },
   "cta_block": {
     "headline": "Inizia a parlare. Smetti di digitare.",
@@ -248,8 +251,8 @@
     "example_caption": "Testo di esempio · prova l’interruttore",
     "closing_eyebrow": "Più fluidità. Molta più privacy.",
     "video_eyebrow": "L’app in azione",
-    "video_title": "Da un pensiero a una nota.",
-    "video_description": "Guarda Verba in Note di Apple: tieni premuta la scorciatoia, parla e rilascia. L’indicatore elabora l’audio, poi il testo appare nella nota. Demo senza audio, con un messaggio di esempio in inglese.",
+    "video_title": "Dillo dove ti serve.",
+    "video_description": "Scrivi un’email, dai istruzioni dettagliate a un assistente AI o metti un’idea in un documento. Parla nel campo di testo che stai già usando, nelle app Mac e sul web. Meno tastiera, meno passaggi tra finestre, più spazio ai tuoi pensieri.",
     "dictionary_alt": "Dizionario di Verba con regole di sostituzione e interruttori individuali.",
     "dictionary_caption": "Il Dizionario di Verba. Le tue regole restano sul tuo Mac.",
     "email_draft": "Bozza",
@@ -260,6 +263,10 @@
     "email_saved": "Bozza salvata",
     "demo_processing": "Rifiniamo le tue parole…",
     "pause_animation": "Pausa animazioni",
-    "resume_animation": "Riprendi animazioni"
+    "resume_animation": "Riprendi animazioni",
+    "use_emails": "Email e messaggi",
+    "use_prompts": "Prompt e istruzioni",
+    "use_notes": "Note e documenti",
+    "video_accessible_label": "Demo senza audio: tieni premuto Fn, detta un messaggio di esempio in Note di Apple e rilascia. Verba elabora la registrazione e inserisce il testo."
   }
 }

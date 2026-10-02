@@ -4,7 +4,8 @@
     "privacy": "Datenschutz",
     "pricing": "Preise",
     "download": "Kostenlos laden",
-    "menu": "Navigation öffnen"
+    "menu": "Navigation öffnen",
+    "how_it_works": "So funktioniert’s"
   },
   "hero": {
     "headline": "Ihre Stimme, sofort abgetippt. Privat.",
@@ -45,7 +46,8 @@
     "step_02": "SCHRITT 02",
     "step_02_desc": "Sprich in deinem Tempo und deiner Sprache. Keine besonderen Befehle nötig.",
     "step_03": "SCHRITT 03",
-    "step_03_desc": "Lass Fn los. Verba transkribiert, korrigiert auf Wunsch und fügt die Worte dort ein, wo du schreibst."
+    "step_03_desc": "Lass Fn los. Verba transkribiert, korrigiert auf Wunsch und fügt die Worte dort ein, wo du schreibst.",
+    "step_hold_key": "Halte <key>Fn</key>"
   },
   "privacy_section": {
     "headline": "Privat by Design.",
@@ -135,8 +137,8 @@
     "subheadline": "Optionale Textkorrektur, auf Diktate abgestimmt. Entferne Füllwörter und verbessere die Zeichensetzung, ohne den Sinn zu verändern.",
     "before_label": "Sie sagten",
     "after_label": "Verba schrieb",
-    "before_text": "ähm also im Grunde wollte ich ähm über den Projektstatus sprechen und dass wir irgendwie ähm die API bis nächste Woche fertigstellen müssen",
-    "after_text": "Ich wollte über den Projektstatus sprechen. Wir müssen die API bis nächste Woche fertigstellen.",
+    "before_text": "ähm kannst du den aktualisierten Vorschlag bis Freitag schicken und äh den neuen Zeitplan hinzufügen",
+    "after_text": "Kannst du den aktualisierten Vorschlag bis Freitag schicken und den neuen Zeitplan hinzufügen?",
     "features_title": "Was es macht",
     "feature_fillers": "Entfernt Füllwörter (ähm, also, irgendwie, im Grunde)",
     "feature_grammar": "Korrigiert Grammatik und Zeichensetzung",
@@ -144,7 +146,8 @@
     "feature_styles": "Stil-Modi: Standard, Formell, Lässig, Begeistert",
     "note": "Optionaler Download zur Einrichtung. Danach läuft die Korrektur auf deinem Mac.",
     "status_active": "Intelligente Bereinigung Aktiv",
-    "status_inactive": "Intelligente Bereinigung Inaktiv"
+    "status_inactive": "Intelligente Bereinigung Inaktiv",
+    "before_annotated": "<filler>ähm</filler> kannst du den aktualisierten Vorschlag bis Freitag schicken und <filler>äh</filler> den neuen Zeitplan hinzufügen"
   },
   "cta_block": {
     "headline": "Sprich los. Lass die Tastatur ruhen.",
@@ -248,8 +251,8 @@
     "example_caption": "Beispieltext · probiere den Schalter",
     "closing_eyebrow": "Mehr Schreibfluss. Viel mehr Privatsphäre.",
     "video_eyebrow": "Die App in Aktion",
-    "video_title": "Vom Gedanken zur fertigen Notiz.",
-    "video_description": "Sieh Verba in Apple Notizen: Tastenkürzel halten, sprechen und loslassen. Die Aufnahmeanzeige verarbeitet das Audio, dann erscheint der Text. Stumme Demo mit einer Beispielnachricht auf Englisch.",
+    "video_title": "Sprich dort, wo du schreibst.",
+    "video_description": "Schreibe eine E-Mail, gib einem KI-Assistenten ein ausführliches Briefing oder halte eine Idee im Dokument fest. Sprich in das Textfeld, das du gerade nutzt – in Mac-Apps und im Web. Weniger tippen, weniger Fensterwechsel, mehr Zeit für deine Gedanken.",
     "dictionary_alt": "Verbas Wörterbuch mit Ersetzungsregeln und einzelnen Schaltern.",
     "dictionary_caption": "Das Wörterbuch in Verba. Deine Regeln bleiben auf deinem Mac.",
     "email_draft": "Entwurf",
@@ -260,6 +263,10 @@
     "email_saved": "Entwurf gespeichert",
     "demo_processing": "Deine Worte werden überarbeitet…",
     "pause_animation": "Animationen pausieren",
-    "resume_animation": "Animationen fortsetzen"
+    "resume_animation": "Animationen fortsetzen",
+    "use_emails": "E-Mails und Nachrichten",
+    "use_prompts": "Prompts und Anweisungen",
+    "use_notes": "Notizen und Dokumente",
+    "video_accessible_label": "Stumme Demo: Fn halten, eine Beispielnachricht in Apple Notizen diktieren und loslassen. Verba verarbeitet die Aufnahme und fügt den Text ein."
   }
 }

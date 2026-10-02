@@ -4,7 +4,8 @@
     "privacy": "Privacy",
     "pricing": "Prijzen",
     "download": "Gratis downloaden",
-    "menu": "Navigatie openen"
+    "menu": "Navigatie openen",
+    "how_it_works": "Zo werkt het"
   },
   "hero": {
     "headline": "Jouw stem, direct getypt. Privé.",
@@ -45,7 +46,8 @@
     "step_02": "STAP 02",
     "step_02_desc": "Spreek in je eigen tempo en taal. Geen speciale commando’s nodig.",
     "step_03": "STAP 03",
-    "step_03_desc": "Laat Fn los. Verba transcribeert, verfijnt desgewenst en plakt je woorden waar je schrijft."
+    "step_03_desc": "Laat Fn los. Verba transcribeert, verfijnt desgewenst en plakt je woorden waar je schrijft.",
+    "step_hold_key": "Houd <key>Fn</key> ingedrukt"
   },
   "privacy_section": {
     "headline": "Ontworpen voor privacy.",
@@ -135,8 +137,8 @@
     "subheadline": "Optionele tekstcorrectie, afgestemd op dicteren. Verwijder aarzelingen en verbeter de interpunctie, met behoud van je betekenis.",
     "before_label": "Jij zei",
     "after_label": "Verba schreef",
-    "before_text": "ehm dus eigenlijk wilde ik eh praten over de projectstatus en we moeten zeg maar de API afhebben voor volgende week",
-    "after_text": "Ik wilde praten over de projectstatus. We moeten de API voor volgende week afhebben.",
+    "before_text": "ehm kun je het bijgewerkte voorstel voor vrijdag sturen en eh de nieuwe planning toevoegen",
+    "after_text": "Kun je het bijgewerkte voorstel voor vrijdag sturen en de nieuwe planning toevoegen?",
     "features_title": "Wat het doet",
     "feature_fillers": "Verwijdert stopwoorden (ehm, uh, zeg maar, eigenlijk)",
     "feature_grammar": "Repareert grammatica en interpunctie",
@@ -144,7 +146,8 @@
     "feature_styles": "Stijlen: Standaard, Formeel, Casual, Enthousiast",
     "note": "Optionele download bij het instellen. Daarna werkt tekstcorrectie op je Mac.",
     "status_active": "Slim Opschonen Actief",
-    "status_inactive": "Slim Opschonen Inactief"
+    "status_inactive": "Slim Opschonen Inactief",
+    "before_annotated": "<filler>ehm</filler> kun je het bijgewerkte voorstel voor vrijdag sturen en <filler>eh</filler> de nieuwe planning toevoegen"
   },
   "cta_block": {
     "headline": "Begin met spreken. Stop met typen.",
@@ -248,8 +251,8 @@
     "example_caption": "Voorbeeldtekst · probeer de schakelaar",
     "closing_eyebrow": "Meer gemak. Veel meer privacy.",
     "video_eyebrow": "De app in actie",
-    "video_title": "Van een gedachte naar een notitie.",
-    "video_description": "Bekijk Verba in Apple Notities: houd de sneltoets ingedrukt, spreek en laat los. De opnamebalk verwerkt de audio, waarna de tekst verschijnt. Demo zonder geluid met een Engels voorbeeldbericht.",
+    "video_title": "Zeg het waar je schrijft.",
+    "video_description": "Schrijf een e-mail, geef een AI-assistent een uitgebreide opdracht of zet een idee in een document. Spreek in het tekstveld dat je al gebruikt, in Mac-apps en op het web. Minder typen, minder wisselen tussen vensters, meer ruimte voor je gedachten.",
     "dictionary_alt": "Verba-woordenboek met vervangingsregels en afzonderlijke schakelaars.",
     "dictionary_caption": "Het woordenboek in Verba. Je regels blijven op je Mac.",
     "email_draft": "Concept",
@@ -260,6 +263,10 @@
     "email_saved": "Concept opgeslagen",
     "demo_processing": "Je woorden worden verfijnd…",
     "pause_animation": "Animaties pauzeren",
-    "resume_animation": "Animaties hervatten"
+    "resume_animation": "Animaties hervatten",
+    "use_emails": "E-mails en berichten",
+    "use_prompts": "Prompts en instructies",
+    "use_notes": "Notities en documenten",
+    "video_accessible_label": "Demo zonder geluid: houd Fn ingedrukt, dicteer een voorbeeldbericht in Apple Notities en laat los. Verba verwerkt de opname en voegt de tekst in."
   }
 }

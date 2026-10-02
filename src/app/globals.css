@@ -1690,3 +1690,257 @@ html {
 .native-step .typed-sample {
   align-self: center;
 }
+
+/* A single contextual demonstration leads into the writing benefits. */
+.use-case-demo {
+  display: grid;
+  grid-template-columns: 0.9fr 1.35fr;
+  align-items: center;
+  gap: 65px;
+}
+.use-case-demo > * {
+  min-width: 0;
+}
+.use-case-demo h2 {
+  max-width: 430px;
+}
+.use-case-demo .section-description {
+  font-size: 14px;
+}
+.use-case-demo video {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  background: var(--earth-green);
+}
+.writing-uses {
+  display: grid;
+  gap: 13px;
+  margin-top: 28px;
+  font-size: 12px;
+  color: var(--earth-green);
+}
+.writing-uses li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.writing-uses svg {
+  flex-shrink: 0;
+}
+.compact-workflow {
+  margin-top: 58px;
+}
+.compact-workflow .workflow-step {
+  display: block;
+  padding-top: 21px;
+}
+.compact-workflow .step-number {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}
+.compact-workflow h3 {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  font-size: 26px;
+}
+.compact-workflow p {
+  margin-top: 9px;
+  max-width: 320px;
+}
+.inline-fn {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+  display: inline-flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 7px;
+  width: 42px;
+  height: 39px;
+  padding: 8px 6px;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  box-shadow:
+    0 3px 0 var(--border-subtle),
+    0 5px 12px oklch(0 0 0 / 0.04);
+  transform: rotate(-5deg);
+  vertical-align: middle;
+}
+.inline-fn span {
+  font-size: 11px;
+  align-self: start;
+}
+.supporting-features {
+  padding-block: 55px;
+  border-block: 1px solid var(--border-subtle);
+  background: var(--warm-gray);
+}
+.supporting-features .feature-item svg {
+  margin-bottom: 17px;
+  width: 23px;
+  height: 23px;
+}
+.supporting-features .feature-item h3 {
+  font-size: 24px;
+}
+.supporting-features .feature-item p {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* Both versions are readable without interaction or JavaScript. The edit plays once. */
+.cleanup-comparison {
+  min-width: 0;
+}
+.cleanup-before {
+  padding: 0 24px 0 28px;
+  border-left: 1px solid var(--border-subtle);
+}
+.cleanup-before .eyebrow,
+.cleanup-after .eyebrow {
+  margin-bottom: 15px;
+}
+.cleanup-before .eyebrow {
+  color: var(--text-secondary);
+}
+.cleanup-before p {
+  color: var(--text-secondary);
+  font-size: 17px;
+  line-height: 1.85;
+}
+.filler {
+  position: relative;
+  color: var(--brand-accent);
+  white-space: nowrap;
+}
+.filler::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: 53%;
+  height: 1px;
+  background: currentColor;
+  transform-origin: left;
+}
+.cleanup-connector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 27px;
+  color: var(--brand-accent);
+}
+.cleanup-connector span {
+  height: 1px;
+  flex: 1;
+  background: var(--border-subtle);
+}
+.cleanup-after {
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  background: var(--bg-card);
+  padding: 29px;
+  box-shadow: 0 12px 35px -22px
+    color-mix(in oklch, var(--earth-green) 20%, transparent);
+}
+.cleanup-after .eyebrow {
+  color: var(--earth-green);
+}
+.cleanup-after > p {
+  font-family: var(--font-serif);
+  font-size: 30px;
+  line-height: 1.3;
+  color: var(--earth-green);
+}
+.cleanup-local {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 10px;
+  margin-top: 24px;
+}
+.cleanup-comparison[data-reveal="animate"] .filler::after {
+  animation: remove-filler 0.65s 0.2s both;
+}
+.cleanup-comparison[data-reveal="animate"] .cleanup-after {
+  animation: cleanup-arrive 0.65s 0.8s both;
+}
+@keyframes remove-filler {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes cleanup-arrive {
+  from {
+    opacity: 0.3;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1050px) {
+  .use-case-demo {
+    gap: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .use-case-demo {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+  .use-case-demo h2 {
+    max-width: 100%;
+  }
+  .compact-workflow {
+    margin-top: 38px;
+  }
+  .compact-workflow .workflow-grid {
+    gap: 24px;
+  }
+  .compact-workflow .workflow-step {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    column-gap: 15px;
+  }
+  .compact-workflow .step-number {
+    grid-row: span 2;
+    margin-top: 12px;
+  }
+  .compact-workflow h3 {
+    min-height: 43px;
+  }
+  .compact-workflow p {
+    margin-top: 7px;
+  }
+  .cleanup-before {
+    padding-inline: 20px;
+  }
+  .cleanup-after {
+    padding: 23px;
+  }
+  .cleanup-after > p {
+    font-size: 28px;
+  }
+  .supporting-features {
+    padding-block: 42px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cleanup-comparison[data-reveal="animate"] .filler::after,
+  .cleanup-comparison[data-reveal="animate"] .cleanup-after {
+    animation: none;
+  }
+}

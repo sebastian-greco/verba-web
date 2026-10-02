@@ -77,8 +77,8 @@ export default function Nav({ locale }: { locale: string }) {
   const [open, setOpen] = useState(false);
 
   const navLinks = [
-    { href: "/#features", label: t("features") },
     { href: "/#privacy", label: t("privacy") },
+    { href: "/#how-it-works", label: t("how_it_works") },
     { href: "/#pricing", label: t("pricing") },
   ];
 
