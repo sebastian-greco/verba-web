@@ -6,7 +6,7 @@ export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="py-24 bg-card border-t border-border relative z-10">
+    <footer className="site-footer py-24 bg-card border-t border-border relative z-10">
       <div className="max-w-6xl mx-auto px-6 flex flex-col xl:flex-row justify-between items-center gap-12">
         <div className="flex flex-col gap-3">
           <BrandLogo className="h-12 self-start" />
@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-12 text-sm font-bold text-muted-foreground uppercase tracking-widest">
+        <div className="footer-links flex flex-wrap justify-center gap-12 text-sm font-bold text-muted-foreground uppercase tracking-widest">
           <Link className="hover:text-accent transition-colors" href="/terms">
             {t("terms")}
           </Link>
@@ -33,7 +33,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="text-xs font-bold text-muted-foreground opacity-40 tracking-widest uppercase">
+        <div className="footer-copyright text-xs font-bold text-muted-foreground opacity-40 tracking-widest uppercase">
           {t("copyright")}
         </div>
       </div>

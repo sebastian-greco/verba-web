@@ -1,9 +1,16 @@
 "use client";
 
+import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 
-export default function LicenseKeyDisplay({ fullKey, displayKey }: { fullKey: string, displayKey: string }) {
+export default function LicenseKeyDisplay({
+  fullKey,
+  displayKey,
+}: {
+  fullKey: string;
+  displayKey: string;
+}) {
   const t = useTranslations("thanks");
   const [copied, setCopied] = useState(false);
 
@@ -14,7 +21,9 @@ export default function LicenseKeyDisplay({ fullKey, displayKey }: { fullKey: st
   };
 
   const prefix = fullKey.split("-")[0];
-  const visualKey = displayKey.startsWith("****") ? `${prefix}-${displayKey}` : displayKey;
+  const visualKey = displayKey.startsWith("****")
+    ? `${prefix}-${displayKey}`
+    : displayKey;
 
   return (
     <div className="mb-16 w-full max-w-sm mx-auto flex flex-col items-center">
@@ -28,9 +37,17 @@ export default function LicenseKeyDisplay({ fullKey, displayKey }: { fullKey: st
           aria-label={t("copy")}
         >
           {copied ? (
-            <span className="material-symbols-outlined text-lg text-emerald-600">check</span>
+            <Check
+              size={20}
+              aria-hidden="true"
+              className="shrink-0 text-accent"
+            />
           ) : (
-            <span className="material-symbols-outlined text-lg">content_copy</span>
+            <Copy
+              size={20}
+              aria-hidden="true"
+              className="shrink-0 text-accent"
+            />
           )}
         </button>
       </div>

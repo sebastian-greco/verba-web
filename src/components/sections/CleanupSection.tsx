@@ -1,136 +1,63 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
 import { useState } from "react";
+import { Check, Sparkles, LockKeyhole } from "lucide-react";
+import Reveal from "@/components/home/Reveal";
 
 export default function CleanupSection() {
   const t = useTranslations("cleanup");
-  const [isClean, setIsClean] = useState(true);
-
+  const r = useTranslations("redesign");
+  const [clean, setClean] = useState(true);
   return (
-    <section className="py-40 bg-background overflow-hidden relative">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-24">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="md:w-1/2"
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 text-accent text-[10px] font-black uppercase tracking-widest rounded-lg mb-10">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+    <section className="section-space cleanup-section">
+      <div className="page-shell detail-grid">
+        <Reveal>
+          <p className="eyebrow">
+            <Sparkles size={15} aria-hidden="true" />
             {t("headline")}
-          </div>
-
-          <h2 className="text-5xl md:text-6xl font-black mb-10 text-primary leading-[1.15] font-serif">
-            {t.rich("subheadline", {
-              br: () => <br />,
-              span: (chunks) => <span className="italic font-normal">{chunks}</span>
-            })}
-          </h2>
-
-          <p className="text-xl text-muted-foreground serif-body mb-12 leading-relaxed font-serif">
+          </p>
+          <h2>{r("cleanup_title")}</h2>
+          <p className="section-description">{t("subheadline")}</p>
+          <ul className="benefit-list">
+            {["feature_fillers", "feature_grammar"].map((key) => (
+              <li key={key}>
+                <Check size={17} aria-hidden="true" />
+                {t(key)}
+              </li>
+            ))}
+          </ul>
+          <p className="small-note">
+            <LockKeyhole size={14} aria-hidden="true" />
             {t("note")}
           </p>
-
-          <div className="space-y-8">
-            <div className="flex items-center gap-5">
-              <div className="w-12 h-12 rounded-full bg-highlight/10 flex items-center justify-center text-highlight shrink-0">
-                <span className="material-symbols-outlined text-2xl">
-                  {"check_circle"}
-                </span>
-              </div>
-              <span className="font-bold text-lg text-primary serif-body font-serif">
-                {t("feature_fillers")}
-              </span>
-            </div>
-            <div className="flex items-center gap-5">
-              <div className="w-12 h-12 rounded-full bg-highlight/10 flex items-center justify-center text-highlight shrink-0">
-                <span className="material-symbols-outlined text-2xl">
-                  {"check_circle"}
-                </span>
-              </div>
-              <span className="font-bold text-lg text-primary serif-body font-serif">
-                {t("feature_grammar")}
-              </span>
-            </div>
+        </Reveal>
+        <Reveal className="cleanup-example">
+          <div className="cleanup-toolbar">
+            <span>{t("headline")}</span>
+            <button
+              type="button"
+              className="cleanup-switch"
+              role="switch"
+              aria-checked={clean}
+              aria-label={t("headline")}
+              onClick={() => setClean(!clean)}
+            >
+              <span />
+            </button>
           </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="md:w-1/2 w-full"
-        >
-          <div className="bg-card rounded-[40px] p-10 soft-shadow border border-border">
-            <div className="flex items-center justify-between mb-12">
-              <span className="text-xs font-bold text-muted-foreground tracking-widest uppercase">
-                {t("features_title")}
-              </span>
-              <div className="flex items-center gap-3">
-                <span className="text-xs font-bold text-muted-foreground">
-                  {t("badge")}
-                </span>
-                <div
-                  className={`tactile-toggle ${isClean ? "active" : ""}`}
-                  onClick={() => setIsClean(!isClean)}
-                ></div>
-              </div>
-            </div>
-
-            <div className="space-y-12">
-              <div className="relative">
-                <div className="absolute -left-6 top-0 bottom-0 w-1 bg-red-200/50 rounded-full"></div>
-                <div
-                  className={
-                    isClean ? "blur-filter" : "transition-all duration-500"
-                  }
-                >
-                  <p className="text-lg text-muted-foreground serif-body italic leading-relaxed font-serif">
-                    &quot;{t("before_text")}&quot;
-                  </p>
-                </div>
-                <div className="mt-3 text-[10px] font-black text-red-300 uppercase tracking-widest">
-                  {t("before_label")}
-                </div>
-              </div>
-
-              <div className="relative">
-                <div
-                  className={`absolute -left-6 top-0 bottom-0 w-1 rounded-full transition-colors duration-500 ${isClean ? "bg-highlight" : "bg-highlight/30"}`}
-                ></div>
-                <div
-                  className={
-                    !isClean ? "blur-filter" : "transition-all duration-500"
-                  }
-                >
-                  <p className="text-2xl text-primary font-black leading-relaxed serif-body font-serif">
-                    &quot;{t("after_text")}&quot;
-                  </p>
-                </div>
-                <div
-                  className={`mt-3 text-[10px] font-black uppercase tracking-widest transition-colors duration-500 ${isClean ? "text-highlight" : "text-highlight/50"}`}
-                >
-                  {t("after_label")}
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-14 pt-8 border-t border-muted flex items-center justify-between">
-              <div
-                className={`flex items-center gap-2 transition-colors duration-500 ${isClean ? "text-highlight" : "text-muted-foreground"}`}
-              >
-                <span className="material-symbols-outlined text-sm">
-                  {"auto_awesome"}
-                </span>
-                <span className="text-[10px] font-bold uppercase tracking-widest">
-                  {isClean ? t("status_active") : t("status_inactive")}
-                </span>
-              </div>
-            </div>
+          <div className="cleanup-text" aria-live="polite">
+            <span className="eyebrow">
+              {t(clean ? "after_label" : "before_label")}
+            </span>
+            <p key={String(clean)}>{t(clean ? "after_text" : "before_text")}</p>
           </div>
-        </motion.div>
+          <div className="cleanup-status">
+            <Sparkles size={15} aria-hidden="true" />
+            {t(clean ? "status_active" : "status_inactive")}
+          </div>
+          <p className="example-caption">{r("example_caption")}</p>
+        </Reveal>
       </div>
     </section>
   );

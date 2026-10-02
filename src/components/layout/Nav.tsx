@@ -5,7 +5,12 @@ import { usePathname, useRouter, Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
 import BrandLogo from "@/components/layout/BrandLogo";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import { DOWNLOAD_URL } from "@/lib/constants";
 import {
   DropdownMenu,
@@ -13,6 +18,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { ChevronDown, Menu } from "lucide-react";
 import { useState, Suspense } from "react";
 
 const localeNames: Record<string, string> = {
@@ -41,10 +47,7 @@ function LocaleSwitcher({ locale }: { locale: string }) {
           size="sm"
           className="h-8 gap-1 text-xs px-2 font-medium text-muted-foreground hover:text-foreground rounded-full"
         >
-          {localeNames[locale]}{" "}
-          <span className="material-symbols-outlined text-[10px] opacity-50">
-            {"keyboard_arrow_down"}
-          </span>
+          {localeNames[locale]} <ChevronDown size={12} aria-hidden="true" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
@@ -54,7 +57,7 @@ function LocaleSwitcher({ locale }: { locale: string }) {
         {routing.locales.map((l) => (
           <DropdownMenuItem
             key={l}
-            onClick={() => router.replace(pathWithQuery as any, { locale: l })}
+            onClick={() => router.replace(pathWithQuery, { locale: l })}
             className={`text-xs cursor-pointer ${
               l === locale
                 ? "bg-primary/10 text-primary font-semibold"
@@ -74,26 +77,26 @@ export default function Nav({ locale }: { locale: string }) {
   const [open, setOpen] = useState(false);
 
   const navLinks = [
-    { href: "#features", label: t("features") },
-    { href: "#privacy", label: t("privacy") },
-    { href: "#pricing", label: t("pricing") },
+    { href: "/#features", label: t("features") },
+    { href: "/#privacy", label: t("privacy") },
+    { href: "/#pricing", label: t("pricing") },
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 glass-header">
-      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+    <header className="site-header fixed top-0 w-full z-50 glass-header">
+      <div className="nav-shell mx-auto h-20 flex items-center justify-between">
         <Link href="/" className="flex shrink-0 items-center">
           <BrandLogo />
         </Link>
         <nav className="hidden md:flex items-center gap-10 text-sm text-muted-foreground font-semibold">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
-              className="hover:text-accent transition-colors font-sans uppercase tracking-widest"
+              className="nav-link hover:text-accent transition-colors font-sans"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-4">
@@ -102,7 +105,7 @@ export default function Nav({ locale }: { locale: string }) {
           </Suspense>
           <a
             href={DOWNLOAD_URL}
-            className="btn-warm px-6 py-2.5 rounded-full text-sm font-bold block"
+            className="nav-download btn-warm px-6 py-2.5 rounded-full text-sm font-bold block"
           >
             {t("download")}
           </a>
@@ -113,24 +116,31 @@ export default function Nav({ locale }: { locale: string }) {
           </Suspense>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="rounded-full">
-                <span className="material-symbols-outlined">{"menu"}</span>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full"
+                aria-label={t("menu")}
+              >
+                <Menu size={20} aria-hidden="true" />
               </Button>
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-64 border-l-border bg-background/95 backdrop-blur-xl"
+              aria-describedby={undefined}
+              className="w-72 p-6 border-l-border bg-background/95 backdrop-blur-xl"
             >
+              <SheetTitle className="sr-only">{t("menu")}</SheetTitle>
               <nav className="flex flex-col gap-4 mt-8">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.href}
                     href={link.href}
                     className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors uppercase tracking-widest"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
                 <a
                   href={DOWNLOAD_URL}
