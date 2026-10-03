@@ -15,37 +15,40 @@ export default function DictionarySection() {
       aria-labelledby="dictionary-heading"
       className="dictionary-section"
     >
-      <div className="page-shell detail-grid">
-        <Reveal>
+      <div className="page-shell dictionary-layout">
+        <Reveal className="dictionary-intro">
           <p className="eyebrow">{t("example_title")}</p>
           <h2 id="dictionary-heading">{t("headline")}</h2>
           <p className="dictionary-description mt-6">{t("description")}</p>
-          <h3 className="dictionary-learning mt-8">{t("learning_title")}</h3>
-          <p className="dictionary-learning-description mt-3 leading-relaxed">
-            {t("learning_description")}
-          </p>
         </Reveal>
-        <Reveal>
-          <figure className="dictionary-media">
+        <Reveal className="dictionary-main-image">
+          <figure>
             <Image
               className="dictionary-screenshot"
               src={DICTIONARY_IMAGE_URL}
               alt={r("dictionary_alt")}
-              width={1824}
-              height={1324}
+              width={1874}
+              height={1216}
               sizes="(max-width: 767px) 100vw, 550px"
             />
+            <figcaption className="mt-4">{r("dictionary_caption")}</figcaption>
+          </figure>
+        </Reveal>
+        <Reveal className="dictionary-suggestions">
+          <h3 className="dictionary-learning">{t("learning_title")}</h3>
+          <p className="dictionary-learning-description mt-3 leading-relaxed">
+            {t("learning_description")}
+          </p>
+          <div className="suggestion-crop">
             <Image
-              className="dictionary-suggestion"
               src={DICTIONARY_SUGGESTION_IMAGE_URL}
               alt={r("dictionary_suggestion_alt")}
               width={825}
               height={442}
-              sizes="(max-width: 420px) 90vw, 360px"
+              sizes="(max-width: 420px) 100vw, 415px"
             />
-            <figcaption className="mt-4">{r("dictionary_caption")}</figcaption>
-            <p className="mt-4 leading-relaxed">{t("compatibility_note")}</p>
-          </figure>
+          </div>
+          <p className="dictionary-compatibility">{t("compatibility_note")}</p>
         </Reveal>
       </div>
     </section>

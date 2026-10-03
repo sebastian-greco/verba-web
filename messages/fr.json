@@ -83,8 +83,8 @@
   "dictionary": {
     "headline": "Vos mots. Écrits comme vous le souhaitez.",
     "description": "Des noms, des termes de projet et des expressions du quotidien. Enregistrez-les dans le Dictionnaire natif de Verba ; vos règles de remplacement locales les écriront comme vous le souhaitez.",
-    "learning_title": "Vous choisissez ce que Verba retient.",
-    "learning_description": "Les corrections peuvent devenir des règles suggérées. Chacune doit être approuvée par vos soins, et vous pouvez désactiver l’apprentissage des corrections à tout moment.",
+    "learning_title": "Suggestions automatiques. À vous de choisir.",
+    "learning_description": "Corrigez un mot après avoir dicté et Verba peut proposer de mémoriser la modification pour la prochaine fois. Acceptez ou ignorez : vous approuvez chaque règle et pouvez désactiver l’apprentissage à tout moment.",
     "example_title": "Dictionnaire",
     "replace_label": "Remplacer",
     "with_label": "Par",

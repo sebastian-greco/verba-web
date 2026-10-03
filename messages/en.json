@@ -83,8 +83,8 @@
   "dictionary": {
     "headline": "Your words. Spelled your way.",
     "description": "Names, project terms, phrases you use every day. Save them in Verba’s native Dictionary, and your local replacement rules keep them written your way.",
-    "learning_title": "You choose what Verba remembers.",
-    "learning_description": "Corrections can become suggested rules. Each needs your approval, and you can turn correction learning off anytime.",
+    "learning_title": "Automatic suggestions. Your choice.",
+    "learning_description": "Correct a word after dictating, and Verba can suggest saving the change for next time. Accept it or ignore it—you approve every rule, and can turn correction learning off anytime.",
     "example_title": "Dictionary",
     "replace_label": "Replace",
     "with_label": "With",

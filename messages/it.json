@@ -83,8 +83,8 @@
   "dictionary": {
     "headline": "Le tue parole. Scritte a modo tuo.",
     "description": "Nomi, termini di progetto ed espressioni che usi ogni giorno. Salvali nel Dizionario nativo di Verba: le regole di sostituzione locali li manterranno scritti a modo tuo.",
-    "learning_title": "Decidi tu cosa ricorda Verba.",
-    "learning_description": "Le correzioni possono diventare regole suggerite. Devi approvare ogni regola e puoi disattivare l’apprendimento delle correzioni in qualsiasi momento.",
+    "learning_title": "Suggerimenti automatici. Decidi tu.",
+    "learning_description": "Correggi una parola dopo aver dettato e Verba può suggerire di salvare la modifica per la prossima volta. Accetta o ignora: approvi tu ogni regola e puoi disattivare l’apprendimento quando vuoi.",
     "example_title": "Dizionario",
     "replace_label": "Sostituisci",
     "with_label": "Con",

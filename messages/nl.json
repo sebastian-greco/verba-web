@@ -83,8 +83,8 @@
   "dictionary": {
     "headline": "Je woorden. Geschreven zoals jij het wilt.",
     "description": "Namen, projecttermen en uitdrukkingen die je elke dag gebruikt. Sla ze op in het native Woordenboek van Verba; je lokale vervangregels zorgen ervoor dat ze worden geschreven zoals jij wilt.",
-    "learning_title": "Jij bepaalt wat Verba onthoudt.",
-    "learning_description": "Correcties kunnen voorgestelde regels worden. Je moet elke regel goedkeuren en je kunt het leren van correcties altijd uitschakelen.",
+    "learning_title": "Automatische suggesties. Jij beslist.",
+    "learning_description": "Corrigeer een woord na het dicteren en Verba kan voorstellen de wijziging voor de volgende keer op te slaan. Accepteer of negeer: jij keurt elke regel goed en kunt het leren altijd uitschakelen.",
     "example_title": "Woordenboek",
     "replace_label": "Vervang",
     "with_label": "Door",

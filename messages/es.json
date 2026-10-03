@@ -83,8 +83,8 @@
   "dictionary": {
     "headline": "Tus palabras. Escritas a tu manera.",
     "description": "Nombres, términos de proyectos y frases que usas a diario. Guárdalos en el Diccionario nativo de Verba y tus reglas locales de reemplazo harán que se escriban a tu manera.",
-    "learning_title": "Tú decides qué recuerda Verba.",
-    "learning_description": "Las correcciones pueden convertirse en reglas sugeridas. Tú apruebas cada una y puedes desactivar el aprendizaje de correcciones cuando quieras.",
+    "learning_title": "Sugerencias automáticas. Tú decides.",
+    "learning_description": "Corrige una palabra después de dictar y Verba puede sugerir guardar el cambio para la próxima vez. Acéptalo o ignóralo: tú apruebas cada regla y puedes desactivar el aprendizaje cuando quieras.",
     "example_title": "Diccionario",
     "replace_label": "Reemplazar",
     "with_label": "Por",

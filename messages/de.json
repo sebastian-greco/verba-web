@@ -83,8 +83,8 @@
   "dictionary": {
     "headline": "Deine Wörter. So, wie du sie schreibst.",
     "description": "Namen, Projektbegriffe und Ausdrücke, die du täglich verwendest. Speichere sie in Verbas Wörterbuch. Deine lokalen Ersetzungsregeln halten die Schreibweise fest.",
-    "learning_title": "Du entscheidest, was Verba sich merkt.",
-    "learning_description": "Korrekturen können zu Regelvorschlägen werden. Du bestätigst jeden Vorschlag selbst und kannst das Lernen aus Korrekturen jederzeit ausschalten.",
+    "learning_title": "Automatische Vorschläge. Deine Entscheidung.",
+    "learning_description": "Korrigiere ein Wort nach dem Diktieren, und Verba kann vorschlagen, die Änderung fürs nächste Mal zu speichern. Akzeptiere oder ignoriere sie: Du bestätigst jede Regel und kannst das Lernen jederzeit ausschalten.",
     "example_title": "Wörterbuch",
     "replace_label": "Ersetzen",
     "with_label": "Durch",

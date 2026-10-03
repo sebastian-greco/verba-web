@@ -3,14 +3,7 @@
 import { useInView, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import {
-  Mail,
-  LockKeyhole,
-  Pause,
-  Play,
-  Paperclip,
-  ArrowUp,
-} from "lucide-react";
+import { Mail, LockKeyhole, Paperclip, ArrowUp } from "lucide-react";
 import MacOverlaySimulator, {
   type OverlayState,
 } from "@/components/ui/MacOverlaySimulator";
@@ -21,9 +14,8 @@ export default function DictationScene() {
   const scene = useRef<HTMLDivElement>(null);
   const visible = useInView(scene, { amount: 0.2 });
   const [stage, setStage] = useState<OverlayState>("idle");
-  const [paused, setPaused] = useState(false);
   const reducedMotion = useReducedMotion();
-  const animated = visible && reducedMotion === false && !paused;
+  const animated = visible && reducedMotion === false;
   const displayStage = reducedMotion ? "success" : stage;
 
   useEffect(() => {
@@ -105,21 +97,6 @@ export default function DictationScene() {
           <LockKeyhole size={11} aria-hidden="true" />
           {t("never_uploaded")}
         </span>
-        {!reducedMotion && (
-          <button
-            type="button"
-            className="scene-pause"
-            onClick={() => setPaused((value) => !value)}
-            aria-label={t(paused ? "resume_animation" : "pause_animation")}
-            title={t(paused ? "resume_animation" : "pause_animation")}
-          >
-            {paused ? (
-              <Play size={12} aria-hidden="true" />
-            ) : (
-              <Pause size={12} aria-hidden="true" />
-            )}
-          </button>
-        )}
       </div>
     </div>
   );
