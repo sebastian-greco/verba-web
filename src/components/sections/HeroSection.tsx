@@ -18,7 +18,14 @@ export default function HeroSection() {
             <br />
             <em>{t("hero_line_3")}</em>
           </h1>
-          <p className="hero-description">{t("hero_description")}</p>
+          <p className="hero-description">
+            {t.rich("hero_description", {
+              local: (chunks) => <strong>{chunks}</strong>,
+              private: (chunks) => (
+                <strong className="hero-privacy-promise">{chunks}</strong>
+              ),
+            })}
+          </p>
           <div className="hero-actions">
             <a className="button-primary" href={DOWNLOAD_URL}>
               <ArrowDownToLine size={18} aria-hidden="true" />

@@ -67,12 +67,15 @@ export default function DictationScene() {
           </div>
         </div>
         <div className="email-body">
-          <p>{t("demo_intro")}</p>
           <div className="demo-output">
             {displayStage === "success" ? (
-              <p className="written-text">{t("demo_text")}</p>
+              <div className="written-text">
+                <p>{t("demo_intro")}</p>
+                <p>{t("demo_text")}</p>
+              </div>
             ) : (
               <div className="writing-placeholder" aria-hidden="true">
+                <span className="greeting-placeholder" />
                 <span />
                 <span />
                 <span />

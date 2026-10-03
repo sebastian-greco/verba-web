@@ -1379,9 +1379,8 @@ html {
   container-type: inline-size;
 }
 .hero-copy h1 {
-  font-size: clamp(2.5rem, 18cqi, 6.8rem);
+  font-size: clamp(2rem, 17cqi, 6.5rem);
 }
-:lang(de) .hero-copy h1,
 :lang(it) .hero-copy h1,
 :lang(nl) .hero-copy h1 {
   font-size: clamp(2.3rem, 15.5cqi, 6rem);
@@ -2106,4 +2105,38 @@ html {
   .inline-fn {
     transition: none;
   }
+}
+
+.hero-description strong {
+  color: var(--earth-green);
+  font-weight: 600;
+}
+.hero-privacy-promise {
+  display: block;
+  margin-top: 6px;
+}
+:lang(de) .hero-copy h1 {
+  font-size: clamp(1.8rem, 12.5cqi, 5rem);
+}
+:lang(fr) .hero-copy h1 {
+  font-size: clamp(1.9rem, 14.5cqi, 5.8rem);
+}
+.email-body .demo-output {
+  padding-top: 0;
+}
+.email-body .written-text p + p {
+  margin-top: 13px;
+}
+.email-body .writing-placeholder span {
+  width: 95%;
+}
+.email-body .writing-placeholder .greeting-placeholder {
+  width: 22%;
+  margin-bottom: 13px;
+}
+.email-body .writing-placeholder span:nth-child(3) {
+  width: 83%;
+}
+.email-body .writing-placeholder span:last-child {
+  width: 47%;
 }
