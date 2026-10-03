@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import BrandLogo from "@/components/layout/BrandLogo";
+import AnimationToggle from "@/components/home/AnimationToggle";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -35,6 +36,7 @@ export default function Footer() {
 
         <div className="footer-copyright text-xs font-bold text-muted-foreground opacity-40 tracking-widest uppercase">
           {t("copyright")}
+          <AnimationToggle />
         </div>
       </div>
     </footer>

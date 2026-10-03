@@ -7,16 +7,17 @@ import {
 } from "@/lib/constants";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
-import { useInView, useReducedMotion } from "framer-motion";
+import { useInView } from "framer-motion";
 import { ArrowDown, Check, Sparkles, LockKeyhole } from "lucide-react";
 import Reveal from "@/components/home/Reveal";
+import { useAnimationPreferences } from "@/components/home/AnimationPreferences";
 
 export default function CleanupSection() {
   const t = useTranslations("cleanup");
   const r = useTranslations("redesign");
   const example = useRef<HTMLDivElement>(null);
   const visible = useInView(example, { once: true, amount: 0.4 });
-  const reducedMotion = useReducedMotion();
+  const { reducedMotion } = useAnimationPreferences();
   const photos = useRef<HTMLElement>(null);
   const photosVisible = useInView(photos, { amount: 0.3 });
   return (

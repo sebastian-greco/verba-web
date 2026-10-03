@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import type { ReactNode } from "react";
+import { useAnimationPreferences } from "@/components/home/AnimationPreferences";
 
 export default function Reveal({
   children,
@@ -12,13 +13,13 @@ export default function Reveal({
   className?: string;
   delay?: number;
 }) {
-  const reducedMotion = useReducedMotion();
+  const { paused, reducedMotion } = useAnimationPreferences();
   return (
     <motion.div
       className={className}
       initial={false}
       whileInView={
-        reducedMotion ? undefined : { opacity: [0.65, 1], y: [18, 0] }
+        reducedMotion || paused ? undefined : { opacity: [0.65, 1], y: [18, 0] }
       }
       viewport={{ once: true, amount: 0.12 }}
       transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}

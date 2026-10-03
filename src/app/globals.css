@@ -2178,6 +2178,34 @@ html {
 .email-body .writing-placeholder span:nth-child(3) {
   width: 83%;
 }
+
+/* One page-wide control freezes decorative loops without resetting their frame. */
+html[data-animations-paused="true"] .redesign *,
+html[data-animations-paused="true"] .redesign *::before,
+html[data-animations-paused="true"] .redesign *::after {
+  animation-play-state: paused !important;
+  transition-duration: 0s !important;
+}
+.footer-animation-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  min-width: 130px;
+  min-height: 44px;
+  margin-top: 2px;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--earth-green);
+  cursor: pointer;
+}
+.footer-animation-toggle:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.footer-animation-toggle svg {
+  flex-shrink: 0;
+}
 .email-body .writing-placeholder span:last-child {
   width: 47%;
 }

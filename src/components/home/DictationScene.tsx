@@ -1,12 +1,17 @@
 "use client";
 
-import { useInView, useReducedMotion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useInView } from "framer-motion";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { useTranslations } from "next-intl";
 import { Mail, LockKeyhole, Paperclip, ArrowUp } from "lucide-react";
 import MacOverlaySimulator, {
   type OverlayState,
 } from "@/components/ui/MacOverlaySimulator";
+import { useAnimationPreferences } from "@/components/home/AnimationPreferences";
+
+const subscribeToHydration = () => () => {};
+const clientSnapshot = () => true;
+const serverSnapshot = () => false;
 
 // This email is fictional. Never load personal messages or recordings here.
 export default function DictationScene() {
@@ -14,9 +19,15 @@ export default function DictationScene() {
   const scene = useRef<HTMLDivElement>(null);
   const visible = useInView(scene, { amount: 0.2 });
   const [stage, setStage] = useState<OverlayState>("idle");
-  const reducedMotion = useReducedMotion();
-  const animated = visible && reducedMotion === false;
-  const displayStage = reducedMotion ? "success" : stage;
+  const { paused, reducedMotion } = useAnimationPreferences();
+  const hydrated = useSyncExternalStore(
+    subscribeToHydration,
+    clientSnapshot,
+    serverSnapshot,
+  );
+  const animated = visible && !paused && reducedMotion === false;
+  // Keep the first browser render identical to SSR before applying OS preferences.
+  const displayStage = hydrated && reducedMotion ? "success" : stage;
 
   useEffect(() => {
     if (!animated) return;
