@@ -1,13 +1,13 @@
 "use client";
 
-import { useReducedMotion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useInView, useReducedMotion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import {
   Mail,
   LockKeyhole,
-  Mic,
-  RotateCcw,
+  Pause,
+  Play,
   Paperclip,
   ArrowUp,
 } from "lucide-react";
@@ -18,25 +18,37 @@ import MacOverlaySimulator, {
 // This email is fictional. Never load personal messages or recordings here.
 export default function DictationScene() {
   const t = useTranslations("redesign");
+  const scene = useRef<HTMLDivElement>(null);
+  const visible = useInView(scene, { amount: 0.2 });
   const [stage, setStage] = useState<OverlayState>("idle");
+  const [paused, setPaused] = useState(false);
   const reducedMotion = useReducedMotion();
+  const animated = visible && reducedMotion === false && !paused;
+  const displayStage = reducedMotion ? "success" : stage;
+
   useEffect(() => {
-    if (reducedMotion) return;
-    const timer = window.setTimeout(() => setStage("recording"), 600);
-    return () => window.clearTimeout(timer);
-  }, [reducedMotion]);
-  useEffect(() => {
-    if (stage !== "recording" && stage !== "processing") return;
+    if (!animated) return;
+    const next: Partial<Record<OverlayState, [OverlayState, number]>> = {
+      idle: ["recording", 600],
+      recording: ["processing", 2300],
+      processing: ["success", 1200],
+      success: ["idle", 5000],
+    };
+    const transition = next[stage];
+    if (!transition) return;
     const timer = window.setTimeout(
-      () => setStage(stage === "recording" ? "processing" : "success"),
-      stage === "recording" ? 2300 : 1200,
+      () => setStage(transition[0]),
+      transition[1],
     );
     return () => window.clearTimeout(timer);
-  }, [stage]);
-  const busy = stage === "recording" || stage === "processing";
+  }, [animated, stage]);
 
   return (
-    <div className="dictation-scene email-scene" data-stage={stage}>
+    <div
+      ref={scene}
+      className="dictation-scene email-scene"
+      data-stage={displayStage}
+    >
       <div className="scene-orbit scene-orbit-one" aria-hidden="true" />
       <div className="scene-orbit scene-orbit-two" aria-hidden="true" />
       <div className="note-window email-window">
@@ -64,8 +76,8 @@ export default function DictationScene() {
         </div>
         <div className="email-body">
           <p>{t("demo_intro")}</p>
-          <div className="demo-output" aria-live="polite" aria-atomic="true">
-            {stage === "success" ? (
+          <div className="demo-output">
+            {displayStage === "success" ? (
               <p className="written-text">{t("demo_text")}</p>
             ) : (
               <div className="writing-placeholder" aria-hidden="true">
@@ -86,35 +98,28 @@ export default function DictationScene() {
         </div>
       </div>
       <div className="hero-native-overlay">
-        <MacOverlaySimulator state={stage} animated={!reducedMotion} />
+        <MacOverlaySimulator state={displayStage} animated={animated} />
       </div>
-      <div className="scene-control">
-        <button
-          type="button"
-          className="demo-play"
-          disabled={busy}
-          onClick={() => setStage("recording")}
-        >
-          {stage === "success" ? (
-            <RotateCcw size={15} aria-hidden="true" />
-          ) : (
-            <Mic size={15} aria-hidden="true" />
-          )}
-          {t(
-            stage === "processing"
-              ? "demo_processing"
-              : stage === "recording"
-                ? "demo_speaking"
-                : stage === "success"
-                  ? "demo_replay"
-                  : "demo_play",
-          )}
-        </button>
-        <span>{t("demo_caption")}</span>
+      <div className="scene-control hero-loop-control">
         <span className="scene-privacy">
           <LockKeyhole size={11} aria-hidden="true" />
           {t("never_uploaded")}
         </span>
+        {!reducedMotion && (
+          <button
+            type="button"
+            className="scene-pause"
+            onClick={() => setPaused((value) => !value)}
+            aria-label={t(paused ? "resume_animation" : "pause_animation")}
+            title={t(paused ? "resume_animation" : "pause_animation")}
+          >
+            {paused ? (
+              <Play size={12} aria-hidden="true" />
+            ) : (
+              <Pause size={12} aria-hidden="true" />
+            )}
+          </button>
+        )}
       </div>
     </div>
   );

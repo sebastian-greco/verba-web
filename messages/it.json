@@ -223,7 +223,7 @@
     "demo_title": "Un’idea per domani",
     "demo_intro": "Ciao a tutti,",
     "demo_text": "Domani prendiamoci un po’ di tempo per esplorare la nuova idea. Portate uno schizzo, una domanda o semplicemente un punto di vista nuovo. A domani!",
-    "never_uploaded": "Elaborato qui. Mai caricato online.",
+    "never_uploaded": "Elaborato in locale. Mai caricato online.",
     "demo_play": "Prova l’animazione",
     "demo_speaking": "Dalla voce alle parole…",
     "demo_replay": "Riproduci di nuovo",
@@ -267,6 +267,7 @@
     "use_emails": "Email e messaggi",
     "use_prompts": "Prompt e istruzioni",
     "use_notes": "Note e documenti",
-    "video_accessible_label": "Demo senza audio: detta una richiesta per un report in ChatGPT. Verba registra, elabora la voce in locale e inserisce il testo finale senza inviarlo."
+    "video_accessible_label": "Demo senza audio: detta una richiesta per un report in ChatGPT. Verba registra, elabora la voce in locale e inserisce il testo finale senza inviarlo.",
+    "dictionary_suggestion_alt": "Verba chiede se ricordare la correzione da Christian a Cristian, con le opzioni Ignora e Accetta."
   }
 }

@@ -38,3 +38,6 @@ export const BUY_URL = `/mac-license`;
 export const DEMO_VIDEO_URL = "/media/verba-chatgpt-demo.mp4";
 export const DEMO_POSTER_URL = "/media/verba-chatgpt-poster.png";
 export const DICTIONARY_IMAGE_URL = "/media/verba-dictionary.png";
+
+export const DICTIONARY_SUGGESTION_IMAGE_URL =
+  "/media/verba-dictionary-suggestion.png";

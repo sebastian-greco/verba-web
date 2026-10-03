@@ -1630,7 +1630,8 @@ html {
   min-height: 42px;
 }
 .hero-native-overlay .mac-overlay {
-  transform: scale(1.3);
+  transform: scale(0.85);
+  transform-origin: top center;
 }
 .scene-control .scene-privacy {
   display: flex;
@@ -1991,4 +1992,43 @@ html {
   .cleanup-comparison[data-reveal="animate"] .cleanup-after {
     animation: none;
   }
+}
+
+/* Quiet loop controls keep the email illustration in focus. */
+.hero-loop-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+.hero-loop-control .scene-privacy {
+  margin-top: 0;
+}
+.scene-pause {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+.scene-pause:hover {
+  background: var(--warm-gray);
+  color: var(--earth-green);
+}
+.scene-pause:focus-visible {
+  outline: 2px solid var(--earth-green);
+  outline-offset: 2px;
+}
+
+.dictionary-suggestion {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin-top: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
 }

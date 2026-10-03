@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { DICTIONARY_IMAGE_URL } from "@/lib/constants";
+import {
+  DICTIONARY_IMAGE_URL,
+  DICTIONARY_SUGGESTION_IMAGE_URL,
+} from "@/lib/constants";
 import Reveal from "@/components/home/Reveal";
 
 export default function DictionarySection() {
@@ -21,6 +24,14 @@ export default function DictionarySection() {
           <p className="dictionary-learning-description mt-3 leading-relaxed">
             {t("learning_description")}
           </p>
+          <Image
+            className="dictionary-suggestion"
+            src={DICTIONARY_SUGGESTION_IMAGE_URL}
+            alt={r("dictionary_suggestion_alt")}
+            width={825}
+            height={442}
+            sizes="(max-width: 420px) 90vw, 360px"
+          />
         </Reveal>
         <Reveal>
           <figure>

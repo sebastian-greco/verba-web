@@ -223,7 +223,7 @@
     "demo_title": "Een idee voor morgen",
     "demo_intro": "Hallo allemaal,",
     "demo_text": "Laten we morgen even tijd maken voor het nieuwe idee. Neem een schets, een vraag of gewoon een frisse blik mee. Tot dan!",
-    "never_uploaded": "Hier verwerkt. Nooit geüpload.",
+    "never_uploaded": "Lokaal verwerkt. Nooit geüpload.",
     "demo_play": "Probeer de animatie",
     "demo_speaking": "Van stem naar woorden…",
     "demo_replay": "Opnieuw afspelen",
@@ -267,6 +267,7 @@
     "use_emails": "E-mails en berichten",
     "use_prompts": "Prompts en instructies",
     "use_notes": "Notities en documenten",
-    "video_accessible_label": "Demo zonder geluid: dicteer een opdracht voor een rapport in ChatGPT. Verba neemt op, verwerkt de spraak lokaal en voegt de uiteindelijke tekst in zonder deze te versturen."
+    "video_accessible_label": "Demo zonder geluid: dicteer een opdracht voor een rapport in ChatGPT. Verba neemt op, verwerkt de spraak lokaal en voegt de uiteindelijke tekst in zonder deze te versturen.",
+    "dictionary_suggestion_alt": "Verba vraagt of de correctie van Christian naar Cristian moet worden onthouden, met de opties Negeren en Accepteren."
   }
 }

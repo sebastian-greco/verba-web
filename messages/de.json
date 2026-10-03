@@ -223,7 +223,7 @@
     "demo_title": "Eine Idee für morgen",
     "demo_intro": "Hallo zusammen,",
     "demo_text": "Nehmen wir uns morgen etwas Zeit für die neue Idee. Bringt eine Skizze, eine Frage oder einfach einen frischen Blick mit. Bis morgen!",
-    "never_uploaded": "Hier verarbeitet. Nie hochgeladen.",
+    "never_uploaded": "Lokal verarbeitet. Nie hochgeladen.",
     "demo_play": "Animation starten",
     "demo_speaking": "Aus Sprache werden Worte…",
     "demo_replay": "Erneut abspielen",
@@ -267,6 +267,7 @@
     "use_emails": "E-Mails und Nachrichten",
     "use_prompts": "Prompts und Anweisungen",
     "use_notes": "Notizen und Dokumente",
-    "video_accessible_label": "Demo ohne Ton: Diktiere eine Anfrage für einen Bericht in ChatGPT. Verba nimmt auf, verarbeitet die Sprache lokal und fügt den fertigen Text ein, ohne ihn abzusenden."
+    "video_accessible_label": "Demo ohne Ton: Diktiere eine Anfrage für einen Bericht in ChatGPT. Verba nimmt auf, verarbeitet die Sprache lokal und fügt den fertigen Text ein, ohne ihn abzusenden.",
+    "dictionary_suggestion_alt": "Verba fragt, ob die Korrektur von Christian zu Cristian gespeichert werden soll, mit den Optionen Ignorieren und Akzeptieren."
   }
 }
