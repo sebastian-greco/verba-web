@@ -7,7 +7,6 @@ import {
   LockKeyhole,
   WifiOff,
   ScanEye,
-  Laptop,
 } from "lucide-react";
 import Reveal from "@/components/home/Reveal";
 
@@ -32,28 +31,36 @@ export default function PrivacySection() {
             aria-label={t("diagram_alt")}
           >
             <div className="device-frame">
-              <div className="device-top">
-                <Laptop size={16} aria-hidden="true" />
-                <span>{t("on_your_mac")}</span>
-                <LockKeyhole size={14} aria-hidden="true" />
-              </div>
-              <div className="local-flow">
-                <AudioLines size={28} aria-hidden="true" />
-                <span className="flow-line" />
-                <div className="local-core">
-                  <Image src="/verba-logo.svg" alt="" width={46} height={37} />
+              <span className="device-camera" aria-hidden="true" />
+              <div className="device-screen">
+                <div className="device-top">
+                  <span>{t("on_your_mac")}</span>
+                  <LockKeyhole size={14} aria-hidden="true" />
                 </div>
-                <span className="flow-line" />
-                <FileText size={28} aria-hidden="true" />
-              </div>
-              <div className="flow-labels">
-                <span>{t("flow_voice")}</span>
-                <span>{APP_NAME}</span>
-                <span>{t("flow_words")}</span>
+                <div className="device-content">
+                  <div className="local-flow">
+                    <AudioLines size={28} aria-hidden="true" />
+                    <span className="flow-line" />
+                    <div className="local-core">
+                      <Image
+                        src="/verba-logo.svg"
+                        alt=""
+                        width={46}
+                        height={37}
+                      />
+                    </div>
+                    <span className="flow-line" />
+                    <FileText size={28} aria-hidden="true" />
+                  </div>
+                  <div className="flow-labels">
+                    <span>{t("flow_voice")}</span>
+                    <span>{APP_NAME}</span>
+                    <span>{t("flow_words")}</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="device-base" />
-            <p className="diagram-caption">{t("diagram_caption")}</p>
+            <div className="device-base" aria-hidden="true" />
           </div>
         </Reveal>
         <div className="privacy-principles">
