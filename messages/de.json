@@ -147,7 +147,9 @@
     "note": "Optionaler Download zur Einrichtung. Danach läuft die Korrektur auf deinem Mac.",
     "status_active": "Intelligente Bereinigung Aktiv",
     "status_inactive": "Intelligente Bereinigung Inaktiv",
-    "before_annotated": "<filler>ähm</filler> kannst du den aktualisierten Vorschlag bis Freitag schicken und <filler>äh</filler> den neuen Zeitplan hinzufügen"
+    "before_annotated": "<filler>ähm</filler> kannst du den aktualisierten Vorschlag bis Freitag schicken und <filler>äh</filler> den neuen Zeitplan hinzufügen",
+    "original_image_alt": "Ursprüngliche E-Mail-Transkription in Verba: Begrüßung, Nachricht und Grußformel in einem Absatz.",
+    "cleaned_image_alt": "Dieselbe E-Mail nach der Textbereinigung durch Verba: Begrüßung, Nachricht und Grußformel in getrennten Absätzen."
   },
   "cta_block": {
     "headline": "Sprich los. Lass die Tastatur ruhen.",

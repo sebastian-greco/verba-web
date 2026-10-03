@@ -147,7 +147,9 @@
     "note": "Download iniziale opzionale. Poi la revisione funziona sul tuo Mac.",
     "status_active": "Smart Cleanup Attivo",
     "status_inactive": "Smart Cleanup Inattivo",
-    "before_annotated": "<filler>ehm</filler> puoi inviare la proposta aggiornata entro venerdì e <filler>ecco</filler> includere le nuove scadenze"
+    "before_annotated": "<filler>ehm</filler> puoi inviare la proposta aggiornata entro venerdì e <filler>ecco</filler> includere le nuove scadenze",
+    "original_image_alt": "Trascrizione originale dell’email in Verba: saluto, messaggio e firma in un unico paragrafo.",
+    "cleaned_image_alt": "La stessa email dopo la pulizia di Verba: saluto, messaggio e firma separati in paragrafi."
   },
   "cta_block": {
     "headline": "Inizia a parlare. Smetti di digitare.",

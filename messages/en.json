@@ -147,7 +147,9 @@
     "note": "Optional setup download. After that, cleanup runs on your Mac.",
     "status_active": "Smart Cleanup Active",
     "status_inactive": "Smart Cleanup Inactive",
-    "before_annotated": "<filler>um</filler> can you send the updated proposal by friday and <filler>uh</filler> include the new timeline"
+    "before_annotated": "<filler>um</filler> can you send the updated proposal by friday and <filler>uh</filler> include the new timeline",
+    "original_image_alt": "Original email transcription in Verba: greeting, message and sign-off in one paragraph.",
+    "cleaned_image_alt": "The same email after Verba cleanup: greeting, message and sign-off separated into paragraphs."
   },
   "cta_block": {
     "headline": "Start speaking. Stop typing.",

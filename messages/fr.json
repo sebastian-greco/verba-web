@@ -147,7 +147,9 @@
     "note": "Téléchargement initial facultatif. Ensuite, la correction fonctionne sur votre Mac.",
     "status_active": "Nettoyage Intelligent Actif",
     "status_inactive": "Nettoyage Intelligent Inactif",
-    "before_annotated": "<filler>euh</filler> peux-tu envoyer la proposition actualisée pour vendredi et <filler>euh</filler> inclure le nouveau calendrier"
+    "before_annotated": "<filler>euh</filler> peux-tu envoyer la proposition actualisée pour vendredi et <filler>euh</filler> inclure le nouveau calendrier",
+    "original_image_alt": "Transcription originale de l’e-mail dans Verba : salutation, message et signature dans un seul paragraphe.",
+    "cleaned_image_alt": "Le même e-mail après nettoyage par Verba : salutation, message et signature séparés en paragraphes."
   },
   "cta_block": {
     "headline": "Commencez à parler. Arrêtez de taper.",

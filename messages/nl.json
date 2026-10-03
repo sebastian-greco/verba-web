@@ -147,7 +147,9 @@
     "note": "Optionele download bij het instellen. Daarna werkt tekstcorrectie op je Mac.",
     "status_active": "Slim Opschonen Actief",
     "status_inactive": "Slim Opschonen Inactief",
-    "before_annotated": "<filler>ehm</filler> kun je het bijgewerkte voorstel voor vrijdag sturen en <filler>eh</filler> de nieuwe planning toevoegen"
+    "before_annotated": "<filler>ehm</filler> kun je het bijgewerkte voorstel voor vrijdag sturen en <filler>eh</filler> de nieuwe planning toevoegen",
+    "original_image_alt": "Oorspronkelijke e-mailtranscriptie in Verba: aanhef, bericht en afsluiting in één alinea.",
+    "cleaned_image_alt": "Dezelfde e-mail na tekstopschoning door Verba: aanhef, bericht en afsluiting in afzonderlijke alinea’s."
   },
   "cta_block": {
     "headline": "Begin met spreken. Stop met typen.",

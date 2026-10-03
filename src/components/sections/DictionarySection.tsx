@@ -24,24 +24,24 @@ export default function DictionarySection() {
           <p className="dictionary-learning-description mt-3 leading-relaxed">
             {t("learning_description")}
           </p>
-          <Image
-            className="dictionary-suggestion"
-            src={DICTIONARY_SUGGESTION_IMAGE_URL}
-            alt={r("dictionary_suggestion_alt")}
-            width={825}
-            height={442}
-            sizes="(max-width: 420px) 90vw, 360px"
-          />
         </Reveal>
         <Reveal>
-          <figure>
+          <figure className="dictionary-media">
             <Image
               className="dictionary-screenshot"
               src={DICTIONARY_IMAGE_URL}
               alt={r("dictionary_alt")}
-              width={1874}
-              height={1216}
+              width={1824}
+              height={1324}
               sizes="(max-width: 767px) 100vw, 550px"
+            />
+            <Image
+              className="dictionary-suggestion"
+              src={DICTIONARY_SUGGESTION_IMAGE_URL}
+              alt={r("dictionary_suggestion_alt")}
+              width={825}
+              height={442}
+              sizes="(max-width: 420px) 90vw, 360px"
             />
             <figcaption className="mt-4">{r("dictionary_caption")}</figcaption>
             <p className="mt-4 leading-relaxed">{t("compatibility_note")}</p>

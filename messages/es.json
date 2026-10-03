@@ -147,7 +147,9 @@
     "note": "Descarga inicial opcional. Después, la limpieza se ejecuta en tu Mac.",
     "status_active": "Limpieza Inteligente Activa",
     "status_inactive": "Limpieza Inteligente Inactiva",
-    "before_annotated": "<filler>eh</filler> puedes enviar la propuesta actualizada para el viernes y <filler>bueno</filler> incluir el nuevo calendario"
+    "before_annotated": "<filler>eh</filler> puedes enviar la propuesta actualizada para el viernes y <filler>bueno</filler> incluir el nuevo calendario",
+    "original_image_alt": "Transcripción original del correo en Verba: saludo, mensaje y despedida en un solo párrafo.",
+    "cleaned_image_alt": "El mismo correo tras la limpieza de Verba: saludo, mensaje y despedida separados en párrafos."
   },
   "cta_block": {
     "headline": "Empieza a hablar. Deja de escribir.",

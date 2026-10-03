@@ -37,7 +37,10 @@ export const BUY_URL = `/mac-license`;
 // Reviewed product media. Never add screenshots containing transcription history.
 export const DEMO_VIDEO_URL = "/media/verba-chatgpt-demo.mp4";
 export const DEMO_POSTER_URL = "/media/verba-chatgpt-poster.png";
-export const DICTIONARY_IMAGE_URL = "/media/verba-dictionary.png";
+export const DICTIONARY_IMAGE_URL = "/media/verba-dictionary-rules.png";
 
 export const DICTIONARY_SUGGESTION_IMAGE_URL =
   "/media/verba-dictionary-suggestion.png";
+
+export const CLEANUP_ORIGINAL_IMAGE_URL = "/media/verba-cleanup-original.png";
+export const CLEANUP_RESULT_IMAGE_URL = "/media/verba-cleanup-result.png";

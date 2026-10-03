@@ -2032,3 +2032,47 @@ html {
   border-radius: 12px;
   border: 1px solid var(--border-subtle);
 }
+
+.dictionary-media .dictionary-screenshot {
+  border: 0;
+  border-radius: 0;
+}
+.dictionary-media .dictionary-suggestion {
+  width: 86%;
+  max-width: 440px;
+  margin: 4px auto 24px;
+  box-shadow: 0 14px 28px -16px oklch(0.2 0.03 145 / 0.3);
+}
+.cleanup-intro .section-description {
+  margin-top: 0;
+}
+.cleanup-proof {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 44px;
+}
+/* Focus the original screenshots on the transcript tabs and text, without altering the assets. */
+.cleanup-native-crop {
+  position: relative;
+  aspect-ratio: 1144 / 388;
+  overflow: hidden;
+  border-radius: 10px;
+  background: oklch(0.23 0 0);
+  border: 1px solid var(--border-subtle);
+}
+.cleanup-native-crop img {
+  position: absolute;
+  width: 159.44%;
+  max-width: none;
+  height: auto;
+  left: -47.2%;
+  top: -98.45%;
+}
+@media (max-width: 767px) {
+  .cleanup-proof {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    margin-top: 32px;
+  }
+}
