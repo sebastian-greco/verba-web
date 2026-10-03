@@ -267,6 +267,6 @@
     "use_emails": "Emails & messages",
     "use_prompts": "Prompts & instructions",
     "use_notes": "Notes & documents",
-    "video_accessible_label": "Silent demo: hold Fn, dictate a sample message in Apple Notes, then release. Verba processes the recording and inserts the finished text."
+    "video_accessible_label": "Silent demo: dictate a report prompt into ChatGPT. Verba records, processes the speech locally, and inserts the finished prompt without submitting it."
   }
 }

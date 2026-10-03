@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Mail, MessageSquare, FileText } from "lucide-react";
 import WorkflowDemo from "@/components/home/WorkflowDemo";
-import { DEMO_VIDEO_URL, DEMO_POSTER_URL } from "@/lib/constants";
+import ProductDemo from "@/components/home/ProductDemo";
 import Reveal from "@/components/home/Reveal";
 
 export default function DemoSection() {
@@ -28,15 +28,7 @@ export default function DemoSection() {
               ))}
             </ul>
           </div>
-          <video
-            controls
-            playsInline
-            preload="none"
-            poster={DEMO_POSTER_URL}
-            aria-label={t("video_accessible_label")}
-          >
-            <source src={DEMO_VIDEO_URL} type="video/mp4" />
-          </video>
+          <ProductDemo />
         </Reveal>
         <WorkflowDemo />
       </div>

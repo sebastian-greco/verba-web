@@ -267,6 +267,6 @@
     "use_emails": "E-mails et messages",
     "use_prompts": "Prompts et instructions",
     "use_notes": "Notes et documents",
-    "video_accessible_label": "Démo muette : maintenez Fn, dictez un message dans Notes d’Apple, puis relâchez. Verba traite l’enregistrement et insère le texte."
+    "video_accessible_label": "Démo sans son : dictez une demande de rapport dans ChatGPT. Verba enregistre, traite la voix localement et insère le texte final sans l’envoyer."
   }
 }

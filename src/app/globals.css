@@ -1709,6 +1709,7 @@ html {
 }
 .use-case-demo video {
   width: 100%;
+  height: auto;
   border-radius: 10px;
   border: 1px solid var(--border-subtle);
   background: var(--earth-green);

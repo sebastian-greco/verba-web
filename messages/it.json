@@ -267,6 +267,6 @@
     "use_emails": "Email e messaggi",
     "use_prompts": "Prompt e istruzioni",
     "use_notes": "Note e documenti",
-    "video_accessible_label": "Demo senza audio: tieni premuto Fn, detta un messaggio di esempio in Note di Apple e rilascia. Verba elabora la registrazione e inserisce il testo."
+    "video_accessible_label": "Demo senza audio: detta una richiesta per un report in ChatGPT. Verba registra, elabora la voce in locale e inserisce il testo finale senza inviarlo."
   }
 }

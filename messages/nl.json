@@ -267,6 +267,6 @@
     "use_emails": "E-mails en berichten",
     "use_prompts": "Prompts en instructies",
     "use_notes": "Notities en documenten",
-    "video_accessible_label": "Demo zonder geluid: houd Fn ingedrukt, dicteer een voorbeeldbericht in Apple Notities en laat los. Verba verwerkt de opname en voegt de tekst in."
+    "video_accessible_label": "Demo zonder geluid: dicteer een opdracht voor een rapport in ChatGPT. Verba neemt op, verwerkt de spraak lokaal en voegt de uiteindelijke tekst in zonder deze te versturen."
   }
 }

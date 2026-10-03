@@ -267,6 +267,6 @@
     "use_emails": "E-Mails und Nachrichten",
     "use_prompts": "Prompts und Anweisungen",
     "use_notes": "Notizen und Dokumente",
-    "video_accessible_label": "Stumme Demo: Fn halten, eine Beispielnachricht in Apple Notizen diktieren und loslassen. Verba verarbeitet die Aufnahme und fügt den Text ein."
+    "video_accessible_label": "Demo ohne Ton: Diktiere eine Anfrage für einen Bericht in ChatGPT. Verba nimmt auf, verarbeitet die Sprache lokal und fügt den fertigen Text ein, ohne ihn abzusenden."
   }
 }
