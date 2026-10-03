@@ -1817,13 +1817,14 @@ html {
     transform 140ms ease-out,
     box-shadow 140ms ease-out;
   vertical-align: middle;
+  transform: translateY(-3px);
 }
 .inline-fn span {
   font-size: 8px;
   align-self: start;
 }
 .inline-fn:hover {
-  transform: translateY(3px);
+  transform: translateY(0);
   box-shadow: 0 0 0 var(--border-subtle);
 }
 .supporting-features {
@@ -2139,4 +2140,8 @@ html {
 }
 .email-body .writing-placeholder span:last-child {
   width: 47%;
+}
+
+.email-body .written-text p {
+  white-space: pre-line;
 }

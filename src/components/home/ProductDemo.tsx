@@ -30,6 +30,7 @@ export default function ProductDemo() {
       controls
       muted
       playsInline
+      loop={reducedMotion === false}
       preload="none"
       width={1392}
       height={736}
