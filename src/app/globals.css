@@ -1034,6 +1034,46 @@ html {
   background: var(--warm-gray);
   transform: none;
 }
+.locale-menu [role="menuitem"]:focus-visible {
+  /* Radix highlights the focused row; an offset ring clips against the popup. */
+  outline: none;
+}
+.locale-menu [role="menuitem"][data-highlighted] {
+  background: var(--earth-green);
+  color: var(--bg-card);
+}
+.mobile-nav-panel {
+  font-family: var(--font-sans);
+  background: var(--bg-page);
+}
+.mobile-nav-link {
+  letter-spacing: 0;
+  text-transform: none;
+  padding-block: 6px;
+}
+.mobile-nav-download {
+  min-width: 130px;
+  border-radius: 6px;
+  background: var(--earth-green);
+  color: var(--bg-card);
+  font-size: 14px;
+  font-weight: 500;
+}
+.mobile-nav-download:hover {
+  background: var(--text-primary);
+}
+.mobile-nav-panel > button {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+}
+.mobile-nav-panel > button:focus-visible {
+  outline: 2px solid var(--earth-green);
+  outline-offset: 2px;
+  box-shadow: none;
+}
 .site-footer {
   padding: 45px 0;
 }

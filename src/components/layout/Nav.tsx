@@ -52,7 +52,7 @@ function LocaleSwitcher({ locale }: { locale: string }) {
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className="min-w-[80px] bg-background/90 backdrop-blur-xl border-border"
+        className="locale-menu min-w-[80px] bg-background/90 backdrop-blur-xl border-border"
       >
         {routing.locales.map((l) => (
           <DropdownMenuItem
@@ -128,7 +128,7 @@ export default function Nav({ locale }: { locale: string }) {
             <SheetContent
               side="right"
               aria-describedby={undefined}
-              className="w-72 p-6 border-l-border bg-background/95 backdrop-blur-xl"
+              className="mobile-nav-panel w-72 p-6 border-l-border bg-background/95 backdrop-blur-xl"
             >
               <SheetTitle className="sr-only">{t("menu")}</SheetTitle>
               <nav className="flex flex-col gap-4 mt-8">
@@ -136,7 +136,7 @@ export default function Nav({ locale }: { locale: string }) {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors uppercase tracking-widest"
+                    className="mobile-nav-link text-base font-normal text-muted-foreground hover:text-foreground transition-colors"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}
@@ -144,7 +144,7 @@ export default function Nav({ locale }: { locale: string }) {
                 ))}
                 <a
                   href={DOWNLOAD_URL}
-                  className="btn-warm mt-4 text-center py-3 rounded-full font-bold block"
+                  className="mobile-nav-download mt-4 text-center py-3 block"
                 >
                   {t("download")}
                 </a>
