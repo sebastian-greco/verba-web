@@ -1817,14 +1817,14 @@ html {
     transform 140ms ease-out,
     box-shadow 140ms ease-out;
   vertical-align: middle;
-  transform: translateY(-3px);
+  transform: translateY(-6px);
 }
 .inline-fn span {
   font-size: 8px;
   align-self: start;
 }
 .inline-fn:hover {
-  transform: translateY(0);
+  transform: translateY(-3px);
   box-shadow: 0 0 0 var(--border-subtle);
 }
 .supporting-features {
