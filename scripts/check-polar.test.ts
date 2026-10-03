@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, describe, expect, mock, test } from "bun:test";
+import { afterEach, beforeEach, describe, expect, mock, spyOn, test } from "bun:test";
 import { NextRequest } from "next/server";
 import { GET } from "@/app/mac-license/route";
 import { createPolarClient, fetchLicenseData } from "@/lib/polar";
@@ -13,11 +13,15 @@ let requests: Request[];
 let responseStatus: number;
 let failLicenseLookup: boolean;
 let checkoutResponse: typeof fixtures.checkout;
+let failFetch: boolean;
+let checkoutErrorLog: ReturnType<typeof spyOn>;
 
 beforeEach(() => {
   requests = [];
   responseStatus = 200;
   failLicenseLookup = false;
+  failFetch = false;
+  checkoutErrorLog = spyOn(console, "error").mockImplementation(() => {});
   checkoutResponse = structuredClone(fixtures.checkout);
   process.env.POLAR_ACCESS_TOKEN = "test-access-token";
   process.env.POLAR_PRODUCT_ID = "test-product";
@@ -27,6 +31,7 @@ beforeEach(() => {
   globalThis.fetch = mock(async (input: string | URL | Request, init?: RequestInit) => {
     const request = new Request(input, init);
     requests.push(request);
+    if (failFetch) throw new DOMException("Private upstream failure details", "TimeoutError");
     const isLicenseLookup = new URL(request.url).pathname === "/v1/license-keys/";
     const status = isLicenseLookup && failLicenseLookup ? 503 : responseStatus;
     return Response.json(status >= 400 ? { detail: "Test failure" } : isLicenseLookup ? fixtures.licenseKeys : checkoutResponse, {
@@ -38,6 +43,7 @@ beforeEach(() => {
 
 afterEach(() => {
   globalThis.fetch = originalFetch;
+  checkoutErrorLog.mockRestore();
   for (const key of envKeys) {
     if (originalEnv[key] === undefined) delete process.env[key];
     else process.env[key] = originalEnv[key];
@@ -109,6 +115,32 @@ describe("Polar 2026-10 integration", () => {
     delete process.env.POLAR_ACCESS_TOKEN;
     expect(await fetchLicenseData(fixtures.checkout.id)).toEqual({ customerEmail: null, licenseKey: null, displayKey: null, confirmed: false });
     expect(requests).toHaveLength(0);
+  });
+
+  test("invalid Polar credentials return an uncached unavailable response and safe diagnostics", async () => {
+    responseStatus = 401;
+    const response = await GET(new NextRequest("https://verbaspeech.app/mac-license"));
+    expect(response.status).toBe(503);
+    expect(response.headers.get("Cache-Control")).toBe("no-store");
+    expect(response.headers.get("Location")).toBeNull();
+    expect(await response.text()).toBe("Checkout is currently unavailable. Please try again later.");
+    expect(checkoutErrorLog).toHaveBeenCalledWith("Polar checkout creation failed", {
+      type: "PolarClientError",
+      status: 401,
+    });
+    expect(requests).toHaveLength(1);
+  });
+
+  test("Polar network timeouts return unavailable without logging upstream details", async () => {
+    failFetch = true;
+    const response = await GET(new NextRequest("https://verbaspeech.app/mac-license"));
+    expect(response.status).toBe(503);
+    expect(checkoutErrorLog).toHaveBeenCalledWith("Polar checkout creation failed", {
+      type: "PolarNetworkError",
+      status: null,
+    });
+    expect(JSON.stringify(checkoutErrorLog.mock.calls)).not.toContain("Private upstream failure details");
+    expect(requests).toHaveLength(1);
   });
 
   test("unsupported API responses fail instead of displaying license data", async () => {

@@ -55,6 +55,39 @@ sends `Polar-Version: 2026-10` on every request. The package is pinned to SDK
 still selects the sandbox server. Product, organization, benefit, and access
 token configuration remain in the existing environment variables.
 
+Checkout requires a valid Polar access token with `checkouts:write` scope for
+the same environment and organization as `POLAR_PRODUCT_ID`. Production Worker
+credentials are configured separately from `.env.local`; changing a local token
+does not repair an expired or revoked deployed token. If Polar rejects a request,
+`/mac-license` returns an uncached `503` and logs only the error type and HTTP
+status. A logged `401` can indicate an invalid Worker `POLAR_ACCESS_TOKEN` or
+an environment mismatch; check both before replacing the token. The application
+cannot refresh that credential automatically.
+
+Set these runtime bindings on the production Worker in the Cloudflare dashboard:
+
+- Secret: `POLAR_ACCESS_TOKEN`, a valid production token with `checkouts:write`
+  and the read scopes needed for checkout/license lookup.
+- Environment binding: `POLAR_ENV=production` (currently stored as a Worker
+  secret). Keep that existing binding; do not add a variable with the same name.
+- Product bindings (currently stored as Worker secrets): `POLAR_PRODUCT_ID`
+  for the production product; `POLAR_ORG_ID` and `POLAR_BENEFIT_ID` enable
+  license retrieval after payment. Do not add variables with those same names.
+
+OpenNext can bundle values from local Next.js environment files as defaults.
+If the production Worker has no `POLAR_ENV` binding, a bundled `sandbox` value
+can send a valid production token to the sandbox API and produce `401
+invalid_token`. Replacing the token alone cannot fix that mismatch. The explicit
+runtime `POLAR_ENV=production` binding overrides the bundled default; verify it
+before rotating credentials. Use production product and benefit identifiers too;
+using a sandbox product in production returns `422: Product does not exist`.
+
+`bun run deploy` passes `--keep-vars` to Wrangler so deployments retain those
+dashboard variables. OpenNext's [environment variable guidance](https://opennext.js.org/cloudflare/howtos/env-vars)
+documents this flag and recommends configuring runtime variables in the dashboard.
+The flag preserves existing values; it does not recreate missing bindings or
+replace invalid tokens.
+
 Polar's [API changelog](https://polar.sh/docs/changelog/api) says `2026-10`
 becomes Current on October 1, 2026. Its checkout contracts are unchanged from
 `2026-04`; license responses add nullable `member_id` and `member` fields.

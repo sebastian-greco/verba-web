@@ -1,7 +1,7 @@
-/* eslint-disable i18next/no-literal-string */
-import { setRequestLocale } from 'next-intl/server';
-import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
+import type { ReactNode } from "react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { APP_NAME, CONTACT_EMAIL } from "@/lib/constants";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -10,84 +10,65 @@ type Props = {
 export default async function PrivacyPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('legal');
+  const t = await getTranslations("legal");
+  const contact = (chunks: ReactNode) => (
+    <a href={`mailto:${CONTACT_EMAIL}`} className="text-primary hover:underline">
+      {chunks}
+    </a>
+  );
 
   return (
-    <div className="min-h-screen pt-14">
+    <div className="min-h-screen pt-14" lang={locale}>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 py-16">
         <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-8 inline-block">
-          ← Verba
+          <span aria-hidden="true">← </span>{APP_NAME}
         </Link>
-
-        <h1 className="text-3xl font-bold mb-2">{t('privacy_title')}</h1>
-        <p className="text-sm text-muted-foreground mb-12">{t('last_updated')}</p>
-
-        <div className="prose prose-invert prose-sm max-w-none space-y-8 text-muted-foreground leading-relaxed">
+        <h1 className="text-3xl font-bold mb-2">{t("privacy_title")}</h1>
+        <p className="text-sm text-muted-foreground mb-12">{t("last_updated")}</p>
+        <div className="space-y-8 text-muted-foreground leading-relaxed text-sm">
           <section>
-            <h2 className="text-lg font-semibold text-foreground mb-3">No Data Collection</h2>
-            <p>
-              Verba does not collect, transmit, store, or process any personal data on external servers.
-              Your voice recordings, transcriptions, and usage data never leave your Mac.
-            </p>
+            <h2 className="text-lg font-semibold text-foreground mb-3">{t("privacy.local_title")}</h2>
+            <p>{t("privacy.local_body")}</p>
           </section>
-
           <section>
-            <h2 className="text-lg font-semibold text-foreground mb-3">What Stays on Your Device</h2>
-            <p>All data Verba creates is stored locally on your Mac:</p>
+            <h2 className="text-lg font-semibold text-foreground mb-3">{t("privacy.stored_title")}</h2>
+            <p>{t("privacy.stored_body")}</p>
             <ul className="list-disc pl-5 mt-2 space-y-1">
-              <li>Audio recordings: <code className="text-xs font-mono bg-card px-1 py-0.5 rounded">~/Library/Application Support/Verba/recordings/</code></li>
-              <li>Transcription database: <code className="text-xs font-mono bg-card px-1 py-0.5 rounded">~/Library/Application Support/Verba/recordings.db</code></li>
-              <li>AI models: <code className="text-xs font-mono bg-card px-1 py-0.5 rounded">~/Library/Application Support/Verba/models/</code></li>
-              <li>License activation: stored in macOS Keychain, never on external servers</li>
-              <li>App preferences: macOS UserDefaults (local)</li>
+              {["stored_audio", "stored_transcripts", "stored_dictionary", "stored_preferences"].map((key) => (
+                <li key={key}>{t(`privacy.${key}`)}</li>
+              ))}
             </ul>
           </section>
-
           <section>
-            <h2 className="text-lg font-semibold text-foreground mb-3">License Validation</h2>
-            <p>
-              The only network interaction Verba performs is license key validation through Polar (our payment
-              processor) when you activate a license. This check confirms your license key is valid. License
-              status is cached locally for up to 7 days so Verba works fully offline.
-              No audio, transcriptions, or personal data are sent during this process.
-            </p>
+            <h2 className="text-lg font-semibold text-foreground mb-3">{t("privacy.network_title")}</h2>
+            <p>{t("privacy.network_body")}</p>
+            <p className="mt-2">{t("privacy.network_license")}</p>
+            <p className="mt-2">{t("privacy.network_audio")}</p>
           </section>
-
           <section>
-            <h2 className="text-lg font-semibold text-foreground mb-3">No Analytics or Telemetry</h2>
-            <p>
-              Verba contains zero analytics, crash reporting, or telemetry code. There are no third-party
-              SDKs that phone home. We have no visibility into how you use the app.
-            </p>
+            <h2 className="text-lg font-semibold text-foreground mb-3">{t("privacy.analytics_title")}</h2>
+            <p>{t("privacy.analytics_body")}</p>
           </section>
-
           <section>
-            <h2 className="text-lg font-semibold text-foreground mb-3">System Permissions</h2>
-            <p>Verba requests the following macOS permissions:</p>
-            <ul className="list-disc pl-5 mt-2 space-y-1">
-              <li><strong className="text-foreground">Microphone</strong> — required for audio recording. Audio is processed locally.</li>
-              <li><strong className="text-foreground">Accessibility</strong> — required to paste transcribed text into other apps.</li>
+            <h2 className="text-lg font-semibold text-foreground mb-3">{t("privacy.permissions_title")}</h2>
+            <p>{t("privacy.permissions_body")}</p>
+            <ul className="list-disc pl-5 mt-2 space-y-2">
+              {["microphone", "accessibility"].map((key) => (
+                <li key={key}>
+                  <strong className="text-foreground">{t(`privacy.permission_${key}`)}</strong>
+                  {" — "}{t(`privacy.permission_${key}_body`)}
+                </li>
+              ))}
             </ul>
-            <p className="mt-2">These permissions are used solely for core app functionality. No data is shared externally.</p>
+            <p className="mt-2">{t("privacy.permissions_note")}</p>
           </section>
-
           <section>
-            <h2 className="text-lg font-semibold text-foreground mb-3">Data Deletion</h2>
-            <p>
-              You can delete your recordings at any time from within the app. Uninstalling Verba and removing
-              <code className="text-xs font-mono bg-card px-1 py-0.5 rounded mx-1">~/Library/Application Support/Verba/</code>
-              removes all locally stored data completely.
-            </p>
+            <h2 className="text-lg font-semibold text-foreground mb-3">{t("privacy.deletion_title")}</h2>
+            <p>{t("privacy.deletion_body")}</p>
           </section>
-
           <section>
-            <h2 className="text-lg font-semibold text-foreground mb-3">Contact</h2>
-            <p>
-              Questions about privacy? Email us at{' '}
-              <a href="mailto:hello@verbaspeech.app" className="text-primary hover:underline">
-                hello@verbaspeech.app
-              </a>
-            </p>
+            <h2 className="text-lg font-semibold text-foreground mb-3">{t("privacy.contact_title")}</h2>
+            <p>{t.rich("privacy.contact_body", { email: CONTACT_EMAIL, contact })}</p>
           </section>
         </div>
       </div>

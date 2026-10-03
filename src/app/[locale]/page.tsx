@@ -1,14 +1,14 @@
-import { setRequestLocale } from 'next-intl/server';
-import Nav from '@/components/layout/Nav';
-import Footer from '@/components/layout/Footer';
-import HeroSection from '@/components/sections/HeroSection';
-import DemoSection from '@/components/sections/DemoSection';
-import PrivacySection from '@/components/sections/PrivacySection';
-import FeaturesSection from '@/components/sections/FeaturesSection';
-import DictionarySection from '@/components/sections/DictionarySection';
-import PricingSection from '@/components/sections/PricingSection';
-import CleanupSection from '@/components/sections/CleanupSection';
-import CtaSection from '@/components/sections/CtaSection';
+import { setRequestLocale } from "next-intl/server";
+import Nav from "@/components/layout/Nav";
+import Footer from "@/components/layout/Footer";
+import HeroSection from "@/components/sections/HeroSection";
+import DemoSection from "@/components/sections/DemoSection";
+import PrivacySection from "@/components/sections/PrivacySection";
+import FeaturesSection from "@/components/sections/FeaturesSection";
+import DictionarySection from "@/components/sections/DictionarySection";
+import PricingSection from "@/components/sections/PricingSection";
+import CleanupSection from "@/components/sections/CleanupSection";
+import CtaSection from "@/components/sections/CtaSection";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -21,14 +21,14 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <Nav locale={locale} />
-      <main>
+      <main className="redesign" lang={locale}>
         <HeroSection />
-        <DemoSection />
         <PrivacySection />
-        <FeaturesSection />
-        <DictionarySection />
-        <PricingSection />
+        <DemoSection />
         <CleanupSection />
+        <DictionarySection />
+        <FeaturesSection />
+        <PricingSection />
         <CtaSection />
       </main>
       <Footer />

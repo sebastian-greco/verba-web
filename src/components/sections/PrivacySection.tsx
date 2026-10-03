@@ -1,82 +1,82 @@
-"use client";
-
+import Image from "next/image";
+import { APP_NAME } from "@/lib/constants";
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import {
+  AudioLines,
+  FileText,
+  LockKeyhole,
+  WifiOff,
+  ScanEye,
+} from "lucide-react";
+import Reveal from "@/components/home/Reveal";
 
 export default function PrivacySection() {
-  const t = useTranslations("privacy_section");
-
+  const t = useTranslations("redesign");
   return (
-    <section className="py-40 bg-card" id="privacy">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <motion.span
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-xs font-black text-highlight uppercase tracking-[0.3em] mb-8 block"
-        >
-          {t("badge")}
-        </motion.span>
-
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-5xl md:text-6xl font-black mb-12 text-primary font-serif"
-        >
-          {t("headline")}
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="text-2xl text-muted-foreground serif-body mb-24 max-w-2xl mx-auto leading-relaxed italic font-serif"
-        >
-          &quot;{t("quote")}{t("quote_extension")}&quot;
-        </motion.p>
-
-        <div className="grid sm:grid-cols-3 gap-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="flex flex-col items-center gap-8 p-10 rounded-[40px] bg-muted hover:bg-card border border-transparent hover:border-border transition-all soft-shadow"
+    <section className="privacy-section" id="privacy">
+      <div className="page-shell">
+        <Reveal className="privacy-layout">
+          <div className="privacy-copy">
+            <p className="eyebrow">{t("privacy_eyebrow")}</p>
+            <h2>
+              {t("privacy_title_1")}
+              <br />
+              <em>{t("privacy_title_2")}</em>
+            </h2>
+            <p className="section-description">{t("privacy_description")}</p>
+          </div>
+          <div
+            className="local-diagram"
+            role="img"
+            aria-label={t("diagram_alt")}
           >
-            <span className="material-symbols-outlined text-5xl text-primary/40">{"no_accounts"}</span>
-            <h3 className="font-bold text-2xl text-primary serif-body font-serif">
-              {t("no_account_title")}
-            </h3>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="flex flex-col items-center gap-8 p-10 rounded-[40px] bg-muted hover:bg-card border border-transparent hover:border-border transition-all soft-shadow"
-          >
-            <span className="material-symbols-outlined text-5xl text-primary/40">{"wifi_off"}</span>
-            <h3 className="font-bold text-2xl text-primary serif-body font-serif">
-              {t("offline_title")}
-            </h3>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="flex flex-col items-center gap-8 p-10 rounded-[40px] bg-muted hover:bg-card border border-transparent hover:border-border transition-all soft-shadow"
-          >
-            <span className="material-symbols-outlined text-5xl text-primary/40">{"memory"}</span>
-            <h3 className="font-bold text-2xl text-primary serif-body font-serif">
-              {t("local_storage_title")}
-            </h3>
-          </motion.div>
+            <div className="device-frame">
+              <span className="device-camera" aria-hidden="true" />
+              <div className="device-screen">
+                <div className="device-top">
+                  <span>{t("on_your_mac")}</span>
+                  <LockKeyhole size={14} aria-hidden="true" />
+                </div>
+                <div className="device-content">
+                  <div className="local-flow">
+                    <AudioLines size={28} aria-hidden="true" />
+                    <span className="flow-line" />
+                    <div className="local-core">
+                      <Image
+                        src="/verba-logo.svg"
+                        alt=""
+                        width={46}
+                        height={37}
+                      />
+                    </div>
+                    <span className="flow-line" />
+                    <FileText size={28} aria-hidden="true" />
+                  </div>
+                  <div className="flow-labels">
+                    <span>{t("flow_voice")}</span>
+                    <span>{APP_NAME}</span>
+                    <span>{t("flow_words")}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="device-base" aria-hidden="true" />
+          </div>
+        </Reveal>
+        <div className="privacy-principles">
+          {[
+            { icon: LockKeyhole, key: "audio" },
+            { icon: ScanEye, key: "tracking" },
+            { icon: WifiOff, key: "offline" },
+          ].map(({ icon: Icon, key }, i) => (
+            <Reveal key={key} delay={i * 0.08}>
+              <Icon size={22} aria-hidden="true" />
+              <h3>{t(`${key}_title`)}</h3>
+              <p>{t(`${key}_description`)}</p>
+            </Reveal>
+          ))}
         </div>
+        <p className="privacy-footnote">{t("connection_note")}</p>
       </div>
     </section>
   );

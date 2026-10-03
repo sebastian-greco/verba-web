@@ -7,7 +7,7 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy -- --keep-vars",
 		"upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
 		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
 		"cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
@@ -16,6 +16,8 @@
 		"lint:i18n": "eslint ."
 	},
 	"dependencies": {
+		"@fontsource/geist-mono": "^5.3.0",
+		"@fontsource/geist-sans": "^5.3.0",
 		"@fontsource/inter": "^5.2.8",
 		"@fontsource/newsreader": "^5.2.10",
 		"@opennextjs/cloudflare": "^1.17.1",

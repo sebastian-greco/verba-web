@@ -1,26 +1,16 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import Image from "next/image";
+import BrandLogo from "@/components/layout/BrandLogo";
+import AnimationToggle from "@/components/home/AnimationToggle";
 
 export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="py-24 bg-card border-t border-border relative z-10">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12">
+    <footer className="site-footer py-24 bg-card border-t border-border relative z-10">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col xl:flex-row justify-between items-center gap-12">
         <div className="flex flex-col gap-3">
-          <div className="flex items-center gap-4">
-            <Image
-              src="/verba-logo.svg"
-              alt="Verba Logo"
-              width={40}
-              height={40}
-              className="w-10 h-10 object-contain"
-            />
-            <span className="text-2xl font-bold tracking-tight text-primary font-serif">
-            {"Verba"}
-          </span>
-          </div>
+          <BrandLogo className="h-12 self-start" />
           <div className="text-sm text-muted-foreground font-serif italic text-left">
             &quot;{"Verba volant, scripta manent"}&quot; <br />
             <span className="text-xs font-sans opacity-70 not-italic">
@@ -29,7 +19,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex gap-12 text-sm font-bold text-muted-foreground uppercase tracking-widest">
+        <div className="footer-links flex flex-wrap justify-center gap-12 text-sm font-bold text-muted-foreground uppercase tracking-widest">
           <Link className="hover:text-accent transition-colors" href="/terms">
             {t("terms")}
           </Link>
@@ -44,8 +34,9 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="text-xs font-bold text-muted-foreground opacity-40 tracking-widest uppercase">
+        <div className="footer-copyright text-xs font-bold text-muted-foreground opacity-40 tracking-widest uppercase">
           {t("copyright")}
+          <AnimationToggle />
         </div>
       </div>
     </footer>
