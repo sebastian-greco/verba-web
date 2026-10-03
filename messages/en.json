@@ -224,7 +224,7 @@
     "demo_date": "A note to yourself",
     "demo_title": "An idea for tomorrow",
     "demo_intro": "Hi team,",
-    "demo_text": "Let’s set aside some time tomorrow to explore the new idea. Bring a sketch, a question, or just a fresh perspective.\n\nSee you there!",
+    "demo_text": "Let’s set aside some time tomorrow to explore the new idea. Bring a sketch, a question, or just a fresh perspective.",
     "never_uploaded": "Processed locally. Never uploaded.",
     "demo_play": "Try the animation",
     "demo_speaking": "Turning voice into words…",
@@ -270,6 +270,7 @@
     "use_prompts": "Prompts & instructions",
     "use_notes": "Notes & documents",
     "video_accessible_label": "Silent demo: dictate a report prompt into ChatGPT. Verba records, processes the speech locally, and inserts the finished prompt without submitting it.",
-    "dictionary_suggestion_alt": "Verba asks whether to remember the correction from Christian to Cristian, with Ignore and Accept options."
+    "dictionary_suggestion_alt": "Verba asks whether to remember the correction from Christian to Cristian, with Ignore and Accept options.",
+    "demo_closing": "See you there!"
   }
 }

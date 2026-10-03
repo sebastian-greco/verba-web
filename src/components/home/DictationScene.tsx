@@ -72,6 +72,7 @@ export default function DictationScene() {
               <div className="written-text">
                 <p>{t("demo_intro")}</p>
                 <p>{t("demo_text")}</p>
+                <p className="demo-closing">{t("demo_closing")}</p>
               </div>
             ) : (
               <div className="writing-placeholder" aria-hidden="true">

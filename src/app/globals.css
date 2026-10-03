@@ -2141,7 +2141,3 @@ html {
 .email-body .writing-placeholder span:last-child {
   width: 47%;
 }
-
-.email-body .written-text p {
-  white-space: pre-line;
-}

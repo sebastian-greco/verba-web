@@ -224,7 +224,7 @@
     "demo_date": "Une note pour vous",
     "demo_title": "Une idée pour demain",
     "demo_intro": "Bonjour à tous,",
-    "demo_text": "Prenons un moment demain pour explorer cette nouvelle idée. Apportez un croquis, une question ou simplement un regard neuf.\n\nÀ demain !",
+    "demo_text": "Prenons un moment demain pour explorer cette nouvelle idée. Apportez un croquis, une question ou simplement un regard neuf.",
     "never_uploaded": "Traité localement. Jamais envoyé en ligne.",
     "demo_play": "Lancer l’animation",
     "demo_speaking": "La voix devient texte…",
@@ -270,6 +270,7 @@
     "use_prompts": "Prompts et instructions",
     "use_notes": "Notes et documents",
     "video_accessible_label": "Démo sans son : dictez une demande de rapport dans ChatGPT. Verba enregistre, traite la voix localement et insère le texte final sans l’envoyer.",
-    "dictionary_suggestion_alt": "Verba propose de mémoriser la correction de Christian en Cristian, avec les options Ignorer et Accepter."
+    "dictionary_suggestion_alt": "Verba propose de mémoriser la correction de Christian en Cristian, avec les options Ignorer et Accepter.",
+    "demo_closing": "À demain !"
   }
 }
