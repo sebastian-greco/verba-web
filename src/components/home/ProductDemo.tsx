@@ -15,6 +15,9 @@ export default function ProductDemo() {
   useEffect(() => {
     const player = video.current;
     if (!player) return;
+    // Media preferences are only known in the browser. Apply looping after
+    // hydration so the server and the first client render have identical markup.
+    player.loop = reducedMotion === false;
     if (!visible || reducedMotion) {
       player.pause();
     } else if (reducedMotion === false && !started.current) {
@@ -30,7 +33,6 @@ export default function ProductDemo() {
       controls
       muted
       playsInline
-      loop={reducedMotion === false}
       preload="none"
       width={1392}
       height={736}
